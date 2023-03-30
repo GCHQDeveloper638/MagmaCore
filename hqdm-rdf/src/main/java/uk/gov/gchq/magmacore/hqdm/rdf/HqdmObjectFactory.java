@@ -374,463 +374,463 @@ public final class HqdmObjectFactory {
 
         switch (typeName) {
             case "abstract_object":
-                return SpatioTemporalExtentServices.createAbstractObject(iri.getIri());
+                return SpatioTemporalExtentServices.createAbstractObject(iri);
             case "acceptance_of_offer":
-                return SpatioTemporalExtentServices.createAcceptanceOfOffer(iri.getIri());
+                return SpatioTemporalExtentServices.createAcceptanceOfOffer(iri);
             case "acceptance_of_offer_for_goods":
-                return SpatioTemporalExtentServices.createAcceptanceOfOfferForGoods(iri.getIri());
+                return SpatioTemporalExtentServices.createAcceptanceOfOfferForGoods(iri);
             case "activity":
-                return SpatioTemporalExtentServices.createActivity(iri.getIri());
+                return SpatioTemporalExtentServices.createActivity(iri);
             case "aggregation":
-                return RelationshipServices.createAggregation(iri.getIri());
+                return RelationshipServices.createAggregation(iri);
             case "agree_contract":
-                return SpatioTemporalExtentServices.createAgreeContract(iri.getIri());
+                return SpatioTemporalExtentServices.createAgreeContract(iri);
             case "agreement_execution":
-                return SpatioTemporalExtentServices.createAgreementExecution(iri.getIri());
+                return SpatioTemporalExtentServices.createAgreementExecution(iri);
             case "agreement_process":
-                return SpatioTemporalExtentServices.createAgreementProcess(iri.getIri());
+                return SpatioTemporalExtentServices.createAgreementProcess(iri);
             case "amount_of_money":
-                return SpatioTemporalExtentServices.createAmountOfMoney(iri.getIri());
+                return SpatioTemporalExtentServices.createAmountOfMoney(iri);
             case "asset":
-                return SpatioTemporalExtentServices.createAsset(iri.getIri());
+                return SpatioTemporalExtentServices.createAsset(iri);
             case "association":
-                return SpatioTemporalExtentServices.createAssociation(iri.getIri());
+                return SpatioTemporalExtentServices.createAssociation(iri);
             case "beginning_of_ownership":
-                return SpatioTemporalExtentServices.createBeginningOfOwnership(iri.getIri());
+                return SpatioTemporalExtentServices.createBeginningOfOwnership(iri);
             case "biological_object":
-                return SpatioTemporalExtentServices.createBiologicalObject(iri.getIri());
+                return SpatioTemporalExtentServices.createBiologicalObject(iri);
             case "biological_system":
-                return SpatioTemporalExtentServices.createBiologicalSystem(iri.getIri());
+                return SpatioTemporalExtentServices.createBiologicalSystem(iri);
             case "biological_system_component":
-                return SpatioTemporalExtentServices.createBiologicalSystemComponent(iri.getIri());
+                return SpatioTemporalExtentServices.createBiologicalSystemComponent(iri);
             case "class":
-                return ClassServices.createClass(iri.getIri());
+                return ClassServices.createClass(iri);
             case "classification":
-                return RelationshipServices.createClassification(iri.getIri());
+                return RelationshipServices.createClassification(iri);
             case "class_of_abstract_object":
-                return ClassServices.createClassOfAbstractObject(iri.getIri());
+                return ClassServices.createClassOfAbstractObject(iri);
             case "class_of_activity":
-                return ClassServices.createClassOfActivity(iri.getIri());
+                return ClassServices.createClassOfActivity(iri);
             case "class_of_agree_contract":
-                return ClassServices.createClassOfAgreeContract(iri.getIri());
+                return ClassServices.createClassOfAgreeContract(iri);
             case "class_of_agreement_execution":
-                return ClassServices.createClassOfAgreementExecution(iri.getIri());
+                return ClassServices.createClassOfAgreementExecution(iri);
             case "class_of_agreement_process":
-                return ClassServices.createClassOfAgreementProcess(iri.getIri());
+                return ClassServices.createClassOfAgreementProcess(iri);
             case "class_of_amount_of_money":
-                return ClassServices.createClassOfAmountOfMoney(iri.getIri());
+                return ClassServices.createClassOfAmountOfMoney(iri);
             case "class_of_association":
-                return ClassServices.createClassOfAssociation(iri.getIri());
+                return ClassServices.createClassOfAssociation(iri);
             case "class_of_biological_object":
-                return ClassServices.createClassOfBiologicalObject(iri.getIri());
+                return ClassServices.createClassOfBiologicalObject(iri);
             case "class_of_biological_system":
-                return ClassServices.createClassOfBiologicalSystem(iri.getIri());
+                return ClassServices.createClassOfBiologicalSystem(iri);
             case "class_of_biological_system_component":
-                return ClassServices.createClassOfBiologicalSystemComponent(iri.getIri());
+                return ClassServices.createClassOfBiologicalSystemComponent(iri);
             case "class_of_class":
-                return ClassServices.createClassOfClass(iri.getIri());
+                return ClassServices.createClassOfClass(iri);
             case "class_of_class_of_spatio_temporal_extent":
-                return ClassServices.createClassOfSpatioTemporalExtent(iri.getIri());
+                return ClassServices.createClassOfSpatioTemporalExtent(iri);
             case "class_of_contract_execution":
-                return ClassServices.createClassOfContractExecution(iri.getIri());
+                return ClassServices.createClassOfContractExecution(iri);
             case "class_of_contract_process":
-                return ClassServices.createClassOfContractProcess(iri.getIri());
+                return ClassServices.createClassOfContractProcess(iri);
             case "class_of_event":
-                return ClassServices.createClassOfEvent(iri.getIri());
+                return ClassServices.createClassOfEvent(iri);
             case "class_of_functional_object":
-                return ClassServices.createClassOfFunctionalObject(iri.getIri());
+                return ClassServices.createClassOfFunctionalObject(iri);
             case "class_of_functional_system":
-                return ClassServices.createClassOfFunctionalSystem(iri.getIri());
+                return ClassServices.createClassOfFunctionalSystem(iri);
             case "class_of_functional_system_component":
-                return ClassServices.createClassOfFunctionalSystemComponent(iri.getIri());
+                return ClassServices.createClassOfFunctionalSystemComponent(iri);
             case "class_of_individual":
-                return ClassServices.createClassOfIndividual(iri.getIri());
+                return ClassServices.createClassOfIndividual(iri);
             case "class_of_in_place_biological_component":
-                return ClassServices.createClassOfInPlaceBiologicalComponent(iri.getIri());
+                return ClassServices.createClassOfInPlaceBiologicalComponent(iri);
             case "class_of_installed_functional_system_component":
-                return ClassServices.createClassOfInstalledFunctionalSystemComponent(iri.getIri());
+                return ClassServices.createClassOfInstalledFunctionalSystemComponent(iri);
             case "class_of_installed_object":
-                return ClassServices.createClassOfInstalledObject(iri.getIri());
+                return ClassServices.createClassOfInstalledObject(iri);
             case "class_of_intentionally_constructed_object":
-                return ClassServices.createClassOfIntentionallyConstructedObject(iri.getIri());
+                return ClassServices.createClassOfIntentionallyConstructedObject(iri);
             case "class_of_offer":
-                return ClassServices.createClassOfOffer(iri.getIri());
+                return ClassServices.createClassOfOffer(iri);
             case "class_of_ordinary_biological_object":
-                return ClassServices.createClassOfOrdinaryBiologicalObject(iri.getIri());
+                return ClassServices.createClassOfOrdinaryBiologicalObject(iri);
             case "class_of_ordinary_functional_object":
-                return ClassServices.createClassOfOrdinaryFunctionalObject(iri.getIri());
+                return ClassServices.createClassOfOrdinaryFunctionalObject(iri);
             case "class_of_ordinary_physical_object":
-                return ClassServices.createClassOfOrdinaryPhysicalObject(iri.getIri());
+                return ClassServices.createClassOfOrdinaryPhysicalObject(iri);
             case "class_of_organization":
-                return ClassServices.createClassOfOrganization(iri.getIri());
+                return ClassServices.createClassOfOrganization(iri);
             case "class_of_organization_component":
-                return ClassServices.createClassOfOrganizationComponent(iri.getIri());
+                return ClassServices.createClassOfOrganizationComponent(iri);
             case "class_of_participant":
-                return ClassServices.createClassOfParticipant(iri.getIri());
+                return ClassServices.createClassOfParticipant(iri);
             case "class_of_party":
-                return ClassServices.createClassOfParty(iri.getIri());
+                return ClassServices.createClassOfParty(iri);
             case "class_of_period_of_time":
-                return ClassServices.createClassOfPeriodOfTime(iri.getIri());
+                return ClassServices.createClassOfPeriodOfTime(iri);
             case "class_of_person":
-                return ClassServices.createClassOfPerson(iri.getIri());
+                return ClassServices.createClassOfPerson(iri);
             case "class_of_person_in_position":
-                return ClassServices.createClassOfPersonInPosition(iri.getIri());
+                return ClassServices.createClassOfPersonInPosition(iri);
             case "class_of_physical_object":
-                return ClassServices.createClassOfPhysicalObject(iri.getIri());
+                return ClassServices.createClassOfPhysicalObject(iri);
             case "class_of_physical_property":
-                return ClassServices.createClassOfPhysicalProperty(iri.getIri());
+                return ClassServices.createClassOfPhysicalProperty(iri);
             case "class_of_physical_quantity":
-                return ClassServices.createClassOfPhysicalQuantity(iri.getIri());
+                return ClassServices.createClassOfPhysicalQuantity(iri);
             case "class_of_point_in_time":
-                return ClassServices.createClassOfPointInTime(iri.getIri());
+                return ClassServices.createClassOfPointInTime(iri);
             case "class_of_position":
-                return ClassServices.createClassOfPosition(iri.getIri());
+                return ClassServices.createClassOfPosition(iri);
             case "class_of_possible_world":
-                return ClassServices.createClassOfPossibleWorld(iri.getIri());
+                return ClassServices.createClassOfPossibleWorld(iri);
             case "class_of_reaching_agreement":
-                return ClassServices.createClassOfReachingAgreement(iri.getIri());
+                return ClassServices.createClassOfReachingAgreement(iri);
             case "class_of_relationship":
-                return ClassServices.createClassOfRelationship(iri.getIri());
+                return ClassServices.createClassOfRelationship(iri);
             case "class_of_representation":
-                return ClassServices.createClassOfRepresentation(iri.getIri());
+                return ClassServices.createClassOfRepresentation(iri);
             case "class_of_sales_product_instance":
-                return ClassServices.createClassOfSalesProductInstance(iri.getIri());
+                return ClassServices.createClassOfSalesProductInstance(iri);
             case "class_of_sign":
-                return ClassServices.createClassOfSign(iri.getIri());
+                return ClassServices.createClassOfSign(iri);
             case "class_of_socially_constructed_activity":
-                return ClassServices.createClassOfSociallyConstructedActivity(iri.getIri());
+                return ClassServices.createClassOfSociallyConstructedActivity(iri);
             case "class_of_socially_constructed_object":
-                return ClassServices.createClassOfSociallyConstructedObject(iri.getIri());
+                return ClassServices.createClassOfSociallyConstructedObject(iri);
             case "class_of_spatio_temporal_extent":
-                return ClassServices.createClassOfSpatioTemporalExtent(iri.getIri());
+                return ClassServices.createClassOfSpatioTemporalExtent(iri);
             case "class_of_state":
-                return ClassServices.createClassOfState(iri.getIri());
+                return ClassServices.createClassOfState(iri);
             case "class_of_state_of_activity":
-                return ClassServices.createClassOfStateOfActivity(iri.getIri());
+                return ClassServices.createClassOfStateOfActivity(iri);
             case "class_of_state_of_amount_of_money":
-                return ClassServices.createClassOfStateOfAmountOfMoney(iri.getIri());
+                return ClassServices.createClassOfStateOfAmountOfMoney(iri);
             case "class_of_state_of_association":
-                return ClassServices.createClassOfStateOfAssociation(iri.getIri());
+                return ClassServices.createClassOfStateOfAssociation(iri);
             case "class_of_state_of_biological_object":
-                return ClassServices.createClassOfStateOfBiologicalObject(iri.getIri());
+                return ClassServices.createClassOfStateOfBiologicalObject(iri);
             case "class_of_state_of_biological_system":
-                return ClassServices.createClassOfStateOfBiologicalSystem(iri.getIri());
+                return ClassServices.createClassOfStateOfBiologicalSystem(iri);
             case "class_of_state_of_biological_system_component":
-                return ClassServices.createClassOfStateOfBiologicalSystemComponent(iri.getIri());
+                return ClassServices.createClassOfStateOfBiologicalSystemComponent(iri);
             case "class_of_state_of_functional_object":
-                return ClassServices.createClassOfStateOfFunctionalObject(iri.getIri());
+                return ClassServices.createClassOfStateOfFunctionalObject(iri);
             case "class_of_state_of_functional_system":
-                return ClassServices.createClassOfStateOfFunctionalSystem(iri.getIri());
+                return ClassServices.createClassOfStateOfFunctionalSystem(iri);
             case "class_of_state_of_functional_system_component":
-                return ClassServices.createClassOfStateOfFunctionalSystemComponent(iri.getIri());
+                return ClassServices.createClassOfStateOfFunctionalSystemComponent(iri);
             case "class_of_state_of_intentionally_constructed_object":
-                return ClassServices.createClassOfStateOfIntentionallyConstructedObject(iri.getIri());
+                return ClassServices.createClassOfStateOfIntentionallyConstructedObject(iri);
             case "class_of_state_of_ordinary_biological_object":
-                return ClassServices.createClassOfStateOfOrdinaryBiologicalObject(iri.getIri());
+                return ClassServices.createClassOfStateOfOrdinaryBiologicalObject(iri);
             case "class_of_state_of_ordinary_functional_object":
-                return ClassServices.createClassOfStateOfOrdinaryFunctionalObject(iri.getIri());
+                return ClassServices.createClassOfStateOfOrdinaryFunctionalObject(iri);
             case "class_of_state_of_ordinary_physical_object":
-                return ClassServices.createClassOfStateOfOrdinaryPhysicalObject(iri.getIri());
+                return ClassServices.createClassOfStateOfOrdinaryPhysicalObject(iri);
             case "class_of_state_of_organization":
-                return ClassServices.createClassOfStateOfOrganization(iri.getIri());
+                return ClassServices.createClassOfStateOfOrganization(iri);
             case "class_of_state_of_organization_component":
-                return ClassServices.createClassOfStateOfOrganizationComponent(iri.getIri());
+                return ClassServices.createClassOfStateOfOrganizationComponent(iri);
             case "class_of_state_of_party":
-                return ClassServices.createClassOfStateOfParty(iri.getIri());
+                return ClassServices.createClassOfStateOfParty(iri);
             case "class_of_state_of_person":
-                return ClassServices.createClassOfStateOfPerson(iri.getIri());
+                return ClassServices.createClassOfStateOfPerson(iri);
             case "class_of_state_of_physical_object":
-                return ClassServices.createClassOfStateOfPhysicalObject(iri.getIri());
+                return ClassServices.createClassOfStateOfPhysicalObject(iri);
             case "class_of_state_of_position":
-                return ClassServices.createClassOfStateOfPosition(iri.getIri());
+                return ClassServices.createClassOfStateOfPosition(iri);
             case "class_of_state_of_sales_product_instance":
-                return ClassServices.createClassOfStateOfSalesProductInstance(iri.getIri());
+                return ClassServices.createClassOfStateOfSalesProductInstance(iri);
             case "class_of_state_of_sign":
-                return ClassServices.createClassOfStateOfSign(iri.getIri());
+                return ClassServices.createClassOfStateOfSign(iri);
             case "class_of_state_of_socially_constructed_activity":
-                return ClassServices.createClassOfStateOfSociallyConstructedActivity(iri.getIri());
+                return ClassServices.createClassOfStateOfSociallyConstructedActivity(iri);
             case "class_of_state_of_socially_constructed_object":
-                return ClassServices.createClassOfStateOfSociallyConstructedObject(iri.getIri());
+                return ClassServices.createClassOfStateOfSociallyConstructedObject(iri);
             case "class_of_state_of_system":
-                return ClassServices.createClassOfStateOfSystem(iri.getIri());
+                return ClassServices.createClassOfStateOfSystem(iri);
             case "class_of_state_of_system_component":
-                return ClassServices.createClassOfStateOfSystemComponent(iri.getIri());
+                return ClassServices.createClassOfStateOfSystemComponent(iri);
             case "class_of_system":
-                return ClassServices.createClassOfSystem(iri.getIri());
+                return ClassServices.createClassOfSystem(iri);
             case "class_of_system_component":
-                return ClassServices.createClassOfSystemComponent(iri.getIri());
+                return ClassServices.createClassOfSystemComponent(iri);
             case "composition":
-                return RelationshipServices.createComposition(iri.getIri());
+                return RelationshipServices.createComposition(iri);
             case "contract_execution":
-                return SpatioTemporalExtentServices.createContractExecution(iri.getIri());
+                return SpatioTemporalExtentServices.createContractExecution(iri);
             case "contract_process":
-                return SpatioTemporalExtentServices.createContractProcess(iri.getIri());
+                return SpatioTemporalExtentServices.createContractProcess(iri);
             case "currency":
-                return SpatioTemporalExtentServices.createCurrency(iri.getIri());
+                return SpatioTemporalExtentServices.createCurrency(iri);
             case "defined_relationship":
-                return RelationshipServices.createDefinedRelationship(iri.getIri());
+                return RelationshipServices.createDefinedRelationship(iri);
             case "definition":
-                return ClassServices.createDefinition(iri.getIri());
+                return ClassServices.createDefinition(iri);
             case "description":
-                return ClassServices.createDescription(iri.getIri());
+                return ClassServices.createDescription(iri);
             case "employee":
-                return SpatioTemporalExtentServices.createEmployee(iri.getIri());
+                return SpatioTemporalExtentServices.createEmployee(iri);
             case "employer":
-                return SpatioTemporalExtentServices.createEmployer(iri.getIri());
+                return SpatioTemporalExtentServices.createEmployer(iri);
             case "employment":
-                return SpatioTemporalExtentServices.createEmployment(iri.getIri());
+                return SpatioTemporalExtentServices.createEmployment(iri);
             case "ending_of_ownership":
-                return SpatioTemporalExtentServices.createEndingOfOwnership(iri.getIri());
+                return SpatioTemporalExtentServices.createEndingOfOwnership(iri);
             case "enumerated_class":
-                return ClassServices.createEnumeratedClass(iri.getIri());
+                return ClassServices.createEnumeratedClass(iri);
             case "event":
-                return SpatioTemporalExtentServices.createEvent(iri.getIri());
+                return SpatioTemporalExtentServices.createEvent(iri);
             case "exchange_of_goods_and_money":
-                return SpatioTemporalExtentServices.createExchangeOfGoodsAndMoney(iri.getIri());
+                return SpatioTemporalExtentServices.createExchangeOfGoodsAndMoney(iri);
             case "function_":
-                return RelationshipServices.createFunction(iri.getIri());
+                return RelationshipServices.createFunction(iri);
             case "functional_object":
-                return SpatioTemporalExtentServices.createFunctionalObject(iri.getIri());
+                return SpatioTemporalExtentServices.createFunctionalObject(iri);
             case "functional_system":
-                return SpatioTemporalExtentServices.createFunctionalSystem(iri.getIri());
+                return SpatioTemporalExtentServices.createFunctionalSystem(iri);
             case "functional_system_component":
-                return SpatioTemporalExtentServices.createFunctionalSystemComponent(iri.getIri());
+                return SpatioTemporalExtentServices.createFunctionalSystemComponent(iri);
             case "identification":
-                return ClassServices.createIdentification(iri.getIri());
+                return ClassServices.createIdentification(iri);
             case "identification_of_physical_quantity":
-                return SpatioTemporalExtentServices.createIdentificationOfPhysicalQuantity(iri.getIri());
+                return SpatioTemporalExtentServices.createIdentificationOfPhysicalQuantity(iri);
             case "individual":
-                return SpatioTemporalExtentServices.createIndividual(iri.getIri());
+                return SpatioTemporalExtentServices.createIndividual(iri);
             case "in_place_biological_component":
-                return SpatioTemporalExtentServices.createInPlaceBiologicalComponent(iri.getIri());
+                return SpatioTemporalExtentServices.createInPlaceBiologicalComponent(iri);
             case "installed_functional_system_component":
-                return SpatioTemporalExtentServices.createInstalledFunctionalSystemComponent(iri.getIri());
+                return SpatioTemporalExtentServices.createInstalledFunctionalSystemComponent(iri);
             case "installed_object":
-                return SpatioTemporalExtentServices.createInstalledObject(iri.getIri());
+                return SpatioTemporalExtentServices.createInstalledObject(iri);
             case "intentionally_constructed_object":
-                return SpatioTemporalExtentServices.createIntentionallyConstructedObject(iri.getIri());
+                return SpatioTemporalExtentServices.createIntentionallyConstructedObject(iri);
             case "kind_of_activity":
-                return ClassServices.createKindOfActivity(iri.getIri());
+                return ClassServices.createKindOfActivity(iri);
             case "kind_of_association":
-                return ClassServices.createKindOfAssociation(iri.getIri());
+                return ClassServices.createKindOfAssociation(iri);
             case "kind_of_biological_object":
-                return ClassServices.createKindOfBiologicalObject(iri.getIri());
+                return ClassServices.createKindOfBiologicalObject(iri);
             case "kind_of_biological_system":
-                return ClassServices.createKindOfBiologicalSystem(iri.getIri());
+                return ClassServices.createKindOfBiologicalSystem(iri);
             case "kind_of_biological_system_component":
-                return ClassServices.createKindOfBiologicalSystemComponent(iri.getIri());
+                return ClassServices.createKindOfBiologicalSystemComponent(iri);
             case "kind_of_functional_object":
-                return ClassServices.createKindOfFunctionalObject(iri.getIri());
+                return ClassServices.createKindOfFunctionalObject(iri);
             case "kind_of_functional_system":
-                return ClassServices.createKindOfFunctionalSystem(iri.getIri());
+                return ClassServices.createKindOfFunctionalSystem(iri);
             case "kind_of_functional_system_component":
-                return ClassServices.createKindOfFunctionalSystemComponent(iri.getIri());
+                return ClassServices.createKindOfFunctionalSystemComponent(iri);
             case "kind_of_individual":
-                return ClassServices.createKindOfIndividual(iri.getIri());
+                return ClassServices.createKindOfIndividual(iri);
             case "kind_of_intentionally_constructed_object":
-                return ClassServices.createKindOfIntentionallyConstructedObject(iri.getIri());
+                return ClassServices.createKindOfIntentionallyConstructedObject(iri);
             case "kind_of_ordinary_biological_object":
-                return ClassServices.createKindOfOrdinaryBiologicalObject(iri.getIri());
+                return ClassServices.createKindOfOrdinaryBiologicalObject(iri);
             case "kind_of_ordinary_functional_object":
-                return ClassServices.createKindOfOrdinaryFunctionalObject(iri.getIri());
+                return ClassServices.createKindOfOrdinaryFunctionalObject(iri);
             case "kind_of_ordinary_physical_object":
-                return ClassServices.createKindOfOrdinaryPhysicalObject(iri.getIri());
+                return ClassServices.createKindOfOrdinaryPhysicalObject(iri);
             case "kind_of_organization":
-                return ClassServices.createKindOfOrganization(iri.getIri());
+                return ClassServices.createKindOfOrganization(iri);
             case "kind_of_organization_component":
-                return ClassServices.createKindOfOrganizationComponent(iri.getIri());
+                return ClassServices.createKindOfOrganizationComponent(iri);
             case "kind_of_party":
-                return ClassServices.createKindOfParty(iri.getIri());
+                return ClassServices.createKindOfParty(iri);
             case "kind_of_person":
-                return ClassServices.createKindOfPerson(iri.getIri());
+                return ClassServices.createKindOfPerson(iri);
             case "kind_of_physical_object":
-                return ClassServices.createKindOfPhysicalObject(iri.getIri());
+                return ClassServices.createKindOfPhysicalObject(iri);
             case "kind_of_physical_property":
-                return ClassServices.createKindOfPhysicalProperty(iri.getIri());
+                return ClassServices.createKindOfPhysicalProperty(iri);
             case "kind_of_physical_quantity":
-                return ClassServices.createKindOfPhysicalQuantity(iri.getIri());
+                return ClassServices.createKindOfPhysicalQuantity(iri);
             case "kind_of_position":
-                return ClassServices.createKindOfPosition(iri.getIri());
+                return ClassServices.createKindOfPosition(iri);
             case "kind_of_relationship_with_restriction":
-                return ClassServices.createKindOfRelationshipWithRestriction(iri.getIri());
+                return ClassServices.createKindOfRelationshipWithRestriction(iri);
             case "kind_of_relationship_with_signature":
-                return ClassServices.createKindOfRelationshipWithSignature(iri.getIri());
+                return ClassServices.createKindOfRelationshipWithSignature(iri);
             case "kind_of_socially_constructed_object":
-                return ClassServices.createKindOfSociallyConstructedObject(iri.getIri());
+                return ClassServices.createKindOfSociallyConstructedObject(iri);
             case "kind_of_system":
-                return ClassServices.createKindOfSystem(iri.getIri());
+                return ClassServices.createKindOfSystem(iri);
             case "kind_of_system_component":
-                return ClassServices.createKindOfSystemComponent(iri.getIri());
+                return ClassServices.createKindOfSystemComponent(iri);
             case "language_community":
-                return SpatioTemporalExtentServices.createLanguageCommunity(iri.getIri());
+                return SpatioTemporalExtentServices.createLanguageCommunity(iri);
             case "money_asset":
-                return SpatioTemporalExtentServices.createMoneyAsset(iri.getIri());
+                return SpatioTemporalExtentServices.createMoneyAsset(iri);
             case "offer":
-                return SpatioTemporalExtentServices.createOffer(iri.getIri());
+                return SpatioTemporalExtentServices.createOffer(iri);
             case "offer_and_acceptance_for_goods":
-                return SpatioTemporalExtentServices.createOfferAndAcceptanceForGoods(iri.getIri());
+                return SpatioTemporalExtentServices.createOfferAndAcceptanceForGoods(iri);
             case "offer_for_goods":
-                return SpatioTemporalExtentServices.createOfferForGoods(iri.getIri());
+                return SpatioTemporalExtentServices.createOfferForGoods(iri);
             case "offering":
-                return SpatioTemporalExtentServices.createOffering(iri.getIri());
+                return SpatioTemporalExtentServices.createOffering(iri);
             case "ordinary_biological_object":
-                return SpatioTemporalExtentServices.createOrdinaryBiologicalObject(iri.getIri());
+                return SpatioTemporalExtentServices.createOrdinaryBiologicalObject(iri);
             case "ordinary_functional_object":
-                return SpatioTemporalExtentServices.createOrdinaryFunctionalObject(iri.getIri());
+                return SpatioTemporalExtentServices.createOrdinaryFunctionalObject(iri);
             case "ordinary_physical_object":
-                return SpatioTemporalExtentServices.createOrdinaryPhysicalObject(iri.getIri());
+                return SpatioTemporalExtentServices.createOrdinaryPhysicalObject(iri);
             case "organization":
-                return SpatioTemporalExtentServices.createOrganization(iri.getIri());
+                return SpatioTemporalExtentServices.createOrganization(iri);
             case "organization_component":
-                return SpatioTemporalExtentServices.createOrganizationComponent(iri.getIri());
+                return SpatioTemporalExtentServices.createOrganizationComponent(iri);
             case "owner":
-                return SpatioTemporalExtentServices.createOwner(iri.getIri());
+                return SpatioTemporalExtentServices.createOwner(iri);
             case "ownership":
-                return SpatioTemporalExtentServices.createOwnership(iri.getIri());
+                return SpatioTemporalExtentServices.createOwnership(iri);
             case "participant":
-                return SpatioTemporalExtentServices.createParticipant(iri.getIri());
+                return SpatioTemporalExtentServices.createParticipant(iri);
             case "party":
-                return SpatioTemporalExtentServices.createParty(iri.getIri());
+                return SpatioTemporalExtentServices.createParty(iri);
             case "pattern":
-                return ClassServices.createPattern(iri.getIri());
+                return ClassServices.createPattern(iri);
             case "period_of_time":
-                return SpatioTemporalExtentServices.createPeriodOfTime(iri.getIri());
+                return SpatioTemporalExtentServices.createPeriodOfTime(iri);
             case "person":
-                return SpatioTemporalExtentServices.createPerson(iri.getIri());
+                return SpatioTemporalExtentServices.createPerson(iri);
             case "person_in_position":
-                return SpatioTemporalExtentServices.createPersonInPosition(iri.getIri());
+                return SpatioTemporalExtentServices.createPersonInPosition(iri);
             case "physical_object":
-                return SpatioTemporalExtentServices.createPhysicalObject(iri.getIri());
+                return SpatioTemporalExtentServices.createPhysicalObject(iri);
             case "physical_property":
-                return SpatioTemporalExtentServices.createPhysicalProperty(iri.getIri());
+                return SpatioTemporalExtentServices.createPhysicalProperty(iri);
             case "physical_property_range":
-                return SpatioTemporalExtentServices.createPhysicalPropertyRange(iri.getIri());
+                return SpatioTemporalExtentServices.createPhysicalPropertyRange(iri);
             case "physical_quantity":
-                return SpatioTemporalExtentServices.createPhysicalQuantity(iri.getIri());
+                return SpatioTemporalExtentServices.createPhysicalQuantity(iri);
             case "physical_quantity_range":
-                return SpatioTemporalExtentServices.createPhysicalQuantityRange(iri.getIri());
+                return SpatioTemporalExtentServices.createPhysicalQuantityRange(iri);
             case "plan":
-                return SpatioTemporalExtentServices.createPlan(iri.getIri());
+                return SpatioTemporalExtentServices.createPlan(iri);
             case "point_in_time":
-                return SpatioTemporalExtentServices.createPointInTime(iri.getIri());
+                return SpatioTemporalExtentServices.createPointInTime(iri);
             case "position":
-                return SpatioTemporalExtentServices.createPosition(iri.getIri());
+                return SpatioTemporalExtentServices.createPosition(iri);
             case "possible_world":
-                return SpatioTemporalExtentServices.createPossibleWorld(iri.getIri());
+                return SpatioTemporalExtentServices.createPossibleWorld(iri);
             case "price":
-                return SpatioTemporalExtentServices.createPrice(iri.getIri());
+                return SpatioTemporalExtentServices.createPrice(iri);
             case "product_brand":
-                return SpatioTemporalExtentServices.createProductBrand(iri.getIri());
+                return SpatioTemporalExtentServices.createProductBrand(iri);
             case "product_offering":
-                return SpatioTemporalExtentServices.createProductOffering(iri.getIri());
+                return SpatioTemporalExtentServices.createProductOffering(iri);
             case "reaching_agreement":
-                return SpatioTemporalExtentServices.createReachingAgreement(iri.getIri());
+                return SpatioTemporalExtentServices.createReachingAgreement(iri);
             case "recognizing_language_community":
-                return SpatioTemporalExtentServices.createRecognizingLanguageCommunity(iri.getIri());
+                return SpatioTemporalExtentServices.createRecognizingLanguageCommunity(iri);
             case "relationship":
-                return RelationshipServices.createRelationship(iri.getIri());
+                return RelationshipServices.createRelationship(iri);
             case "representation_by_pattern":
-                return ClassServices.createRepresentationByPattern(iri.getIri());
+                return ClassServices.createRepresentationByPattern(iri);
             case "representation_by_sign":
-                return SpatioTemporalExtentServices.createRepresentationBySign(iri.getIri());
+                return SpatioTemporalExtentServices.createRepresentationBySign(iri);
             case "requirement":
-                return SpatioTemporalExtentServices.createRequirement(iri.getIri());
+                return SpatioTemporalExtentServices.createRequirement(iri);
             case "requirement_specification":
-                return SpatioTemporalExtentServices.createRequirementSpecification(iri.getIri());
+                return SpatioTemporalExtentServices.createRequirementSpecification(iri);
             case "role":
-                return ClassServices.createRole(iri.getIri());
+                return ClassServices.createRole(iri);
             case "sale_of_goods":
-                return SpatioTemporalExtentServices.createSaleOfGoods(iri.getIri());
+                return SpatioTemporalExtentServices.createSaleOfGoods(iri);
             case "sales_product":
-                return SpatioTemporalExtentServices.createSalesProduct(iri.getIri());
+                return SpatioTemporalExtentServices.createSalesProduct(iri);
             case "sales_product_instance":
-                return SpatioTemporalExtentServices.createSalesProductInstance(iri.getIri());
+                return SpatioTemporalExtentServices.createSalesProductInstance(iri);
             case "sales_product_version":
-                return SpatioTemporalExtentServices.createSalesProductVersion(iri.getIri());
+                return SpatioTemporalExtentServices.createSalesProductVersion(iri);
             case "scale":
-                return RelationshipServices.createScale(iri.getIri());
+                return RelationshipServices.createScale(iri);
             case "sign":
-                return SpatioTemporalExtentServices.createSign(iri.getIri());
+                return SpatioTemporalExtentServices.createSign(iri);
             case "socially_constructed_activity":
-                return SpatioTemporalExtentServices.createSociallyConstructedActivity(iri.getIri());
+                return SpatioTemporalExtentServices.createSociallyConstructedActivity(iri);
             case "socially_constructed_object":
-                return SpatioTemporalExtentServices.createSociallyConstructedObject(iri.getIri());
+                return SpatioTemporalExtentServices.createSociallyConstructedObject(iri);
             case "spatio_temporal_extent":
-                return SpatioTemporalExtentServices.createSpatioTemporalExtent(iri.getIri());
+                return SpatioTemporalExtentServices.createSpatioTemporalExtent(iri);
             case "specialization":
-                return RelationshipServices.createSpecialization(iri.getIri());
+                return RelationshipServices.createSpecialization(iri);
             case "state":
-                return SpatioTemporalExtentServices.createState(iri.getIri());
+                return SpatioTemporalExtentServices.createState(iri);
             case "state_of_activity":
-                return SpatioTemporalExtentServices.createStateOfActivity(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfActivity(iri);
             case "state_of_amount_of_money":
-                return SpatioTemporalExtentServices.createStateOfAmountOfMoney(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfAmountOfMoney(iri);
             case "state_of_association":
-                return SpatioTemporalExtentServices.createStateOfAssociation(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfAssociation(iri);
             case "state_of_biological_object":
-                return SpatioTemporalExtentServices.createStateOfBiologicalObject(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfBiologicalObject(iri);
             case "state_of_biological_system":
-                return SpatioTemporalExtentServices.createStateOfBiologicalSystem(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfBiologicalSystem(iri);
             case "state_of_biological_system_component":
-                return SpatioTemporalExtentServices.createStateOfBiologicalSystemComponent(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfBiologicalSystemComponent(iri);
             case "state_of_functional_object":
-                return SpatioTemporalExtentServices.createStateOfFunctionalObject(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfFunctionalObject(iri);
             case "state_of_functional_system":
-                return SpatioTemporalExtentServices.createStateOfFunctionalSystem(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfFunctionalSystem(iri);
             case "state_of_functional_system_component":
-                return SpatioTemporalExtentServices.createStateOfFunctionalSystemComponent(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfFunctionalSystemComponent(iri);
             case "state_of_intentionally_constructed_object":
-                return SpatioTemporalExtentServices.createStateOfIntentionallyConstructedObject(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfIntentionallyConstructedObject(iri);
             case "state_of_language_community":
-                return SpatioTemporalExtentServices.createStateOfLanguageCommunity(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfLanguageCommunity(iri);
             case "state_of_ordinary_biological_object":
-                return SpatioTemporalExtentServices.createStateOfOrdinaryBiologicalObject(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfOrdinaryBiologicalObject(iri);
             case "state_of_ordinary_functional_object":
-                return SpatioTemporalExtentServices.createStateOfOrdinaryFunctionalObject(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfOrdinaryFunctionalObject(iri);
             case "state_of_ordinary_physical_object":
-                return SpatioTemporalExtentServices.createStateOfOrdinaryPhysicalObject(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfOrdinaryPhysicalObject(iri);
             case "state_of_organization":
-                return SpatioTemporalExtentServices.createStateOfOrganization(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfOrganization(iri);
             case "state_of_organization_component":
-                return SpatioTemporalExtentServices.createStateOfOrganizationComponent(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfOrganizationComponent(iri);
             case "state_of_party":
-                return SpatioTemporalExtentServices.createStateOfParty(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfParty(iri);
             case "state_of_person":
-                return SpatioTemporalExtentServices.createStateOfPerson(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfPerson(iri);
             case "state_of_physical_object":
-                return SpatioTemporalExtentServices.createStateOfPhysicalObject(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfPhysicalObject(iri);
             case "state_of_position":
-                return SpatioTemporalExtentServices.createStateOfPosition(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfPosition(iri);
             case "state_of_sales_product_instance":
-                return SpatioTemporalExtentServices.createStateOfSalesProductInstance(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfSalesProductInstance(iri);
             case "state_of_sign":
-                return SpatioTemporalExtentServices.createStateOfSign(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfSign(iri);
             case "state_of_socially_constructed_activity":
-                return SpatioTemporalExtentServices.createStateOfSociallyConstructedActivity(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfSociallyConstructedActivity(iri);
             case "state_of_socially_constructed_object":
-                return SpatioTemporalExtentServices.createStateOfSociallyConstructedObject(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfSociallyConstructedObject(iri);
             case "state_of_system":
-                return SpatioTemporalExtentServices.createStateOfSystem(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfSystem(iri);
             case "state_of_system_component":
-                return SpatioTemporalExtentServices.createStateOfSystemComponent(iri.getIri());
+                return SpatioTemporalExtentServices.createStateOfSystemComponent(iri);
             case "system":
-                return SpatioTemporalExtentServices.createSystem(iri.getIri());
+                return SpatioTemporalExtentServices.createSystem(iri);
             case "system_component":
-                return SpatioTemporalExtentServices.createSystemComponent(iri.getIri());
+                return SpatioTemporalExtentServices.createSystemComponent(iri);
             case "temporal_composition":
-                return RelationshipServices.createTemporalComposition(iri.getIri());
+                return RelationshipServices.createTemporalComposition(iri);
             case "thing":
-                return SpatioTemporalExtentServices.createThing(iri.getIri());
+                return SpatioTemporalExtentServices.createThing(iri);
             case "transferee":
-                return SpatioTemporalExtentServices.createTransferee(iri.getIri());
+                return SpatioTemporalExtentServices.createTransferee(iri);
             case "transfer_of_ownership":
-                return SpatioTemporalExtentServices.createTransferOfOwnership(iri.getIri());
+                return SpatioTemporalExtentServices.createTransferOfOwnership(iri);
             case "transfer_of_ownership_of_money":
-                return SpatioTemporalExtentServices.createTransferOfOwnershipOfMoney(iri.getIri());
+                return SpatioTemporalExtentServices.createTransferOfOwnershipOfMoney(iri);
             case "transferor":
-                return SpatioTemporalExtentServices.createTransferor(iri.getIri());
+                return SpatioTemporalExtentServices.createTransferor(iri);
             case "unit_of_measure":
-                return RelationshipServices.createUnitOfMeasure(iri.getIri());
+                return RelationshipServices.createUnitOfMeasure(iri);
             case "participant_in_activity_or_association":
             default:
                 throw new HqdmException("Unknown type name: " + typeName);

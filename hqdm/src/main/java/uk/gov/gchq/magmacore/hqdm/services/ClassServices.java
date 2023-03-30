@@ -23,7 +23,7 @@ import uk.gov.gchq.magmacore.hqdm.model.impl.*;
  */
 public class ClassServices {
     /**
-     * Create a {@link Class} with an String.
+     * Create a {@link Class} with a T.
      *
      * @param id
      *            ID of the Class.
@@ -34,7 +34,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfAbstractObject} with an String.
+     * Create a {@link ClassOfAbstractObject} with a T.
      *
      * @param id
      *            ID of the ClassOfAbstractObject.
@@ -45,7 +45,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfActivity} with an String.
+     * Create a {@link ClassOfActivity} with a T.
      *
      * @param id
      *            ID of the ClassOfActivity.
@@ -56,7 +56,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfAgreeContract} with an String.
+     * Create a {@link ClassOfAgreeContract} with a T.
      *
      * @param id
      *            ID of the ClassOfAgreeContract.
@@ -67,7 +67,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfAgreementExecution} with an String.
+     * Create a {@link ClassOfAgreementExecution} with a T.
      *
      * @param id
      *            ID of the ClassOfAgreementExecution.
@@ -78,7 +78,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfAgreementProcess} with an String.
+     * Create a {@link ClassOfAgreementProcess} with a T.
      *
      * @param id
      *            ID of the ClassOfAgreementProcess.
@@ -89,7 +89,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfAmountOfMoney} with an String.
+     * Create a {@link ClassOfAmountOfMoney} with a T.
      *
      * @param id
      *            ID of the ClassOfAmountOfMoney.
@@ -100,7 +100,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfAssociation} with an String.
+     * Create a {@link ClassOfAssociation} with a T.
      *
      * @param id
      *            ID of the ClassOfAssociation.
@@ -111,7 +111,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfBiologicalObject} with an String.
+     * Create a {@link ClassOfBiologicalObject} with a T.
      *
      * @param id
      *            ID of the ClassOfBiologicalObject.
@@ -122,7 +122,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfBiologicalSystem} with an String.
+     * Create a {@link ClassOfBiologicalSystem} with a T.
      *
      * @param id
      *            ID of the ClassOfBiologicalSystem.
@@ -133,7 +133,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfBiologicalSystemComponent} with an String.
+     * Create a {@link ClassOfBiologicalSystemComponent} with a T.
      *
      * @param id
      *            ID of the ClassOfBiologicalSystemComponent.
@@ -144,7 +144,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfClass} with an String.
+     * Create a {@link ClassOfClass} with a T.
      *
      * @param id
      *            ID of the ClassOfClass.
@@ -155,7 +155,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfClassOfSpatioTemporalExtent} with an String.
+     * Create a {@link ClassOfClassOfSpatioTemporalExtent} with a T.
      *
      * @param id
      *            ID of the ClassOfClassOfSpatioTemporalExtent.
@@ -166,7 +166,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfContractExecution} with an String.
+     * Create a {@link ClassOfContractExecution} with a T.
      *
      * @param id
      *            ID of the ClassOfContractExecution.
@@ -177,7 +177,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfContractProcess} with an String.
+     * Create a {@link ClassOfContractProcess} with a T.
      *
      * @param id
      *            ID of the ClassOfContractProcess.
@@ -188,7 +188,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfEvent} with an String.
+     * Create a {@link ClassOfEvent} with a T.
      *
      * @param id
      *            ID of the ClassOfEvent.
@@ -199,7 +199,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfFunctionalObject} with an String.
+     * Create a {@link ClassOfFunctionalObject} with a T.
      *
      * @param id
      *            ID of the ClassOfFunctionalObject.
@@ -210,7 +210,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfFunctionalSystem} with an String.
+     * Create a {@link ClassOfFunctionalSystem} with a T.
      *
      * @param id
      *            ID of the ClassOfFunctionalSystem.
@@ -221,7 +221,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfFunctionalSystemComponent} with an String.
+     * Create a {@link ClassOfFunctionalSystemComponent} with a T.
      *
      * @param id
      *            ID of the ClassOfFunctionalSystemComponent.
@@ -232,7 +232,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfInPlaceBiologicalComponent} with an String.
+     * Create a {@link ClassOfInPlaceBiologicalComponent} with a T.
      *
      * @param id
      *            ID of the ClassOfInPlaceBiologicalComponent.
@@ -243,7 +243,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfIndividual} with an String.
+     * Create a {@link ClassOfIndividual} with a T.
      *
      * @param id
      *            ID of the ClassOfIndividual.
@@ -254,7 +254,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfInstalledFunctionalSystemComponent} with an String.
+     * Create a {@link ClassOfInstalledFunctionalSystemComponent} with a T.
      *
      * @param id
      *            ID of the ClassOfInstalledFunctionalSystemComponent.
@@ -266,62 +266,62 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfInstalledObject} with an String.
+     * Create a {@link ClassOfInstalledObject} with a T.
      *
      * @param id
      *            ID of the ClassOfInstalledObject.
      * @return A ClassOfInstalledObject instance.
      */
-    public static ClassOfInstalledObject createClassOfInstalledObject(final String id) {
-        return new ClassOfInstalledObjectImpl(id);
+    public static <T> ClassOfInstalledObject<T> createClassOfInstalledObject(final T id) {
+        return new ClassOfInstalledObjectImpl<T>(id);
     }
 
     /**
-     * Create a {@link ClassOfIntentionallyConstructedObject} with an String.
+     * Create a {@link ClassOfIntentionallyConstructedObject} with a T.
      *
      * @param id
      *            ID of the ClassOfIntentionallyConstructedObject.
      * @return A ClassOfIntentionallyConstructedObject instance.
      */
-    public static ClassOfIntentionallyConstructedObject createClassOfIntentionallyConstructedObject(final String id) {
-        return new ClassOfIntentionallyConstructedObjectImpl(id);
+    public static <T> ClassOfIntentionallyConstructedObject<T> createClassOfIntentionallyConstructedObject(final T id) {
+        return new ClassOfIntentionallyConstructedObjectImpl<T>(id);
     }
 
     /**
-     * Create a {@link ClassOfOffer} with an String.
+     * Create a {@link ClassOfOffer} with a T.
      *
      * @param id
      *            ID of the ClassOfOffer.
      * @return A ClassOfOffer instance.
      */
-    public static ClassOfOffer createClassOfOffer(final String id) {
-        return new ClassOfOfferImpl(id);
+    public static <T> ClassOfOffer<T> createClassOfOffer(final T id) {
+        return new ClassOfOfferImpl<T>(id);
     }
 
     /**
-     * Create a {@link ClassOfOrdinaryBiologicalObject} with an String.
+     * Create a {@link ClassOfOrdinaryBiologicalObject} with a T.
      *
      * @param id
      *            ID of the ClassOfOrdinaryBiologicalObject.
      * @return A ClassOfOrdinaryBiologicalObject instance.
      */
-    public static ClassOfOrdinaryBiologicalObject createClassOfOrdinaryBiologicalObject(final String id) {
-        return new ClassOfOrdinaryBiologicalObjectImpl(id);
+    public static <T> ClassOfOrdinaryBiologicalObject<T> createClassOfOrdinaryBiologicalObject(final T id) {
+        return new ClassOfOrdinaryBiologicalObjectImpl<T>(id);
     }
 
     /**
-     * Create a {@link ClassOfOrdinaryFunctionalObject} with an String.
+     * Create a {@link ClassOfOrdinaryFunctionalObject} with a T.
      *
      * @param id
      *            ID of the ClassOfOrdinaryFunctionalObject.
      * @return A ClassOfOrdinaryFunctionalObject instance.
      */
-    public static ClassOfOrdinaryFunctionalObject createClassOfOrdinaryFunctionalObject(final String id) {
-        return new ClassOfOrdinaryFunctionalObjectImpl(id);
+    public static <T> ClassOfOrdinaryFunctionalObject<T> createClassOfOrdinaryFunctionalObject(final T id) {
+        return new ClassOfOrdinaryFunctionalObjectImpl<T>(id);
     }
 
     /**
-     * Create a {@link ClassOfOrdinaryPhysicalObject} with an String.
+     * Create a {@link ClassOfOrdinaryPhysicalObject} with a T.
      *
      * @param id
      *            ID of the ClassOfOrdinaryPhysicalObject.
@@ -332,7 +332,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfOrganization} with an String.
+     * Create a {@link ClassOfOrganization} with a T.
      *
      * @param id
      *            ID of the ClassOfOrganization.
@@ -343,7 +343,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfOrganizationComponent} with an String.
+     * Create a {@link ClassOfOrganizationComponent} with a T.
      *
      * @param id
      *            ID of the ClassOfOrganizationComponent.
@@ -354,7 +354,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfParticipant} with an String.
+     * Create a {@link ClassOfParticipant} with a T.
      *
      * @param id
      *            ID of the ClassOfParticipant.
@@ -365,7 +365,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfParty} with an String.
+     * Create a {@link ClassOfParty} with a T.
      *
      * @param id
      *            ID of the ClassOfParty.
@@ -376,7 +376,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfPeriodOfTime} with an String.
+     * Create a {@link ClassOfPeriodOfTime} with a T.
      *
      * @param id
      *            ID of the ClassOfPeriodOfTime.
@@ -387,7 +387,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfPerson} with an String.
+     * Create a {@link ClassOfPerson} with a T.
      *
      * @param id
      *            ID of the ClassOfPerson.
@@ -398,7 +398,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfPersonInPosition} with an String.
+     * Create a {@link ClassOfPersonInPosition} with a T.
      *
      * @param id
      *            ID of the ClassOfPersonInPosition.
@@ -409,7 +409,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfPhysicalObject} with an String.
+     * Create a {@link ClassOfPhysicalObject} with a T.
      *
      * @param id
      *            ID of the ClassOfPhysicalObject.
@@ -420,7 +420,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfPhysicalProperty} with an String.
+     * Create a {@link ClassOfPhysicalProperty} with a T.
      *
      * @param id
      *            ID of the ClassOfPhysicalProperty.
@@ -431,7 +431,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfPhysicalQuantity} with an String.
+     * Create a {@link ClassOfPhysicalQuantity} with a T.
      *
      * @param id
      *            ID of the ClassOfPhysicalQuantity.
@@ -442,7 +442,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfPointInTime} with an String.
+     * Create a {@link ClassOfPointInTime} with a T.
      *
      * @param id
      *            ID of the ClassOfPointInTime.
@@ -453,7 +453,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfPosition} with an String.
+     * Create a {@link ClassOfPosition} with a T.
      *
      * @param id
      *            ID of the ClassOfPosition.
@@ -464,7 +464,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfPossibleWorld} with an String.
+     * Create a {@link ClassOfPossibleWorld} with a T.
      *
      * @param id
      *            ID of the ClassOfPossibleWorld.
@@ -475,7 +475,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfReachingAgreement} with an String.
+     * Create a {@link ClassOfReachingAgreement} with a T.
      *
      * @param id
      *            ID of the ClassOfReachingAgreement.
@@ -486,7 +486,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfRelationship} with an String.
+     * Create a {@link ClassOfRelationship} with a T.
      *
      * @param id
      *            ID of the ClassOfRelationship.
@@ -497,7 +497,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfRepresentation} with an String.
+     * Create a {@link ClassOfRepresentation} with a T.
      *
      * @param id
      *            ID of the ClassOfRepresentation.
@@ -508,7 +508,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfSalesProductInstance} with an String.
+     * Create a {@link ClassOfSalesProductInstance} with a T.
      *
      * @param id
      *            ID of the ClassOfSalesProductInstance.
@@ -519,7 +519,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfSign} with an String.
+     * Create a {@link ClassOfSign} with a T.
      *
      * @param id
      *            ID of the ClassOfSign.
@@ -530,7 +530,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfSociallyConstructedActivity} with an String.
+     * Create a {@link ClassOfSociallyConstructedActivity} with a T.
      *
      * @param id
      *            ID of the ClassOfSociallyConstructedActivity.
@@ -541,7 +541,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfSociallyConstructedObject} with an String.
+     * Create a {@link ClassOfSociallyConstructedObject} with a T.
      *
      * @param id
      *            ID of the ClassOfSociallyConstructedObject.
@@ -552,7 +552,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfSpatioTemporalExtent} with an String.
+     * Create a {@link ClassOfSpatioTemporalExtent} with a T.
      *
      * @param id
      *            ID of the ClassOfSpatioTemporalExtent.
@@ -563,7 +563,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfState} with an String.
+     * Create a {@link ClassOfState} with a T.
      *
      * @param id
      *            ID of the ClassOfState.
@@ -574,7 +574,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfActivity} with an String.
+     * Create a {@link ClassOfStateOfActivity} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfActivity.
@@ -585,7 +585,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfAmountOfMoney} with an String.
+     * Create a {@link ClassOfStateOfAmountOfMoney} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfAmountOfMoney.
@@ -596,7 +596,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfAssociation} with an String.
+     * Create a {@link ClassOfStateOfAssociation} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfAssociation.
@@ -607,7 +607,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfBiologicalObject} with an String.
+     * Create a {@link ClassOfStateOfBiologicalObject} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfBiologicalObject.
@@ -618,7 +618,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfBiologicalSystem} with an String.
+     * Create a {@link ClassOfStateOfBiologicalSystem} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfBiologicalSystem.
@@ -629,7 +629,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfBiologicalSystemComponent} with an String.
+     * Create a {@link ClassOfStateOfBiologicalSystemComponent} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfBiologicalSystemComponent.
@@ -641,7 +641,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfFunctionalObject} with an String.
+     * Create a {@link ClassOfStateOfFunctionalObject} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfFunctionalObject.
@@ -652,7 +652,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfFunctionalSystem} with an String.
+     * Create a {@link ClassOfStateOfFunctionalSystem} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfFunctionalSystem.
@@ -663,7 +663,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfFunctionalSystemComponent} with an String.
+     * Create a {@link ClassOfStateOfFunctionalSystemComponent} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfFunctionalSystemComponent.
@@ -675,7 +675,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfIntentionallyConstructedObject} with an String.
+     * Create a {@link ClassOfStateOfIntentionallyConstructedObject} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfIntentionallyConstructedObject.
@@ -688,7 +688,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfOrdinaryBiologicalObject} with an String.
+     * Create a {@link ClassOfStateOfOrdinaryBiologicalObject} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfOrdinaryBiologicalObject.
@@ -700,7 +700,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfOrdinaryFunctionalObject} with an String.
+     * Create a {@link ClassOfStateOfOrdinaryFunctionalObject} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfOrdinaryFunctionalObject.
@@ -712,7 +712,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfOrdinaryPhysicalObject} with an String.
+     * Create a {@link ClassOfStateOfOrdinaryPhysicalObject} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfOrdinaryPhysicalObject.
@@ -723,7 +723,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfOrganization} with an String.
+     * Create a {@link ClassOfStateOfOrganization} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfOrganization.
@@ -734,7 +734,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfOrganizationComponent} with an String.
+     * Create a {@link ClassOfStateOfOrganizationComponent} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfOrganizationComponent.
@@ -745,7 +745,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfParty} with an String.
+     * Create a {@link ClassOfStateOfParty} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfParty.
@@ -756,7 +756,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfPerson} with an String.
+     * Create a {@link ClassOfStateOfPerson} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfPerson.
@@ -767,7 +767,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfPhysicalObject} with an String.
+     * Create a {@link ClassOfStateOfPhysicalObject} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfPhysicalObject.
@@ -778,7 +778,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfPosition} with an String.
+     * Create a {@link ClassOfStateOfPosition} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfPosition.
@@ -789,7 +789,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfSalesProductInstance} with an String.
+     * Create a {@link ClassOfStateOfSalesProductInstance} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfSalesProductInstance.
@@ -800,7 +800,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfSign} with an String.
+     * Create a {@link ClassOfStateOfSign} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfSign.
@@ -811,7 +811,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfSociallyConstructedActivity} with an String.
+     * Create a {@link ClassOfStateOfSociallyConstructedActivity} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfSociallyConstructedActivity.
@@ -823,7 +823,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfSociallyConstructedObject} with an String.
+     * Create a {@link ClassOfStateOfSociallyConstructedObject} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfSociallyConstructedObject.
@@ -835,7 +835,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfSystem} with an String.
+     * Create a {@link ClassOfStateOfSystem} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfSystem.
@@ -846,7 +846,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfStateOfSystemComponent} with an String.
+     * Create a {@link ClassOfStateOfSystemComponent} with a T.
      *
      * @param id
      *            ID of the ClassOfStateOfSystemComponent.
@@ -857,7 +857,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfSystem} with an String.
+     * Create a {@link ClassOfSystem} with a T.
      *
      * @param id
      *            ID of the ClassOfSystem.
@@ -868,7 +868,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link ClassOfSystemComponent} with an String.
+     * Create a {@link ClassOfSystemComponent} with a T.
      *
      * @param id
      *            ID of the ClassOfSystemComponent.
@@ -879,7 +879,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link Definition} with an String.
+     * Create a {@link Definition} with a T.
      *
      * @param id
      *            ID of the Definition.
@@ -890,7 +890,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link Description} with an String.
+     * Create a {@link Description} with a T.
      *
      * @param id
      *            ID of the Description.
@@ -901,7 +901,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link EnumeratedClass} with an String.
+     * Create a {@link EnumeratedClass} with a T.
      *
      * @param id
      *            ID of the EnumeratedClass.
@@ -912,7 +912,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfActivity} with an String.
+     * Create a {@link KindOfActivity} with a T.
      *
      * @param id
      *            ID of the KindOfActivity.
@@ -923,7 +923,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfAssociation} with an String.
+     * Create a {@link KindOfAssociation} with a T.
      *
      * @param id
      *            ID of the KindOfAssociation.
@@ -934,7 +934,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfBiologicalObject} with an String.
+     * Create a {@link KindOfBiologicalObject} with a T.
      *
      * @param id
      *            ID of the KindOfBiologicalObject.
@@ -945,7 +945,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfBiologicalSystem} with an String.
+     * Create a {@link KindOfBiologicalSystem} with a T.
      *
      * @param id
      *            ID of the KindOfBiologicalSystem.
@@ -956,7 +956,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfBiologicalSystemComponent} with an String.
+     * Create a {@link KindOfBiologicalSystemComponent} with a T.
      *
      * @param id
      *            ID of the KindOfBiologicalSystemComponent.
@@ -967,7 +967,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfFunctionalObject} with an String.
+     * Create a {@link KindOfFunctionalObject} with a T.
      *
      * @param id
      *            ID of the KindOfFunctionalObject.
@@ -978,7 +978,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfFunctionalSystem} with an String.
+     * Create a {@link KindOfFunctionalSystem} with a T.
      *
      * @param id
      *            ID of the KindOfFunctionalSystem.
@@ -989,7 +989,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfFunctionalSystemComponent} with an String.
+     * Create a {@link KindOfFunctionalSystemComponent} with a T.
      *
      * @param id
      *            ID of the KindOfFunctionalSystemComponent.
@@ -1000,7 +1000,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfIndividual} with an String.
+     * Create a {@link KindOfIndividual} with a T.
      *
      * @param id
      *            ID of the KindOfIndividual.
@@ -1011,7 +1011,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfIntentionallyConstructedObject} with an String.
+     * Create a {@link KindOfIntentionallyConstructedObject} with a T.
      *
      * @param id
      *            ID of the KindOfIntentionallyConstructedObject.
@@ -1022,7 +1022,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfOrdinaryBiologicalObject} with an String.
+     * Create a {@link KindOfOrdinaryBiologicalObject} with a T.
      *
      * @param id
      *            ID of the KindOfOrdinaryBiologicalObject.
@@ -1033,7 +1033,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfOrdinaryFunctionalObject} with an String.
+     * Create a {@link KindOfOrdinaryFunctionalObject} with a T.
      *
      * @param id
      *            ID of the KindOfOrdinaryFunctionalObject.
@@ -1044,7 +1044,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfOrdinaryPhysicalObject} with an String.
+     * Create a {@link KindOfOrdinaryPhysicalObject} with a T.
      *
      * @param id
      *            ID of the KindOfOrdinaryPhysicalObject.
@@ -1055,7 +1055,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfOrganization} with an String.
+     * Create a {@link KindOfOrganization} with a T.
      *
      * @param id
      *            ID of the KindOfOrganization.
@@ -1066,7 +1066,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfOrganizationComponent} with an String.
+     * Create a {@link KindOfOrganizationComponent} with a T.
      *
      * @param id
      *            ID of the KindOfOrganizationComponent.
@@ -1077,7 +1077,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfParty} with an String.
+     * Create a {@link KindOfParty} with a T.
      *
      * @param id
      *            ID of the KindOfParty.
@@ -1088,7 +1088,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfPerson} with an String.
+     * Create a {@link KindOfPerson} with a T.
      *
      * @param id
      *            ID of the KindOfPerson.
@@ -1099,7 +1099,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfPhysicalObject} with an String.
+     * Create a {@link KindOfPhysicalObject} with a T.
      *
      * @param id
      *            ID of the KindOfPhysicalObject.
@@ -1110,7 +1110,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfPhysicalProperty} with an String.
+     * Create a {@link KindOfPhysicalProperty} with a T.
      *
      * @param id
      *            ID of the KindOfPhysicalProperty.
@@ -1121,7 +1121,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfPhysicalQuantity} with an String.
+     * Create a {@link KindOfPhysicalQuantity} with a T.
      *
      * @param id
      *            ID of the KindOfPhysicalQuantity.
@@ -1132,7 +1132,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfPosition} with an String.
+     * Create a {@link KindOfPosition} with a T.
      *
      * @param id
      *            ID of the KindOfPosition.
@@ -1143,7 +1143,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfRelationshipWithRestriction} with an String.
+     * Create a {@link KindOfRelationshipWithRestriction} with a T.
      *
      * @param id
      *            ID of the KindOfRelationshipWithRestriction.
@@ -1154,7 +1154,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfRelationshipWithSignature} with an String.
+     * Create a {@link KindOfRelationshipWithSignature} with a T.
      *
      * @param id
      *            ID of the KindOfRelationshipWithSignature.
@@ -1165,7 +1165,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfSociallyConstructedObject} with an String.
+     * Create a {@link KindOfSociallyConstructedObject} with a T.
      *
      * @param id
      *            ID of the KindOfSociallyConstructedObject.
@@ -1176,7 +1176,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfSystem} with an String.
+     * Create a {@link KindOfSystem} with a T.
      *
      * @param id
      *            ID of the KindOfSystem.
@@ -1187,7 +1187,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link KindOfSystemComponent} with an String.
+     * Create a {@link KindOfSystemComponent} with a T.
      *
      * @param id
      *            ID of the KindOfSystemComponent.
@@ -1198,7 +1198,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link Identification} with an String.
+     * Create a {@link Identification} with a T.
      *
      * @param id
      *            ID of the Identification.
@@ -1209,7 +1209,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link Pattern} with an String.
+     * Create a {@link Pattern} with a T.
      *
      * @param id
      *            ID of the Pattern.
@@ -1220,7 +1220,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link RepresentationByPattern} with an String.
+     * Create a {@link RepresentationByPattern} with a T.
      *
      * @param id
      *            ID of the RepresentationByPattern.
@@ -1231,7 +1231,7 @@ public class ClassServices {
     }
 
     /**
-     * Create a {@link Role} with an String.
+     * Create a {@link Role} with a T.
      *
      * @param id
      *            ID of the Role.

@@ -12,6 +12,8 @@ import java.util.List;
 import org.junit.Test;
 
 import uk.gov.gchq.magmacore.hqdm.model.Thing;
+import uk.gov.gchq.magmacore.hqdm.rdf.iri.IRI;
+import uk.gov.gchq.magmacore.hqdm.rdf.iri.IriBase;
 import uk.gov.gchq.magmacore.hqdm.rdf.iri.RDFS;
 import uk.gov.gchq.magmacore.hqdm.services.SpatioTemporalExtentServices;
 
@@ -19,6 +21,8 @@ import uk.gov.gchq.magmacore.hqdm.services.SpatioTemporalExtentServices;
  * Check that all Rdf*Service methods return a {@link Thing} with an RDFS.RDF_TYPE predicate.
  */
 public class RdfServicesTest {
+
+    private static final IriBase BASE = new IriBase("ex", "http://example.com/");
 
     /**
      * Test all of the RDF*Services classes.
@@ -37,18 +41,18 @@ public class RdfServicesTest {
      */
     private void testMethods(final Method[] methods) {
 
-        final List<Thing> thingsWithoutRdfType = Arrays.stream(methods)
+        final List<Thing<IRI>> thingsWithoutRdfType = Arrays.stream(methods)
                 .filter(method -> (method.getModifiers() & Modifier.STATIC) > 0)
                 .filter(method -> method.getName().startsWith("create"))
                 .map(method -> {
                     try {
-                        final var result = method.invoke(null, "id");
+                        final var result = method.invoke(null, new IRI(BASE, "id"));
                         assertNotNull(result);
-                        return (Thing) result;
+                        return (Thing<IRI>) result;
                     } catch (final Exception ex) {
                         fail(ex.getMessage());
                     }
-                    return SpatioTemporalExtentServices.createThing("id");
+                    return SpatioTemporalExtentServices.createThing(new IRI(BASE, "id"));
                 })
                 .filter(thing -> !thing.hasValue(RDFS.RDF_TYPE))
                 .toList();

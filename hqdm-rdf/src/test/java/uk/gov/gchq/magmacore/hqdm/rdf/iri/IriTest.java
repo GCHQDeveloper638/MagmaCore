@@ -20,9 +20,6 @@ import org.junit.Test;
 
 import uk.gov.gchq.magmacore.hqdm.rdf.HqdmObjectFactory;
 import uk.gov.gchq.magmacore.hqdm.rdf.exception.IriException;
-import uk.gov.gchq.magmacore.hqdm.rdf.iri.IRI;
-import uk.gov.gchq.magmacore.hqdm.rdf.iri.IriBase;
-import uk.gov.gchq.magmacore.hqdm.rdf.iri.RDFS;
 
 /**
  * Tests for the {@link HqdmObjectFactory}.
