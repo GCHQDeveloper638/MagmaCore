@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link ClassOfSign} where all the {@link Sign}s are of the same {@link Pattern}.
  */
-public interface Pattern extends ClassOfSign {
+public interface Pattern<T> extends ClassOfSign<T> {
 }

@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link Relationship} where each {@code member__of} the {@code subclass} is a {@code member__of}
  * the {@code superclass}.
  */
-public interface Specialization extends Relationship {
+public interface Specialization<T> extends Relationship<T> {
 }

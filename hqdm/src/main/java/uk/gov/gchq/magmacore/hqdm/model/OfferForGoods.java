@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * An {@link Offer} of an {@link ExchangeOfGoodsAndMoney}.
  */
-public interface OfferForGoods extends Offer {
+public interface OfferForGoods<T> extends Offer<T> {
 }

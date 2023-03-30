@@ -15,8 +15,10 @@
 package uk.gov.gchq.magmacore.hqdm.model;
 
 /**
- * A {@link ClassOfStateOfSociallyConstructedObject} that is also a {@link ClassOfStateOfParty} that
+ * A {@link ClassOfStateOfSociallyConstructedObject} that is also a
+ * {@link ClassOfStateOfParty} that
  * is {@link StateOfOrganization} or any of its subsets.
  */
-public interface ClassOfStateOfOrganization extends ClassOfStateOfSociallyConstructedObject, ClassOfStateOfParty {
+public interface ClassOfStateOfOrganization<T>
+        extends ClassOfStateOfSociallyConstructedObject<T>, ClassOfStateOfParty<T> {
 }

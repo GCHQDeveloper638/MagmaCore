@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfPerson} that is also a {@link KindOfParty} whose members are all of the same
  * kind.
  */
-public interface KindOfPerson extends KindOfParty, ClassOfPerson {
+public interface KindOfPerson<T> extends KindOfParty<T>, ClassOfPerson<T> {
 }

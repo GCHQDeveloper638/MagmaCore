@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of KindOfFunctionalSystem.
  */
-public class KindOfFunctionalSystemImpl extends HqdmObject implements KindOfFunctionalSystem {
+public class KindOfFunctionalSystemImpl<T> extends HqdmObject<T> implements KindOfFunctionalSystem<T> {
     /**
      * Constructs a new KindOfFunctionalSystem.
      *
      * @param id String of the KindOfFunctionalSystem.
      */
-    public KindOfFunctionalSystemImpl(final String id) {
+    public KindOfFunctionalSystemImpl(final T id) {
         super(id);
     }
 }

@@ -21,5 +21,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * Note: This entity type is replicated as the {@code member__of} relationship.
  * </p>
  */
-public interface Classification extends Relationship {
+public interface Classification<T> extends Relationship<T> {
 }

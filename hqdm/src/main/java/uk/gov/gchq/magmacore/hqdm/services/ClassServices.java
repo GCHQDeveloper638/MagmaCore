@@ -25,228 +25,251 @@ public class ClassServices {
     /**
      * Create a {@link Class} with an String.
      *
-     * @param id ID of the Class.
+     * @param id
+     *            ID of the Class.
      * @return A Class instance.
      */
-    public static Class createClass(final String id) {
-        return new ClassImpl(id);
+    public static <T> Class<T> createClass(final T id) {
+        return new ClassImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfAbstractObject} with an String.
      *
-     * @param id ID of the ClassOfAbstractObject.
+     * @param id
+     *            ID of the ClassOfAbstractObject.
      * @return A ClassOfAbstractObject instance.
      */
-    public static ClassOfAbstractObject createClassOfAbstractObject(final String id) {
-        return new ClassOfAbstractObjectImpl(id);
+    public static <T> ClassOfAbstractObject<T> createClassOfAbstractObject(final T id) {
+        return new ClassOfAbstractObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfActivity} with an String.
      *
-     * @param id ID of the ClassOfActivity.
+     * @param id
+     *            ID of the ClassOfActivity.
      * @return A ClassOfActivity instance.
      */
-    public static ClassOfActivity createClassOfActivity(final String id) {
-        return new ClassOfActivityImpl(id);
+    public static <T> ClassOfActivity<T> createClassOfActivity(final T id) {
+        return new ClassOfActivityImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfAgreeContract} with an String.
      *
-     * @param id ID of the ClassOfAgreeContract.
+     * @param id
+     *            ID of the ClassOfAgreeContract.
      * @return A ClassOfAgreeContract instance.
      */
-    public static ClassOfAgreeContract createClassOfAgreeContract(final String id) {
-        return new ClassOfAgreeContractImpl(id);
+    public static <T> ClassOfAgreeContract<T> createClassOfAgreeContract(final T id) {
+        return new ClassOfAgreeContractImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfAgreementExecution} with an String.
      *
-     * @param id ID of the ClassOfAgreementExecution.
+     * @param id
+     *            ID of the ClassOfAgreementExecution.
      * @return A ClassOfAgreementExecution instance.
      */
-    public static ClassOfAgreementExecution createClassOfAgreementExecution(final String id) {
-        return new ClassOfAgreementExecutionImpl(id);
+    public static <T> ClassOfAgreementExecution<T> createClassOfAgreementExecution(final T id) {
+        return new ClassOfAgreementExecutionImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfAgreementProcess} with an String.
      *
-     * @param id ID of the ClassOfAgreementProcess.
+     * @param id
+     *            ID of the ClassOfAgreementProcess.
      * @return A ClassOfAgreementProcess instance.
      */
-    public static ClassOfAgreementProcess createClassOfAgreementProcess(final String id) {
-        return new ClassOfAgreementProcessImpl(id);
+    public static <T> ClassOfAgreementProcess<T> createClassOfAgreementProcess(final T id) {
+        return new ClassOfAgreementProcessImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfAmountOfMoney} with an String.
      *
-     * @param id ID of the ClassOfAmountOfMoney.
+     * @param id
+     *            ID of the ClassOfAmountOfMoney.
      * @return A ClassOfAmountOfMoney instance.
      */
-    public static ClassOfAmountOfMoney createClassOfAmountOfMoney(final String id) {
-        return new ClassOfAmountOfMoneyImpl(id);
+    public static <T> ClassOfAmountOfMoney<T> createClassOfAmountOfMoney(final T id) {
+        return new ClassOfAmountOfMoneyImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfAssociation} with an String.
      *
-     * @param id ID of the ClassOfAssociation.
+     * @param id
+     *            ID of the ClassOfAssociation.
      * @return A ClassOfAssociation instance.
      */
-    public static ClassOfAssociation createClassOfAssociation(final String id) {
-        return new ClassOfAssociationImpl(id);
+    public static <T> ClassOfAssociation<T> createClassOfAssociation(final T id) {
+        return new ClassOfAssociationImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfBiologicalObject} with an String.
      *
-     * @param id ID of the ClassOfBiologicalObject.
+     * @param id
+     *            ID of the ClassOfBiologicalObject.
      * @return A ClassOfBiologicalObject instance.
      */
-    public static ClassOfBiologicalObject createClassOfBiologicalObject(final String id) {
-        return new ClassOfBiologicalObjectImpl(id);
+    public static <T> ClassOfBiologicalObject<T> createClassOfBiologicalObject(final T id) {
+        return new ClassOfBiologicalObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfBiologicalSystem} with an String.
      *
-     * @param id ID of the ClassOfBiologicalSystem.
+     * @param id
+     *            ID of the ClassOfBiologicalSystem.
      * @return A ClassOfBiologicalSystem instance.
      */
-    public static ClassOfBiologicalSystem createClassOfBiologicalSystem(final String id) {
-        return new ClassOfBiologicalSystemImpl(id);
+    public static <T> ClassOfBiologicalSystem<T> createClassOfBiologicalSystem(final T id) {
+        return new ClassOfBiologicalSystemImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfBiologicalSystemComponent} with an String.
      *
-     * @param id ID of the ClassOfBiologicalSystemComponent.
+     * @param id
+     *            ID of the ClassOfBiologicalSystemComponent.
      * @return A ClassOfBiologicalSystemComponent instance.
      */
-    public static ClassOfBiologicalSystemComponent createClassOfBiologicalSystemComponent(final String id) {
-        return new ClassOfBiologicalSystemComponentImpl(id);
+    public static <T> ClassOfBiologicalSystemComponent<T> createClassOfBiologicalSystemComponent(final T id) {
+        return new ClassOfBiologicalSystemComponentImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfClass} with an String.
      *
-     * @param id ID of the ClassOfClass.
+     * @param id
+     *            ID of the ClassOfClass.
      * @return A ClassOfClass instance.
      */
-    public static ClassOfClass createClassOfClass(final String id) {
-        return new ClassOfClassImpl(id);
+    public static <T> ClassOfClass<T> createClassOfClass(final T id) {
+        return new ClassOfClassImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfClassOfSpatioTemporalExtent} with an String.
      *
-     * @param id ID of the ClassOfClassOfSpatioTemporalExtent.
+     * @param id
+     *            ID of the ClassOfClassOfSpatioTemporalExtent.
      * @return A ClassOfClassOfSpatioTemporalExtent instance.
      */
-    public static ClassOfClassOfSpatioTemporalExtent createClassOfClassOfSpatioTemporalExtent(final String id) {
-        return new ClassOfClassOfSpatioTemporalExtentImpl(id);
+    public static <T> ClassOfClassOfSpatioTemporalExtent<T> createClassOfClassOfSpatioTemporalExtent(final T id) {
+        return new ClassOfClassOfSpatioTemporalExtentImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfContractExecution} with an String.
      *
-     * @param id ID of the ClassOfContractExecution.
+     * @param id
+     *            ID of the ClassOfContractExecution.
      * @return A ClassOfContractExecution instance.
      */
-    public static ClassOfContractExecution createClassOfContractExecution(final String id) {
-        return new ClassOfContractExecutionImpl(id);
+    public static <T> ClassOfContractExecution<T> createClassOfContractExecution(final T id) {
+        return new ClassOfContractExecutionImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfContractProcess} with an String.
      *
-     * @param id ID of the ClassOfContractProcess.
+     * @param id
+     *            ID of the ClassOfContractProcess.
      * @return A ClassOfContractProcess instance.
      */
-    public static ClassOfContractProcess createClassOfContractProcess(final String id) {
-        return new ClassOfContractProcessImpl(id);
+    public static <T> ClassOfContractProcess<T> createClassOfContractProcess(final T id) {
+        return new ClassOfContractProcessImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfEvent} with an String.
      *
-     * @param id ID of the ClassOfEvent.
+     * @param id
+     *            ID of the ClassOfEvent.
      * @return A ClassOfEvent instance.
      */
-    public static ClassOfEvent createClassOfEvent(final String id) {
-        return new ClassOfEventImpl(id);
+    public static <T> ClassOfEvent<T> createClassOfEvent(final T id) {
+        return new ClassOfEventImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfFunctionalObject} with an String.
      *
-     * @param id ID of the ClassOfFunctionalObject.
+     * @param id
+     *            ID of the ClassOfFunctionalObject.
      * @return A ClassOfFunctionalObject instance.
      */
-    public static ClassOfFunctionalObject createClassOfFunctionalObject(final String id) {
-        return new ClassOfFunctionalObjectImpl(id);
+    public static <T> ClassOfFunctionalObject<T> createClassOfFunctionalObject(final T id) {
+        return new ClassOfFunctionalObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfFunctionalSystem} with an String.
      *
-     * @param id ID of the ClassOfFunctionalSystem.
+     * @param id
+     *            ID of the ClassOfFunctionalSystem.
      * @return A ClassOfFunctionalSystem instance.
      */
-    public static ClassOfFunctionalSystem createClassOfFunctionalSystem(final String id) {
-        return new ClassOfFunctionalSystemImpl(id);
+    public static <T> ClassOfFunctionalSystem<T> createClassOfFunctionalSystem(final T id) {
+        return new ClassOfFunctionalSystemImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfFunctionalSystemComponent} with an String.
      *
-     * @param id ID of the ClassOfFunctionalSystemComponent.
+     * @param id
+     *            ID of the ClassOfFunctionalSystemComponent.
      * @return A ClassOfFunctionalSystemComponent instance.
      */
-    public static ClassOfFunctionalSystemComponent createClassOfFunctionalSystemComponent(final String id) {
-        return new ClassOfFunctionalSystemComponentImpl(id);
+    public static <T> ClassOfFunctionalSystemComponent<T> createClassOfFunctionalSystemComponent(final T id) {
+        return new ClassOfFunctionalSystemComponentImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfInPlaceBiologicalComponent} with an String.
      *
-     * @param id ID of the ClassOfInPlaceBiologicalComponent.
+     * @param id
+     *            ID of the ClassOfInPlaceBiologicalComponent.
      * @return A ClassOfInPlaceBiologicalComponent instance.
      */
-    public static ClassOfInPlaceBiologicalComponent createClassOfInPlaceBiologicalComponent(final String id) {
-        return new ClassOfInPlaceBiologicalComponentImpl(id);
+    public static <T> ClassOfInPlaceBiologicalComponent<T> createClassOfInPlaceBiologicalComponent(final T id) {
+        return new ClassOfInPlaceBiologicalComponentImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfIndividual} with an String.
      *
-     * @param id ID of the ClassOfIndividual.
+     * @param id
+     *            ID of the ClassOfIndividual.
      * @return A ClassOfIndividual instance.
      */
-    public static ClassOfIndividual createClassOfIndividual(final String id) {
-        return new ClassOfIndividualImpl(id);
+    public static <T> ClassOfIndividual<T> createClassOfIndividual(final T id) {
+        return new ClassOfIndividualImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfInstalledFunctionalSystemComponent} with an String.
      *
-     * @param id ID of the ClassOfInstalledFunctionalSystemComponent.
+     * @param id
+     *            ID of the ClassOfInstalledFunctionalSystemComponent.
      * @return A ClassOfInstalledFunctionalSystemComponent instance.
      */
-    public static ClassOfInstalledFunctionalSystemComponent createClassOfInstalledFunctionalSystemComponent(
-            final String id) {
-        return new ClassOfInstalledFunctionalSystemComponentImpl(id);
+    public static <T> ClassOfInstalledFunctionalSystemComponent<T> createClassOfInstalledFunctionalSystemComponent(
+            final T id) {
+        return new ClassOfInstalledFunctionalSystemComponentImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfInstalledObject} with an String.
      *
-     * @param id ID of the ClassOfInstalledObject.
+     * @param id
+     *            ID of the ClassOfInstalledObject.
      * @return A ClassOfInstalledObject instance.
      */
     public static ClassOfInstalledObject createClassOfInstalledObject(final String id) {
@@ -256,7 +279,8 @@ public class ClassServices {
     /**
      * Create a {@link ClassOfIntentionallyConstructedObject} with an String.
      *
-     * @param id ID of the ClassOfIntentionallyConstructedObject.
+     * @param id
+     *            ID of the ClassOfIntentionallyConstructedObject.
      * @return A ClassOfIntentionallyConstructedObject instance.
      */
     public static ClassOfIntentionallyConstructedObject createClassOfIntentionallyConstructedObject(final String id) {
@@ -266,7 +290,8 @@ public class ClassServices {
     /**
      * Create a {@link ClassOfOffer} with an String.
      *
-     * @param id ID of the ClassOfOffer.
+     * @param id
+     *            ID of the ClassOfOffer.
      * @return A ClassOfOffer instance.
      */
     public static ClassOfOffer createClassOfOffer(final String id) {
@@ -276,7 +301,8 @@ public class ClassServices {
     /**
      * Create a {@link ClassOfOrdinaryBiologicalObject} with an String.
      *
-     * @param id ID of the ClassOfOrdinaryBiologicalObject.
+     * @param id
+     *            ID of the ClassOfOrdinaryBiologicalObject.
      * @return A ClassOfOrdinaryBiologicalObject instance.
      */
     public static ClassOfOrdinaryBiologicalObject createClassOfOrdinaryBiologicalObject(final String id) {
@@ -286,7 +312,8 @@ public class ClassServices {
     /**
      * Create a {@link ClassOfOrdinaryFunctionalObject} with an String.
      *
-     * @param id ID of the ClassOfOrdinaryFunctionalObject.
+     * @param id
+     *            ID of the ClassOfOrdinaryFunctionalObject.
      * @return A ClassOfOrdinaryFunctionalObject instance.
      */
     public static ClassOfOrdinaryFunctionalObject createClassOfOrdinaryFunctionalObject(final String id) {
@@ -296,835 +323,921 @@ public class ClassServices {
     /**
      * Create a {@link ClassOfOrdinaryPhysicalObject} with an String.
      *
-     * @param id ID of the ClassOfOrdinaryPhysicalObject.
+     * @param id
+     *            ID of the ClassOfOrdinaryPhysicalObject.
      * @return A ClassOfOrdinaryPhysicalObject instance.
      */
-    public static ClassOfOrdinaryPhysicalObject createClassOfOrdinaryPhysicalObject(final String id) {
-        return new ClassOfOrdinaryPhysicalObjectImpl(id);
+    public static <T> ClassOfOrdinaryPhysicalObject<T> createClassOfOrdinaryPhysicalObject(final T id) {
+        return new ClassOfOrdinaryPhysicalObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfOrganization} with an String.
      *
-     * @param id ID of the ClassOfOrganization.
+     * @param id
+     *            ID of the ClassOfOrganization.
      * @return A ClassOfOrganization instance.
      */
-    public static ClassOfOrganization createClassOfOrganization(final String id) {
-        return new ClassOfOrganizationImpl(id);
+    public static <T> ClassOfOrganization<T> createClassOfOrganization(final T id) {
+        return new ClassOfOrganizationImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfOrganizationComponent} with an String.
      *
-     * @param id ID of the ClassOfOrganizationComponent.
+     * @param id
+     *            ID of the ClassOfOrganizationComponent.
      * @return A ClassOfOrganizationComponent instance.
      */
-    public static ClassOfOrganizationComponent createClassOfOrganizationComponent(final String id) {
-        return new ClassOfOrganizationComponentImpl(id);
+    public static <T> ClassOfOrganizationComponent<T> createClassOfOrganizationComponent(final T id) {
+        return new ClassOfOrganizationComponentImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfParticipant} with an String.
      *
-     * @param id ID of the ClassOfParticipant.
+     * @param id
+     *            ID of the ClassOfParticipant.
      * @return A ClassOfParticipant instance.
      */
-    public static ClassOfParticipant createClassOfParticipant(final String id) {
-        return new ClassOfParticipantImpl(id);
+    public static <T> ClassOfParticipant<T> createClassOfParticipant(final T id) {
+        return new ClassOfParticipantImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfParty} with an String.
      *
-     * @param id ID of the ClassOfParty.
+     * @param id
+     *            ID of the ClassOfParty.
      * @return A ClassOfParty instance.
      */
-    public static ClassOfParty createClassOfParty(final String id) {
-        return new ClassOfPartyImpl(id);
+    public static <T> ClassOfParty<T> createClassOfParty(final T id) {
+        return new ClassOfPartyImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfPeriodOfTime} with an String.
      *
-     * @param id ID of the ClassOfPeriodOfTime.
+     * @param id
+     *            ID of the ClassOfPeriodOfTime.
      * @return A ClassOfPeriodOfTime instance.
      */
-    public static ClassOfPeriodOfTime createClassOfPeriodOfTime(final String id) {
-        return new ClassOfPeriodOfTimeImpl(id);
+    public static <T> ClassOfPeriodOfTime<T> createClassOfPeriodOfTime(final T id) {
+        return new ClassOfPeriodOfTimeImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfPerson} with an String.
      *
-     * @param id ID of the ClassOfPerson.
+     * @param id
+     *            ID of the ClassOfPerson.
      * @return A ClassOfPerson instance.
      */
-    public static ClassOfPerson createClassOfPerson(final String id) {
-        return new ClassOfPersonImpl(id);
+    public static <T> ClassOfPerson<T> createClassOfPerson(final T id) {
+        return new ClassOfPersonImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfPersonInPosition} with an String.
      *
-     * @param id ID of the ClassOfPersonInPosition.
+     * @param id
+     *            ID of the ClassOfPersonInPosition.
      * @return A ClassOfPersonInPosition instance.
      */
-    public static ClassOfPersonInPosition createClassOfPersonInPosition(final String id) {
-        return new ClassOfPersonInPositionImpl(id);
+    public static <T> ClassOfPersonInPosition<T> createClassOfPersonInPosition(final T id) {
+        return new ClassOfPersonInPositionImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfPhysicalObject} with an String.
      *
-     * @param id ID of the ClassOfPhysicalObject.
+     * @param id
+     *            ID of the ClassOfPhysicalObject.
      * @return A ClassOfPhysicalObject instance.
      */
-    public static ClassOfPhysicalObject createClassOfPhysicalObject(final String id) {
-        return new ClassOfPhysicalObjectImpl(id);
+    public static <T> ClassOfPhysicalObject<T> createClassOfPhysicalObject(final T id) {
+        return new ClassOfPhysicalObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfPhysicalProperty} with an String.
      *
-     * @param id ID of the ClassOfPhysicalProperty.
+     * @param id
+     *            ID of the ClassOfPhysicalProperty.
      * @return A ClassOfPhysicalProperty instance.
      */
-    public static ClassOfPhysicalProperty createClassOfPhysicalProperty(final String id) {
-        return new ClassOfPhysicalPropertyImpl(id);
+    public static <T> ClassOfPhysicalProperty<T> createClassOfPhysicalProperty(final T id) {
+        return new ClassOfPhysicalPropertyImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfPhysicalQuantity} with an String.
      *
-     * @param id ID of the ClassOfPhysicalQuantity.
+     * @param id
+     *            ID of the ClassOfPhysicalQuantity.
      * @return A ClassOfPhysicalQuantity instance.
      */
-    public static ClassOfPhysicalQuantity createClassOfPhysicalQuantity(final String id) {
-        return new ClassOfPhysicalQuantityImpl(id);
+    public static <T> ClassOfPhysicalQuantity<T> createClassOfPhysicalQuantity(final T id) {
+        return new ClassOfPhysicalQuantityImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfPointInTime} with an String.
      *
-     * @param id ID of the ClassOfPointInTime.
+     * @param id
+     *            ID of the ClassOfPointInTime.
      * @return A ClassOfPointInTime instance.
      */
-    public static ClassOfPointInTime createClassOfPointInTime(final String id) {
-        return new ClassOfPointInTimeImpl(id);
+    public static <T> ClassOfPointInTime<T> createClassOfPointInTime(final T id) {
+        return new ClassOfPointInTimeImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfPosition} with an String.
      *
-     * @param id ID of the ClassOfPosition.
+     * @param id
+     *            ID of the ClassOfPosition.
      * @return A ClassOfPosition instance.
      */
-    public static ClassOfPosition createClassOfPosition(final String id) {
-        return new ClassOfPositionImpl(id);
+    public static <T> ClassOfPosition<T> createClassOfPosition(final T id) {
+        return new ClassOfPositionImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfPossibleWorld} with an String.
      *
-     * @param id ID of the ClassOfPossibleWorld.
+     * @param id
+     *            ID of the ClassOfPossibleWorld.
      * @return A ClassOfPossibleWorld instance.
      */
-    public static ClassOfPossibleWorld createClassOfPossibleWorld(final String id) {
-        return new ClassOfPossibleWorldImpl(id);
+    public static <T> ClassOfPossibleWorld<T> createClassOfPossibleWorld(final T id) {
+        return new ClassOfPossibleWorldImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfReachingAgreement} with an String.
      *
-     * @param id ID of the ClassOfReachingAgreement.
+     * @param id
+     *            ID of the ClassOfReachingAgreement.
      * @return A ClassOfReachingAgreement instance.
      */
-    public static ClassOfReachingAgreement createClassOfReachingAgreement(final String id) {
-        return new ClassOfReachingAgreementImpl(id);
+    public static <T> ClassOfReachingAgreement<T> createClassOfReachingAgreement(final T id) {
+        return new ClassOfReachingAgreementImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfRelationship} with an String.
      *
-     * @param id ID of the ClassOfRelationship.
+     * @param id
+     *            ID of the ClassOfRelationship.
      * @return A ClassOfRelationship instance.
      */
-    public static ClassOfRelationship createClassOfRelationship(final String id) {
-        return new ClassOfRelationshipImpl(id);
+    public static <T> ClassOfRelationship<T> createClassOfRelationship(final T id) {
+        return new ClassOfRelationshipImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfRepresentation} with an String.
      *
-     * @param id ID of the ClassOfRepresentation.
+     * @param id
+     *            ID of the ClassOfRepresentation.
      * @return A ClassOfRepresentation instance.
      */
-    public static ClassOfRepresentation createClassOfRepresentation(final String id) {
-        return new ClassOfRepresentationImpl(id);
+    public static <T> ClassOfRepresentation<T> createClassOfRepresentation(final T id) {
+        return new ClassOfRepresentationImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfSalesProductInstance} with an String.
      *
-     * @param id ID of the ClassOfSalesProductInstance.
+     * @param id
+     *            ID of the ClassOfSalesProductInstance.
      * @return A ClassOfSalesProductInstance instance.
      */
-    public static ClassOfSalesProductInstance createClassOfSalesProductInstance(final String id) {
-        return new ClassOfSalesProductInstanceImpl(id);
+    public static <T> ClassOfSalesProductInstance<T> createClassOfSalesProductInstance(final T id) {
+        return new ClassOfSalesProductInstanceImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfSign} with an String.
      *
-     * @param id ID of the ClassOfSign.
+     * @param id
+     *            ID of the ClassOfSign.
      * @return A ClassOfSign instance.
      */
-    public static ClassOfSign createClassOfSign(final String id) {
-        return new ClassOfSignImpl(id);
+    public static <T> ClassOfSign<T> createClassOfSign(final T id) {
+        return new ClassOfSignImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfSociallyConstructedActivity} with an String.
      *
-     * @param id ID of the ClassOfSociallyConstructedActivity.
+     * @param id
+     *            ID of the ClassOfSociallyConstructedActivity.
      * @return A ClassOfSociallyConstructedActivity instance.
      */
-    public static ClassOfSociallyConstructedActivity createClassOfSociallyConstructedActivity(final String id) {
-        return new ClassOfSociallyConstructedActivityImpl(id);
+    public static <T> ClassOfSociallyConstructedActivity<T> createClassOfSociallyConstructedActivity(final T id) {
+        return new ClassOfSociallyConstructedActivityImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfSociallyConstructedObject} with an String.
      *
-     * @param id ID of the ClassOfSociallyConstructedObject.
+     * @param id
+     *            ID of the ClassOfSociallyConstructedObject.
      * @return A ClassOfSociallyConstructedObject instance.
      */
-    public static ClassOfSociallyConstructedObject createClassOfSociallyConstructedObject(final String id) {
-        return new ClassOfSociallyConstructedObjectImpl(id);
+    public static <T> ClassOfSociallyConstructedObject<T> createClassOfSociallyConstructedObject(final T id) {
+        return new ClassOfSociallyConstructedObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfSpatioTemporalExtent} with an String.
      *
-     * @param id ID of the ClassOfSpatioTemporalExtent.
+     * @param id
+     *            ID of the ClassOfSpatioTemporalExtent.
      * @return A ClassOfSpatioTemporalExtent instance.
      */
-    public static ClassOfSpatioTemporalExtent createClassOfSpatioTemporalExtent(final String id) {
-        return new ClassOfSpatioTemporalExtentImpl(id);
+    public static <T> ClassOfSpatioTemporalExtent<T> createClassOfSpatioTemporalExtent(final T id) {
+        return new ClassOfSpatioTemporalExtentImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfState} with an String.
      *
-     * @param id ID of the ClassOfState.
+     * @param id
+     *            ID of the ClassOfState.
      * @return A ClassOfState instance.
      */
-    public static ClassOfState createClassOfState(final String id) {
-        return new ClassOfStateImpl(id);
+    public static <T> ClassOfState<T> createClassOfState(final T id) {
+        return new ClassOfStateImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfActivity} with an String.
      *
-     * @param id ID of the ClassOfStateOfActivity.
+     * @param id
+     *            ID of the ClassOfStateOfActivity.
      * @return A ClassOfStateOfActivity instance.
      */
-    public static ClassOfStateOfActivity createClassOfStateOfActivity(final String id) {
-        return new ClassOfStateOfActivityImpl(id);
+    public static <T> ClassOfStateOfActivity<T> createClassOfStateOfActivity(final T id) {
+        return new ClassOfStateOfActivityImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfAmountOfMoney} with an String.
      *
-     * @param id ID of the ClassOfStateOfAmountOfMoney.
+     * @param id
+     *            ID of the ClassOfStateOfAmountOfMoney.
      * @return A ClassOfStateOfAmountOfMoney instance.
      */
-    public static ClassOfStateOfAmountOfMoney createClassOfStateOfAmountOfMoney(final String id) {
-        return new ClassOfStateOfAmountOfMoneyImpl(id);
+    public static <T> ClassOfStateOfAmountOfMoney<T> createClassOfStateOfAmountOfMoney(final T id) {
+        return new ClassOfStateOfAmountOfMoneyImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfAssociation} with an String.
      *
-     * @param id ID of the ClassOfStateOfAssociation.
+     * @param id
+     *            ID of the ClassOfStateOfAssociation.
      * @return A ClassOfStateOfAssociation instance.
      */
-    public static ClassOfStateOfAssociation createClassOfStateOfAssociation(final String id) {
-        return new ClassOfStateOfAssociationImpl(id);
+    public static <T> ClassOfStateOfAssociation<T> createClassOfStateOfAssociation(final T id) {
+        return new ClassOfStateOfAssociationImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfBiologicalObject} with an String.
      *
-     * @param id ID of the ClassOfStateOfBiologicalObject.
+     * @param id
+     *            ID of the ClassOfStateOfBiologicalObject.
      * @return A ClassOfStateOfBiologicalObject instance.
      */
-    public static ClassOfStateOfBiologicalObject createClassOfStateOfBiologicalObject(final String id) {
-        return new ClassOfStateOfBiologicalObjectImpl(id);
+    public static <T> ClassOfStateOfBiologicalObject<T> createClassOfStateOfBiologicalObject(final T id) {
+        return new ClassOfStateOfBiologicalObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfBiologicalSystem} with an String.
      *
-     * @param id ID of the ClassOfStateOfBiologicalSystem.
+     * @param id
+     *            ID of the ClassOfStateOfBiologicalSystem.
      * @return A ClassOfStateOfBiologicalSystem instance.
      */
-    public static ClassOfStateOfBiologicalSystem createClassOfStateOfBiologicalSystem(final String id) {
-        return new ClassOfStateOfBiologicalSystemImpl(id);
+    public static <T> ClassOfStateOfBiologicalSystem<T> createClassOfStateOfBiologicalSystem(final T id) {
+        return new ClassOfStateOfBiologicalSystemImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfBiologicalSystemComponent} with an String.
      *
-     * @param id ID of the ClassOfStateOfBiologicalSystemComponent.
+     * @param id
+     *            ID of the ClassOfStateOfBiologicalSystemComponent.
      * @return A ClassOfStateOfBiologicalSystemComponent instance.
      */
-    public static ClassOfStateOfBiologicalSystemComponent createClassOfStateOfBiologicalSystemComponent(
-            final String id) {
-        return new ClassOfStateOfBiologicalSystemComponentImpl(id);
+    public static <T> ClassOfStateOfBiologicalSystemComponent<T> createClassOfStateOfBiologicalSystemComponent(
+            final T id) {
+        return new ClassOfStateOfBiologicalSystemComponentImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfFunctionalObject} with an String.
      *
-     * @param id ID of the ClassOfStateOfFunctionalObject.
+     * @param id
+     *            ID of the ClassOfStateOfFunctionalObject.
      * @return A ClassOfStateOfFunctionalObject instance.
      */
-    public static ClassOfStateOfFunctionalObject createClassOfStateOfFunctionalObject(final String id) {
-        return new ClassOfStateOfFunctionalObjectImpl(id);
+    public static <T> ClassOfStateOfFunctionalObject<T> createClassOfStateOfFunctionalObject(final T id) {
+        return new ClassOfStateOfFunctionalObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfFunctionalSystem} with an String.
      *
-     * @param id ID of the ClassOfStateOfFunctionalSystem.
+     * @param id
+     *            ID of the ClassOfStateOfFunctionalSystem.
      * @return A ClassOfStateOfFunctionalSystem instance.
      */
-    public static ClassOfStateOfFunctionalSystem createClassOfStateOfFunctionalSystem(final String id) {
-        return new ClassOfStateOfFunctionalSystemImpl(id);
+    public static <T> ClassOfStateOfFunctionalSystem<T> createClassOfStateOfFunctionalSystem(final T id) {
+        return new ClassOfStateOfFunctionalSystemImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfFunctionalSystemComponent} with an String.
      *
-     * @param id ID of the ClassOfStateOfFunctionalSystemComponent.
+     * @param id
+     *            ID of the ClassOfStateOfFunctionalSystemComponent.
      * @return A ClassOfStateOfFunctionalSystemComponent instance.
      */
-    public static ClassOfStateOfFunctionalSystemComponent createClassOfStateOfFunctionalSystemComponent(
-            final String id) {
-        return new ClassOfStateOfFunctionalSystemComponentImpl(id);
+    public static <T> ClassOfStateOfFunctionalSystemComponent<T> createClassOfStateOfFunctionalSystemComponent(
+            final T id) {
+        return new ClassOfStateOfFunctionalSystemComponentImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfIntentionallyConstructedObject} with an String.
      *
-     * @param id ID of the ClassOfStateOfIntentionallyConstructedObject.
+     * @param id
+     *            ID of the ClassOfStateOfIntentionallyConstructedObject.
      * @return A ClassOfStateOfIntentionallyConstructedObject instance.
      */
-    public static ClassOfStateOfIntentionallyConstructedObject createClassOfStateOfIntentionallyConstructedObject(
-            final String id) {
-        return new ClassOfStateOfIntentionallyConstructedObjectImpl(id);
+    public static <T> ClassOfStateOfIntentionallyConstructedObject<T> 
+        createClassOfStateOfIntentionallyConstructedObject(
+            final T id) {
+        return new ClassOfStateOfIntentionallyConstructedObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfOrdinaryBiologicalObject} with an String.
      *
-     * @param id ID of the ClassOfStateOfOrdinaryBiologicalObject.
+     * @param id
+     *            ID of the ClassOfStateOfOrdinaryBiologicalObject.
      * @return A ClassOfStateOfOrdinaryBiologicalObject instance.
      */
-    public static ClassOfStateOfOrdinaryBiologicalObject createClassOfStateOfOrdinaryBiologicalObject(final String id) {
-        return new ClassOfStateOfOrdinaryBiologicalObjectImpl(id);
+    public static <T> ClassOfStateOfOrdinaryBiologicalObject<T> createClassOfStateOfOrdinaryBiologicalObject(
+            final T id) {
+        return new ClassOfStateOfOrdinaryBiologicalObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfOrdinaryFunctionalObject} with an String.
      *
-     * @param id ID of the ClassOfStateOfOrdinaryFunctionalObject.
+     * @param id
+     *            ID of the ClassOfStateOfOrdinaryFunctionalObject.
      * @return A ClassOfStateOfOrdinaryFunctionalObject instance.
      */
-    public static ClassOfStateOfOrdinaryFunctionalObject createClassOfStateOfOrdinaryFunctionalObject(final String id) {
-        return new ClassOfStateOfOrdinaryFunctionalObjectImpl(id);
+    public static <T> ClassOfStateOfOrdinaryFunctionalObject<T> createClassOfStateOfOrdinaryFunctionalObject(
+            final T id) {
+        return new ClassOfStateOfOrdinaryFunctionalObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfOrdinaryPhysicalObject} with an String.
      *
-     * @param id ID of the ClassOfStateOfOrdinaryPhysicalObject.
+     * @param id
+     *            ID of the ClassOfStateOfOrdinaryPhysicalObject.
      * @return A ClassOfStateOfOrdinaryPhysicalObject instance.
      */
-    public static ClassOfStateOfOrdinaryPhysicalObject createClassOfStateOfOrdinaryPhysicalObject(final String id) {
-        return new ClassOfStateOfOrdinaryPhysicalObjectImpl(id);
+    public static <T> ClassOfStateOfOrdinaryPhysicalObject<T> createClassOfStateOfOrdinaryPhysicalObject(final T id) {
+        return new ClassOfStateOfOrdinaryPhysicalObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfOrganization} with an String.
      *
-     * @param id ID of the ClassOfStateOfOrganization.
+     * @param id
+     *            ID of the ClassOfStateOfOrganization.
      * @return A ClassOfStateOfOrganization instance.
      */
-    public static ClassOfStateOfOrganization createClassOfStateOfOrganization(final String id) {
-        return new ClassOfStateOfOrganizationImpl(id);
+    public static <T> ClassOfStateOfOrganization<T> createClassOfStateOfOrganization(final T id) {
+        return new ClassOfStateOfOrganizationImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfOrganizationComponent} with an String.
      *
-     * @param id ID of the ClassOfStateOfOrganizationComponent.
+     * @param id
+     *            ID of the ClassOfStateOfOrganizationComponent.
      * @return A ClassOfStateOfOrganizationComponent instance.
      */
-    public static ClassOfStateOfOrganizationComponent createClassOfStateOfOrganizationComponent(final String id) {
-        return new ClassOfStateOfOrganizationComponentImpl(id);
+    public static <T> ClassOfStateOfOrganizationComponent<T> createClassOfStateOfOrganizationComponent(final T id) {
+        return new ClassOfStateOfOrganizationComponentImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfParty} with an String.
      *
-     * @param id ID of the ClassOfStateOfParty.
+     * @param id
+     *            ID of the ClassOfStateOfParty.
      * @return A ClassOfStateOfParty instance.
      */
-    public static ClassOfStateOfParty createClassOfStateOfParty(final String id) {
-        return new ClassOfStateOfPartyImpl(id);
+    public static <T> ClassOfStateOfParty<T> createClassOfStateOfParty(final T id) {
+        return new ClassOfStateOfPartyImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfPerson} with an String.
      *
-     * @param id ID of the ClassOfStateOfPerson.
+     * @param id
+     *            ID of the ClassOfStateOfPerson.
      * @return A ClassOfStateOfPerson instance.
      */
-    public static ClassOfStateOfPerson createClassOfStateOfPerson(final String id) {
-        return new ClassOfStateOfPersonImpl(id);
+    public static <T> ClassOfStateOfPerson<T> createClassOfStateOfPerson(final T id) {
+        return new ClassOfStateOfPersonImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfPhysicalObject} with an String.
      *
-     * @param id ID of the ClassOfStateOfPhysicalObject.
+     * @param id
+     *            ID of the ClassOfStateOfPhysicalObject.
      * @return A ClassOfStateOfPhysicalObject instance.
      */
-    public static ClassOfStateOfPhysicalObject createClassOfStateOfPhysicalObject(final String id) {
-        return new ClassOfStateOfPhysicalObjectImpl(id);
+    public static <T> ClassOfStateOfPhysicalObject<T> createClassOfStateOfPhysicalObject(final T id) {
+        return new ClassOfStateOfPhysicalObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfPosition} with an String.
      *
-     * @param id ID of the ClassOfStateOfPosition.
+     * @param id
+     *            ID of the ClassOfStateOfPosition.
      * @return A ClassOfStateOfPosition instance.
      */
-    public static ClassOfStateOfPosition createClassOfStateOfPosition(final String id) {
-        return new ClassOfStateOfPositionImpl(id);
+    public static <T> ClassOfStateOfPosition<T> createClassOfStateOfPosition(final T id) {
+        return new ClassOfStateOfPositionImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfSalesProductInstance} with an String.
      *
-     * @param id ID of the ClassOfStateOfSalesProductInstance.
+     * @param id
+     *            ID of the ClassOfStateOfSalesProductInstance.
      * @return A ClassOfStateOfSalesProductInstance instance.
      */
-    public static ClassOfStateOfSalesProductInstance createClassOfStateOfSalesProductInstance(final String id) {
-        return new ClassOfStateOfSalesProductInstanceImpl(id);
+    public static <T> ClassOfStateOfSalesProductInstance<T> createClassOfStateOfSalesProductInstance(final T id) {
+        return new ClassOfStateOfSalesProductInstanceImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfSign} with an String.
      *
-     * @param id ID of the ClassOfStateOfSign.
+     * @param id
+     *            ID of the ClassOfStateOfSign.
      * @return A ClassOfStateOfSign instance.
      */
-    public static ClassOfStateOfSign createClassOfStateOfSign(final String id) {
-        return new ClassOfStateOfSignImpl(id);
+    public static <T> ClassOfStateOfSign<T> createClassOfStateOfSign(final T id) {
+        return new ClassOfStateOfSignImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfSociallyConstructedActivity} with an String.
      *
-     * @param id ID of the ClassOfStateOfSociallyConstructedActivity.
+     * @param id
+     *            ID of the ClassOfStateOfSociallyConstructedActivity.
      * @return A ClassOfStateOfSociallyConstructedActivity instance.
      */
-    public static ClassOfStateOfSociallyConstructedActivity createClassOfStateOfSociallyConstructedActivity(
-            final String id) {
-        return new ClassOfStateOfSociallyConstructedActivityImpl(id);
+    public static <T> ClassOfStateOfSociallyConstructedActivity<T> createClassOfStateOfSociallyConstructedActivity(
+            final T id) {
+        return new ClassOfStateOfSociallyConstructedActivityImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfSociallyConstructedObject} with an String.
      *
-     * @param id ID of the ClassOfStateOfSociallyConstructedObject.
+     * @param id
+     *            ID of the ClassOfStateOfSociallyConstructedObject.
      * @return A ClassOfStateOfSociallyConstructedObject instance.
      */
-    public static ClassOfStateOfSociallyConstructedObject createClassOfStateOfSociallyConstructedObject(
-            final String id) {
-        return new ClassOfStateOfSociallyConstructedObjectImpl(id);
+    public static <T> ClassOfStateOfSociallyConstructedObject<T> createClassOfStateOfSociallyConstructedObject(
+            final T id) {
+        return new ClassOfStateOfSociallyConstructedObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfSystem} with an String.
      *
-     * @param id ID of the ClassOfStateOfSystem.
+     * @param id
+     *            ID of the ClassOfStateOfSystem.
      * @return A ClassOfStateOfSystem instance.
      */
-    public static ClassOfStateOfSystem createClassOfStateOfSystem(final String id) {
-        return new ClassOfStateOfSystemImpl(id);
+    public static <T> ClassOfStateOfSystem<T> createClassOfStateOfSystem(final T id) {
+        return new ClassOfStateOfSystemImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfStateOfSystemComponent} with an String.
      *
-     * @param id ID of the ClassOfStateOfSystemComponent.
+     * @param id
+     *            ID of the ClassOfStateOfSystemComponent.
      * @return A ClassOfStateOfSystemComponent instance.
      */
-    public static ClassOfStateOfSystemComponent createClassOfStateOfSystemComponent(final String id) {
-        return new ClassOfStateOfSystemComponentImpl(id);
+    public static <T> ClassOfStateOfSystemComponent<T> createClassOfStateOfSystemComponent(final T id) {
+        return new ClassOfStateOfSystemComponentImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfSystem} with an String.
      *
-     * @param id ID of the ClassOfSystem.
+     * @param id
+     *            ID of the ClassOfSystem.
      * @return A ClassOfSystem instance.
      */
-    public static ClassOfSystem createClassOfSystem(final String id) {
-        return new ClassOfSystemImpl(id);
+    public static <T> ClassOfSystem<T> createClassOfSystem(final T id) {
+        return new ClassOfSystemImpl<T>(id);
     }
 
     /**
      * Create a {@link ClassOfSystemComponent} with an String.
      *
-     * @param id ID of the ClassOfSystemComponent.
+     * @param id
+     *            ID of the ClassOfSystemComponent.
      * @return A ClassOfSystemComponent instance.
      */
-    public static ClassOfSystemComponent createClassOfSystemComponent(final String id) {
-        return new ClassOfSystemComponentImpl(id);
+    public static <T> ClassOfSystemComponent<T> createClassOfSystemComponent(final T id) {
+        return new ClassOfSystemComponentImpl<T>(id);
     }
 
     /**
      * Create a {@link Definition} with an String.
      *
-     * @param id ID of the Definition.
+     * @param id
+     *            ID of the Definition.
      * @return A Definition instance.
      */
-    public static Definition createDefinition(final String id) {
-        return new DefinitionImpl(id);
+    public static <T> Definition<T> createDefinition(final T id) {
+        return new DefinitionImpl<T>(id);
     }
 
     /**
      * Create a {@link Description} with an String.
      *
-     * @param id ID of the Description.
+     * @param id
+     *            ID of the Description.
      * @return A Description instance.
      */
-    public static Description createDescription(final String id) {
-        return new DescriptionImpl(id);
+    public static <T> Description<T> createDescription(final T id) {
+        return new DescriptionImpl<T>(id);
     }
 
     /**
      * Create a {@link EnumeratedClass} with an String.
      *
-     * @param id ID of the EnumeratedClass.
+     * @param id
+     *            ID of the EnumeratedClass.
      * @return A EnumeratedClass instance.
      */
-    public static EnumeratedClass createEnumeratedClass(final String id) {
-        return new EnumeratedClassImpl(id);
+    public static <T> EnumeratedClass<T> createEnumeratedClass(final T id) {
+        return new EnumeratedClassImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfActivity} with an String.
      *
-     * @param id ID of the KindOfActivity.
+     * @param id
+     *            ID of the KindOfActivity.
      * @return A KindOfActivity instance.
      */
-    public static KindOfActivity createKindOfActivity(final String id) {
-        return new KindOfActivityImpl(id);
+    public static <T> KindOfActivity<T> createKindOfActivity(final T id) {
+        return new KindOfActivityImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfAssociation} with an String.
      *
-     * @param id ID of the KindOfAssociation.
+     * @param id
+     *            ID of the KindOfAssociation.
      * @return A KindOfAssociation instance.
      */
-    public static KindOfAssociation createKindOfAssociation(final String id) {
-        return new KindOfAssociationImpl(id);
+    public static <T> KindOfAssociation<T> createKindOfAssociation(final T id) {
+        return new KindOfAssociationImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfBiologicalObject} with an String.
      *
-     * @param id ID of the KindOfBiologicalObject.
+     * @param id
+     *            ID of the KindOfBiologicalObject.
      * @return A KindOfBiologicalObject instance.
      */
-    public static KindOfBiologicalObject createKindOfBiologicalObject(final String id) {
-        return new KindOfBiologicalObjectImpl(id);
+    public static <T> KindOfBiologicalObject<T> createKindOfBiologicalObject(final T id) {
+        return new KindOfBiologicalObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfBiologicalSystem} with an String.
      *
-     * @param id ID of the KindOfBiologicalSystem.
+     * @param id
+     *            ID of the KindOfBiologicalSystem.
      * @return A KindOfBiologicalSystem instance.
      */
-    public static KindOfBiologicalSystem createKindOfBiologicalSystem(final String id) {
-        return new KindOfBiologicalSystemImpl(id);
+    public static <T> KindOfBiologicalSystem<T> createKindOfBiologicalSystem(final T id) {
+        return new KindOfBiologicalSystemImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfBiologicalSystemComponent} with an String.
      *
-     * @param id ID of the KindOfBiologicalSystemComponent.
+     * @param id
+     *            ID of the KindOfBiologicalSystemComponent.
      * @return A KindOfBiologicalSystemComponent instance.
      */
-    public static KindOfBiologicalSystemComponent createKindOfBiologicalSystemComponent(final String id) {
-        return new KindOfBiologicalSystemComponentImpl(id);
+    public static <T> KindOfBiologicalSystemComponent<T> createKindOfBiologicalSystemComponent(final T id) {
+        return new KindOfBiologicalSystemComponentImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfFunctionalObject} with an String.
      *
-     * @param id ID of the KindOfFunctionalObject.
+     * @param id
+     *            ID of the KindOfFunctionalObject.
      * @return A KindOfFunctionalObject instance.
      */
-    public static KindOfFunctionalObject createKindOfFunctionalObject(final String id) {
-        return new KindOfFunctionalObjectImpl(id);
+    public static <T> KindOfFunctionalObject<T> createKindOfFunctionalObject(final T id) {
+        return new KindOfFunctionalObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfFunctionalSystem} with an String.
      *
-     * @param id ID of the KindOfFunctionalSystem.
+     * @param id
+     *            ID of the KindOfFunctionalSystem.
      * @return A KindOfFunctionalSystem instance.
      */
-    public static KindOfFunctionalSystem createKindOfFunctionalSystem(final String id) {
-        return new KindOfFunctionalSystemImpl(id);
+    public static <T> KindOfFunctionalSystem<T> createKindOfFunctionalSystem(final T id) {
+        return new KindOfFunctionalSystemImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfFunctionalSystemComponent} with an String.
      *
-     * @param id ID of the KindOfFunctionalSystemComponent.
+     * @param id
+     *            ID of the KindOfFunctionalSystemComponent.
      * @return A KindOfFunctionalSystemComponent instance.
      */
-    public static KindOfFunctionalSystemComponent createKindOfFunctionalSystemComponent(final String id) {
-        return new KindOfFunctionalSystemComponentImpl(id);
+    public static <T> KindOfFunctionalSystemComponent<T> createKindOfFunctionalSystemComponent(final T id) {
+        return new KindOfFunctionalSystemComponentImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfIndividual} with an String.
      *
-     * @param id ID of the KindOfIndividual.
+     * @param id
+     *            ID of the KindOfIndividual.
      * @return A KindOfIndividual instance.
      */
-    public static KindOfIndividual createKindOfIndividual(final String id) {
-        return new KindOfIndividualImpl(id);
+    public static <T> KindOfIndividual<T> createKindOfIndividual(final T id) {
+        return new KindOfIndividualImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfIntentionallyConstructedObject} with an String.
      *
-     * @param id ID of the KindOfIntentionallyConstructedObject.
+     * @param id
+     *            ID of the KindOfIntentionallyConstructedObject.
      * @return A KindOfIntentionallyConstructedObject instance.
      */
-    public static KindOfIntentionallyConstructedObject createKindOfIntentionallyConstructedObject(final String id) {
-        return new KindOfIntentionallyConstructedObjectImpl(id);
+    public static <T> KindOfIntentionallyConstructedObject<T> createKindOfIntentionallyConstructedObject(final T id) {
+        return new KindOfIntentionallyConstructedObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfOrdinaryBiologicalObject} with an String.
      *
-     * @param id ID of the KindOfOrdinaryBiologicalObject.
+     * @param id
+     *            ID of the KindOfOrdinaryBiologicalObject.
      * @return A KindOfOrdinaryBiologicalObject instance.
      */
-    public static KindOfOrdinaryBiologicalObject createKindOfOrdinaryBiologicalObject(final String id) {
-        return new KindOfOrdinaryBiologicalObjectImpl(id);
+    public static <T> KindOfOrdinaryBiologicalObject<T> createKindOfOrdinaryBiologicalObject(final T id) {
+        return new KindOfOrdinaryBiologicalObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfOrdinaryFunctionalObject} with an String.
      *
-     * @param id ID of the KindOfOrdinaryFunctionalObject.
+     * @param id
+     *            ID of the KindOfOrdinaryFunctionalObject.
      * @return A KindOfOrdinaryFunctionalObject instance.
      */
-    public static KindOfOrdinaryFunctionalObject createKindOfOrdinaryFunctionalObject(final String id) {
-        return new KindOfOrdinaryFunctionalObjectImpl(id);
+    public static <T> KindOfOrdinaryFunctionalObject<T> createKindOfOrdinaryFunctionalObject(final T id) {
+        return new KindOfOrdinaryFunctionalObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfOrdinaryPhysicalObject} with an String.
      *
-     * @param id ID of the KindOfOrdinaryPhysicalObject.
+     * @param id
+     *            ID of the KindOfOrdinaryPhysicalObject.
      * @return A KindOfOrdinaryPhysicalObject instance.
      */
-    public static KindOfOrdinaryPhysicalObject createKindOfOrdinaryPhysicalObject(final String id) {
-        return new KindOfOrdinaryPhysicalObjectImpl(id);
+    public static <T> KindOfOrdinaryPhysicalObject<T> createKindOfOrdinaryPhysicalObject(final T id) {
+        return new KindOfOrdinaryPhysicalObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfOrganization} with an String.
      *
-     * @param id ID of the KindOfOrganization.
+     * @param id
+     *            ID of the KindOfOrganization.
      * @return A KindOfOrganization instance.
      */
-    public static KindOfOrganization createKindOfOrganization(final String id) {
-        return new KindOfOrganizationImpl(id);
+    public static <T> KindOfOrganization<T> createKindOfOrganization(final T id) {
+        return new KindOfOrganizationImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfOrganizationComponent} with an String.
      *
-     * @param id ID of the KindOfOrganizationComponent.
+     * @param id
+     *            ID of the KindOfOrganizationComponent.
      * @return A KindOfOrganizationComponent instance.
      */
-    public static KindOfOrganizationComponent createKindOfOrganizationComponent(final String id) {
-        return new KindOfOrganizationComponentImpl(id);
+    public static <T> KindOfOrganizationComponent<T> createKindOfOrganizationComponent(final T id) {
+        return new KindOfOrganizationComponentImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfParty} with an String.
      *
-     * @param id ID of the KindOfParty.
+     * @param id
+     *            ID of the KindOfParty.
      * @return A KindOfParty instance.
      */
-    public static KindOfParty createKindOfParty(final String id) {
-        return new KindOfPartyImpl(id);
+    public static <T> KindOfParty<T> createKindOfParty(final T id) {
+        return new KindOfPartyImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfPerson} with an String.
      *
-     * @param id ID of the KindOfPerson.
+     * @param id
+     *            ID of the KindOfPerson.
      * @return A KindOfPerson instance.
      */
-    public static KindOfPerson createKindOfPerson(final String id) {
-        return new KindOfPersonImpl(id);
+    public static <T> KindOfPerson<T> createKindOfPerson(final T id) {
+        return new KindOfPersonImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfPhysicalObject} with an String.
      *
-     * @param id ID of the KindOfPhysicalObject.
+     * @param id
+     *            ID of the KindOfPhysicalObject.
      * @return A KindOfPhysicalObject instance.
      */
-    public static KindOfPhysicalObject createKindOfPhysicalObject(final String id) {
-        return new KindOfPhysicalObjectImpl(id);
+    public static <T> KindOfPhysicalObject<T> createKindOfPhysicalObject(final T id) {
+        return new KindOfPhysicalObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfPhysicalProperty} with an String.
      *
-     * @param id ID of the KindOfPhysicalProperty.
+     * @param id
+     *            ID of the KindOfPhysicalProperty.
      * @return A KindOfPhysicalProperty instance.
      */
-    public static KindOfPhysicalProperty createKindOfPhysicalProperty(final String id) {
-        return new KindOfPhysicalPropertyImpl(id);
+    public static <T> KindOfPhysicalProperty<T> createKindOfPhysicalProperty(final T id) {
+        return new KindOfPhysicalPropertyImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfPhysicalQuantity} with an String.
      *
-     * @param id ID of the KindOfPhysicalQuantity.
+     * @param id
+     *            ID of the KindOfPhysicalQuantity.
      * @return A KindOfPhysicalQuantity instance.
      */
-    public static KindOfPhysicalQuantity createKindOfPhysicalQuantity(final String id) {
-        return new KindOfPhysicalQuantityImpl(id);
+    public static <T> KindOfPhysicalQuantity<T> createKindOfPhysicalQuantity(final T id) {
+        return new KindOfPhysicalQuantityImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfPosition} with an String.
      *
-     * @param id ID of the KindOfPosition.
+     * @param id
+     *            ID of the KindOfPosition.
      * @return A KindOfPosition instance.
      */
-    public static KindOfPosition createKindOfPosition(final String id) {
-        return new KindOfPositionImpl(id);
+    public static <T> KindOfPosition<T> createKindOfPosition(final T id) {
+        return new KindOfPositionImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfRelationshipWithRestriction} with an String.
      *
-     * @param id ID of the KindOfRelationshipWithRestriction.
+     * @param id
+     *            ID of the KindOfRelationshipWithRestriction.
      * @return A KindOfRelationshipWithRestriction instance.
      */
-    public static KindOfRelationshipWithRestriction createKindOfRelationshipWithRestriction(final String id) {
-        return new KindOfRelationshipWithRestrictionImpl(id);
+    public static <T> KindOfRelationshipWithRestriction<T> createKindOfRelationshipWithRestriction(final T id) {
+        return new KindOfRelationshipWithRestrictionImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfRelationshipWithSignature} with an String.
      *
-     * @param id ID of the KindOfRelationshipWithSignature.
+     * @param id
+     *            ID of the KindOfRelationshipWithSignature.
      * @return A KindOfRelationshipWithSignature instance.
      */
-    public static KindOfRelationshipWithSignature createKindOfRelationshipWithSignature(final String id) {
-        return new KindOfRelationshipWithSignatureImpl(id);
+    public static <T> KindOfRelationshipWithSignature<T> createKindOfRelationshipWithSignature(final T id) {
+        return new KindOfRelationshipWithSignatureImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfSociallyConstructedObject} with an String.
      *
-     * @param id ID of the KindOfSociallyConstructedObject.
+     * @param id
+     *            ID of the KindOfSociallyConstructedObject.
      * @return A KindOfSociallyConstructedObject instance.
      */
-    public static KindOfSociallyConstructedObject createKindOfSociallyConstructedObject(final String id) {
-        return new KindOfSociallyConstructedObjectImpl(id);
+    public static <T> KindOfSociallyConstructedObject<T> createKindOfSociallyConstructedObject(final T id) {
+        return new KindOfSociallyConstructedObjectImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfSystem} with an String.
      *
-     * @param id ID of the KindOfSystem.
+     * @param id
+     *            ID of the KindOfSystem.
      * @return A KindOfSystem instance.
      */
-    public static KindOfSystem createKindOfSystem(final String id) {
-        return new KindOfSystemImpl(id);
+    public static <T> KindOfSystem<T> createKindOfSystem(final T id) {
+        return new KindOfSystemImpl<T>(id);
     }
 
     /**
      * Create a {@link KindOfSystemComponent} with an String.
      *
-     * @param id ID of the KindOfSystemComponent.
+     * @param id
+     *            ID of the KindOfSystemComponent.
      * @return A KindOfSystemComponent instance.
      */
-    public static KindOfSystemComponent createKindOfSystemComponent(final String id) {
-        return new KindOfSystemComponentImpl(id);
+    public static <T> KindOfSystemComponent<T> createKindOfSystemComponent(final T id) {
+        return new KindOfSystemComponentImpl<T>(id);
     }
 
     /**
      * Create a {@link Identification} with an String.
      *
-     * @param id ID of the Identification.
+     * @param id
+     *            ID of the Identification.
      * @return A Identification instance.
      */
-    public static Identification createIdentification(final String id) {
-        return new IdentificationImpl(id);
+    public static <T> Identification<T> createIdentification(final T id) {
+        return new IdentificationImpl<T>(id);
     }
 
     /**
      * Create a {@link Pattern} with an String.
      *
-     * @param id ID of the Pattern.
+     * @param id
+     *            ID of the Pattern.
      * @return A Pattern instance.
      */
-    public static Pattern createPattern(final String id) {
-        return new PatternImpl(id);
+    public static <T> Pattern<T> createPattern(final T id) {
+        return new PatternImpl<T>(id);
     }
 
     /**
      * Create a {@link RepresentationByPattern} with an String.
      *
-     * @param id ID of the RepresentationByPattern.
+     * @param id
+     *            ID of the RepresentationByPattern.
      * @return A RepresentationByPattern instance.
      */
-    public static RepresentationByPattern createRepresentationByPattern(final String id) {
-        return new RepresentationByPatternImpl(id);
+    public static <T> RepresentationByPattern<T> createRepresentationByPattern(final T id) {
+        return new RepresentationByPatternImpl<T>(id);
     }
 
     /**
      * Create a {@link Role} with an String.
      *
-     * @param id ID of the Role.
+     * @param id
+     *            ID of the Role.
      * @return A Role instance.
      */
-    public static Role createRole(final String id) {
-        return new RoleImpl(id);
+    public static <T> Role<T> createRole(final T id) {
+        return new RoleImpl<T>(id);
     }
 }

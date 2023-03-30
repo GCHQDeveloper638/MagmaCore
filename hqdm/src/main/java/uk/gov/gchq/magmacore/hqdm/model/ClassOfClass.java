@@ -22,5 +22,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * {@code member_of} {@link ClassOfClass}.
  * </p>
  */
-public interface ClassOfClass extends ClassOfAbstractObject {
+public interface ClassOfClass<T> extends ClassOfAbstractObject<T> {
 }

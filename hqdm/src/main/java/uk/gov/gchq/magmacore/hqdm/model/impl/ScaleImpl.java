@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Scale.
  */
-public class ScaleImpl extends HqdmObject implements Scale {
+public class ScaleImpl<T> extends HqdmObject<T> implements Scale<T> {
     /**
      * Constructs a new Scale.
      *
      * @param id String of the Scale.
      */
-    public ScaleImpl(final String id) {
+    public ScaleImpl(final T id) {
         super(id);
     }
 }

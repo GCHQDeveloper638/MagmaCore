@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of KindOfActivity.
  */
-public class KindOfActivityImpl extends HqdmObject implements KindOfActivity {
+public class KindOfActivityImpl<T> extends HqdmObject<T> implements KindOfActivity<T> {
     /**
      * Constructs a new KindOfActivity.
      *
      * @param id String of the KindOfActivity.
      */
-    public KindOfActivityImpl(final String id) {
+    public KindOfActivityImpl(final T id) {
         super(id);
     }
 }

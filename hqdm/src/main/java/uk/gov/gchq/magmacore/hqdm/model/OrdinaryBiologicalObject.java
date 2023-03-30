@@ -19,6 +19,6 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * {@link OrdinaryPhysicalObject} that is a {@link BiologicalObject} that does not survive the
  * replacement of all of its parts.
  */
-public interface OrdinaryBiologicalObject
-        extends StateOfOrdinaryBiologicalObject, BiologicalObject, OrdinaryPhysicalObject {
+public interface OrdinaryBiologicalObject<T>
+        extends StateOfOrdinaryBiologicalObject<T>, BiologicalObject<T>, OrdinaryPhysicalObject<T> {
 }

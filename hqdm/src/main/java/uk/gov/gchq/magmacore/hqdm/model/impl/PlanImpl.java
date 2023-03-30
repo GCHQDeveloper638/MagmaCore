@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Plan.
  */
-public class PlanImpl extends HqdmObject implements Plan {
+public class PlanImpl<T> extends HqdmObject<T> implements Plan<T> {
     /**
      * Constructs a new Plan.
      *
      * @param id String of the Plan.
      */
-    public PlanImpl(final String id) {
+    public PlanImpl(final T id) {
         super(id);
     }
 }

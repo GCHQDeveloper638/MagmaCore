@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A scale is a function from {@link KindOfPhysicalQuantity} to the real numbers.
  */
-public interface Scale extends Function_ {
+public interface Scale<T> extends Function_<T> {
 }

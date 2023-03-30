@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of KindOfIndividual.
  */
-public class KindOfIndividualImpl extends HqdmObject implements KindOfIndividual {
+public class KindOfIndividualImpl<T> extends HqdmObject<T> implements KindOfIndividual<T> {
     /**
      * Constructs a new KindOfIndividual.
      *
      * @param id String of the KindOfIndividual.
      */
-    public KindOfIndividualImpl(final String id) {
+    public KindOfIndividualImpl(final T id) {
         super(id);
     }
 }

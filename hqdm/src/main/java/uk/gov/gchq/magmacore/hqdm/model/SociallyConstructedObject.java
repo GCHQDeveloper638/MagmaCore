@@ -15,8 +15,10 @@
 package uk.gov.gchq.magmacore.hqdm.model;
 
 /**
- * An {@link IntentionallyConstructedObject} that is necessarily constructed by agreement or at
+ * An {@link IntentionallyConstructedObject} that is necessarily constructed by
+ * agreement or at
  * least acquiescence of many people.
  */
-public interface SociallyConstructedObject extends IntentionallyConstructedObject, StateOfSociallyConstructedObject {
+public interface SociallyConstructedObject<T>
+        extends IntentionallyConstructedObject<T>, StateOfSociallyConstructedObject<T> {
 }

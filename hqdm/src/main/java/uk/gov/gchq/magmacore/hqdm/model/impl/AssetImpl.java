@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Asset.
  */
-public class AssetImpl extends HqdmObject implements Asset {
+public class AssetImpl<T> extends HqdmObject<T> implements Asset<T> {
     /**
      * Constructs a new Asset.
      *
      * @param id String of the Asset.
      */
-    public AssetImpl(final String id) {
+    public AssetImpl(final T id) {
         super(id);
     }
 }

@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link State} that is a {@code participant_in} an {@link Activity} or {@link Association}.
  */
-public interface Participant extends StateOfPhysicalObject {
+public interface Participant<T> extends StateOfPhysicalObject<T> {
 }

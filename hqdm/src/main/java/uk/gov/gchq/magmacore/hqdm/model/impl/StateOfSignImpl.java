@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of StateOfSign.
  */
-public class StateOfSignImpl extends HqdmObject implements StateOfSign {
+public class StateOfSignImpl<T> extends HqdmObject<T> implements StateOfSign<T> {
     /**
      * Constructs a new StateOfSign.
      *
      * @param id String of the StateOfSign.
      */
-    public StateOfSignImpl(final String id) {
+    public StateOfSignImpl(final T id) {
         super(id);
     }
 }

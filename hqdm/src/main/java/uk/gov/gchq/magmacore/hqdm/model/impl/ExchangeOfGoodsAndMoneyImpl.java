@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of ExchangeOfGoodsAndMoney.
  */
-public class ExchangeOfGoodsAndMoneyImpl extends HqdmObject implements ExchangeOfGoodsAndMoney {
+public class ExchangeOfGoodsAndMoneyImpl<T> extends HqdmObject<T> implements ExchangeOfGoodsAndMoney<T> {
     /**
      * Constructs a new ExchangeOfGoodsAndMoney.
      *
      * @param id String of the ExchangeOfGoodsAndMoney.
      */
-    public ExchangeOfGoodsAndMoneyImpl(final String id) {
+    public ExchangeOfGoodsAndMoneyImpl(final T id) {
         super(id);
     }
 }

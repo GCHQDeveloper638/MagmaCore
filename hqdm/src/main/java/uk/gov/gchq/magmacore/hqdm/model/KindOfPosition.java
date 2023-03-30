@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfPosition} that is also a {@link KindOfOrganizationComponent} where all the
  * members are of the same kind.
  */
-public interface KindOfPosition extends ClassOfPosition, KindOfOrganizationComponent {
+public interface KindOfPosition<T> extends ClassOfPosition<T>, KindOfOrganizationComponent<T> {
 }

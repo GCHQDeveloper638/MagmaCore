@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link ClassOfStateOfPhysicalObject} that is {@link Participant} or any of its subsets.
  */
-public interface ClassOfParticipant extends ClassOfStateOfPhysicalObject {
+public interface ClassOfParticipant<T> extends ClassOfStateOfPhysicalObject<T> {
 }

@@ -18,6 +18,6 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfStateOfSociallyConstructedObject} that is
  * {@link StateOfSociallyConstructedObject} or any of its subsets.
  */
-public interface ClassOfStateOfSociallyConstructedActivity
-        extends ClassOfStateOfSociallyConstructedObject, ClassOfStateOfActivity {
+public interface ClassOfStateOfSociallyConstructedActivity<T>
+        extends ClassOfStateOfSociallyConstructedObject<T>, ClassOfStateOfActivity<T> {
 }

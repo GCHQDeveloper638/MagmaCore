@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of StateOfLanguageCommunity.
  */
-public class StateOfLanguageCommunityImpl extends HqdmObject implements StateOfLanguageCommunity {
+public class StateOfLanguageCommunityImpl<T> extends HqdmObject<T> implements StateOfLanguageCommunity<T> {
     /**
      * Constructs a new StateOfLanguageCommunity.
      *
      * @param id String of the StateOfLanguageCommunity.
      */
-    public StateOfLanguageCommunityImpl(final String id) {
+    public StateOfLanguageCommunityImpl(final T id) {
         super(id);
     }
 }

@@ -20,5 +20,5 @@ import uk.gov.gchq.magmacore.hqdm.pojo.Top;
  * A SELECT where a {@link Participant} may be a {@code participant_in} an {@link Activity} or an
  * {@link Association}.
  */
-public interface ParticipantInActivityOrAssociation extends Top {
+public interface ParticipantInActivityOrAssociation<T> extends Top<T> {
 }

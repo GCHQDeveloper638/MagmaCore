@@ -15,8 +15,11 @@
 package uk.gov.gchq.magmacore.hqdm.model;
 
 /**
- * A {@link ClassOfBiologicalSystemComponent} that is also a {@link KindOfSystemComponent} where all
- * the member components play the same {@link Role} in some {@link BiologicalSystem}.
+ * A {@link ClassOfBiologicalSystemComponent} that is also a
+ * {@link KindOfSystemComponent} where all
+ * the member components play the same {@link Role} in some
+ * {@link BiologicalSystem}.
  */
-public interface KindOfBiologicalSystemComponent extends ClassOfBiologicalSystemComponent, KindOfSystemComponent {
+public interface KindOfBiologicalSystemComponent<T>
+        extends ClassOfBiologicalSystemComponent<T>, KindOfSystemComponent<T> {
 }

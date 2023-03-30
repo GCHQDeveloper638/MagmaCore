@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link StateOfOrganization} that is a {@code temporal_part_of} a {@link LanguageCommunity}.
  */
-public interface StateOfLanguageCommunity extends StateOfOrganization {
+public interface StateOfLanguageCommunity<T> extends StateOfOrganization<T> {
 }

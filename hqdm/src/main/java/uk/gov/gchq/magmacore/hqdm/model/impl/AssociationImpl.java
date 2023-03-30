@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Association.
  */
-public class AssociationImpl extends HqdmObject implements Association {
+public class AssociationImpl<T> extends HqdmObject<T> implements Association<T> {
     /**
      * Constructs a new Association.
      *
      * @param id String of the Association.
      */
-    public AssociationImpl(final String id) {
+    public AssociationImpl(final T id) {
         super(id);
     }
 }

@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link ClassOfActivity} all of whose members are of the same kind.
  */
-public interface KindOfActivity extends ClassOfActivity {
+public interface KindOfActivity<T> extends ClassOfActivity<T> {
 }

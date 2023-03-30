@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link Class} that is {@link AbstractObject} or any its subsets.
  */
-public interface ClassOfAbstractObject extends Class {
+public interface ClassOfAbstractObject<T> extends Class<T> {
 }

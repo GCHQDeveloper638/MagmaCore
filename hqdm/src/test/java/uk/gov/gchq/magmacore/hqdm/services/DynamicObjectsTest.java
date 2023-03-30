@@ -36,7 +36,7 @@ public class DynamicObjectsTest {
     public void testCreate() {
 
         // Create the object with three interfaces.
-        final Person person = DynamicObjects.create("person1", Person.class,
+        final Person<String> person = DynamicObjects.create("person1", Person.class,
                 new Class[] { Person.class, Participant.class, Party.class });
 
         // Verify that the object implements all three interfaces and has the right id.
@@ -62,7 +62,7 @@ public class DynamicObjectsTest {
         assertEquals("person1", person1.getId());
 
         // Add two more interfaces to the object - this time return it as a Participant.
-        final Participant person2 = DynamicObjects.implementInterfaces(person1, Participant.class,
+        final Participant<String> person2 = DynamicObjects.implementInterfaces(person1, Participant.class,
                 new Class[] { Person.class, Participant.class, Party.class });
 
         // Verify that the object implements all three interfaces and has the right id.

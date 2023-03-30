@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of PossibleWorld.
  */
-public class PossibleWorldImpl extends HqdmObject implements PossibleWorld {
+public class PossibleWorldImpl<T> extends HqdmObject<T> implements PossibleWorld<T> {
     /**
      * Constructs a new PossibleWorld.
      *
      * @param id String of the PossibleWorld.
      */
-    public PossibleWorldImpl(final String id) {
+    public PossibleWorldImpl(final T id) {
         super(id);
     }
 }

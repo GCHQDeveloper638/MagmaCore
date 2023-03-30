@@ -15,8 +15,10 @@
 package uk.gov.gchq.magmacore.hqdm.model;
 
 /**
- * An {@link IntentionallyConstructedObject} that is also a {@link PhysicalObject} that has an
+ * An {@link IntentionallyConstructedObject} that is also a
+ * {@link PhysicalObject} that has an
  * {@code intended_role}.
  */
-public interface FunctionalObject extends IntentionallyConstructedObject, StateOfFunctionalObject, PhysicalObject {
+public interface FunctionalObject<T>
+        extends IntentionallyConstructedObject<T>, StateOfFunctionalObject<T>, PhysicalObject<T> {
 }

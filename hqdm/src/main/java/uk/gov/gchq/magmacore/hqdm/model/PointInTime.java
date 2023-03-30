@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * An {@link Event} that is all of space at an instant from some viewpoint.
  */
-public interface PointInTime extends Event {
+public interface PointInTime<T> extends Event<T> {
 }

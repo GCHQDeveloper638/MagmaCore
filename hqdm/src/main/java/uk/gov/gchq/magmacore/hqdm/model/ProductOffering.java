@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * An {@link Offering} that is for a {@link SalesProduct}.
  */
-public interface ProductOffering extends Offering {
+public interface ProductOffering<T> extends Offering<T> {
 }

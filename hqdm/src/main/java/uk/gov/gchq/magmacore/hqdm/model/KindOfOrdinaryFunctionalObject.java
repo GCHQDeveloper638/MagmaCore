@@ -19,6 +19,6 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * and a {@link KindOfBiologicalObject} where each {@code member_of} a
  * {@link KindOfOrdinaryBiologicalObject} is of the same kind.
  */
-public interface KindOfOrdinaryFunctionalObject
-        extends ClassOfOrdinaryFunctionalObject, KindOfOrdinaryPhysicalObject, KindOfFunctionalObject {
+public interface KindOfOrdinaryFunctionalObject<T>
+        extends ClassOfOrdinaryFunctionalObject<T>, KindOfOrdinaryPhysicalObject<T>, KindOfFunctionalObject<T> {
 }

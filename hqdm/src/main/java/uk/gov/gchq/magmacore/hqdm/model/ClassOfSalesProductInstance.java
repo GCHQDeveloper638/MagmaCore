@@ -19,6 +19,6 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * {@link ClassOfOrdinaryFunctionalObject} that is {@link SalesProductInstance} or any of its
  * subsets.
  */
-public interface ClassOfSalesProductInstance
-        extends ClassOfStateOfSalesProductInstance, ClassOfOrdinaryFunctionalObject {
+public interface ClassOfSalesProductInstance<T>
+        extends ClassOfStateOfSalesProductInstance<T>, ClassOfOrdinaryFunctionalObject<T> {
 }

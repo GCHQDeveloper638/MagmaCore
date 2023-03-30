@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link StateOfOrdinaryFunctionalObject} that is a {@link SalesProductInstance} or a
  * {@code temporal_part_of} one.
  */
-public interface StateOfSalesProductInstance extends StateOfOrdinaryFunctionalObject {
+public interface StateOfSalesProductInstance<T> extends StateOfOrdinaryFunctionalObject<T> {
 }

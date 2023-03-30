@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of AcceptanceOfOffer.
  */
-public class AcceptanceOfOfferImpl extends HqdmObject implements AcceptanceOfOffer {
+public class AcceptanceOfOfferImpl<T> extends HqdmObject<T> implements AcceptanceOfOffer<T> {
     /**
      * Constructs a new AcceptanceOfOffer.
      *
      * @param id String of the AcceptanceOfOffer.
      */
-    public AcceptanceOfOfferImpl(final String id) {
+    public AcceptanceOfOfferImpl(final T id) {
         super(id);
     }
 }

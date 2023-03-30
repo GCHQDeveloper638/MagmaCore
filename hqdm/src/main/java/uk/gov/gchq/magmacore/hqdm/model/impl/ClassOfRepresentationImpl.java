@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of ClassOfRepresentation.
  */
-public class ClassOfRepresentationImpl extends HqdmObject implements ClassOfRepresentation {
+public class ClassOfRepresentationImpl<T> extends HqdmObject<T> implements ClassOfRepresentation<T> {
     /**
      * Constructs a new ClassOfRepresentation.
      *
      * @param id String of the ClassOfRepresentation.
      */
-    public ClassOfRepresentationImpl(final String id) {
+    public ClassOfRepresentationImpl(final T id) {
         super(id);
     }
 }

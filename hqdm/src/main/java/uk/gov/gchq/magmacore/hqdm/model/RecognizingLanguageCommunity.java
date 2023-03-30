@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link StateOfLanguageCommunity} that recognizes what a {@link Pattern} is intended to
  * represent.
  */
-public interface RecognizingLanguageCommunity extends StateOfLanguageCommunity, Participant {
+public interface RecognizingLanguageCommunity<T> extends StateOfLanguageCommunity<T>, Participant<T> {
 }

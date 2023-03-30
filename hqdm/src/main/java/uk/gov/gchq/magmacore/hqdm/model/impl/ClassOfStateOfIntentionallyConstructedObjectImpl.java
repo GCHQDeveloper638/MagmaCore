@@ -20,14 +20,14 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of ClassOfStateOfIntentionallyConstructedObject.
  */
-public class ClassOfStateOfIntentionallyConstructedObjectImpl extends HqdmObject
-        implements ClassOfStateOfIntentionallyConstructedObject {
+public class ClassOfStateOfIntentionallyConstructedObjectImpl<T> extends HqdmObject<T>
+        implements ClassOfStateOfIntentionallyConstructedObject<T> {
     /**
      * Constructs a new ClassOfStateOfIntentionallyConstructedObject.
      *
      * @param id String of the ClassOfStateOfIntentionallyConstructedObject.
      */
-    public ClassOfStateOfIntentionallyConstructedObjectImpl(final String id) {
+    public ClassOfStateOfIntentionallyConstructedObjectImpl(final T id) {
         super(id);
     }
 }

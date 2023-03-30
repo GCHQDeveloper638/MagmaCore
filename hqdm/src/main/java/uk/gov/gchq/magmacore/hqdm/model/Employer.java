@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link StateOfParty} that is a {@code participant_in} an {@link Employment}.
  */
-public interface Employer extends StateOfParty, Participant {
+public interface Employer<T> extends StateOfParty<T>, Participant<T> {
 }

@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link StateOfParty} and {@link Participant} receiving {@link Ownership} in a
  * {@link TransferOfOwnership}.
  */
-public interface Transferee extends StateOfParty, Participant {
+public interface Transferee<T> extends StateOfParty<T>, Participant<T> {
 }

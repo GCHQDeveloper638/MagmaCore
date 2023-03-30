@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of RepresentationBySign.
  */
-public class RepresentationBySignImpl extends HqdmObject implements RepresentationBySign {
+public class RepresentationBySignImpl<T> extends HqdmObject<T> implements RepresentationBySign<T> {
     /**
      * Constructs a new RepresentationBySign.
      *
      * @param id String of the RepresentationBySign.
      */
-    public RepresentationBySignImpl(final String id) {
+    public RepresentationBySignImpl(final T id) {
         super(id);
     }
 }

@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of OrdinaryPhysicalObject.
  */
-public class OrdinaryPhysicalObjectImpl extends HqdmObject implements OrdinaryPhysicalObject {
+public class OrdinaryPhysicalObjectImpl<T> extends HqdmObject<T> implements OrdinaryPhysicalObject<T> {
     /**
      * Constructs a new OrdinaryPhysicalObject.
      *
      * @param id String of the OrdinaryPhysicalObject.
      */
-    public OrdinaryPhysicalObjectImpl(final String id) {
+    public OrdinaryPhysicalObjectImpl(final T id) {
         super(id);
     }
 }

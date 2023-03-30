@@ -19,5 +19,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * {@link Participant} that represents some {@link Thing} for some community in one or more
  * {@code representation_by_sign}.
  */
-public interface Sign extends SociallyConstructedObject, StateOfSign, Participant {
+public interface Sign<T> extends SociallyConstructedObject<T>, StateOfSign<T>, Participant<T> {
 }

@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * Any {@link SociallyConstructedObject} that is also an {@link Activity}.
  */
-public interface SociallyConstructedActivity extends Activity, SociallyConstructedObject {
+public interface SociallyConstructedActivity<T> extends Activity<T>, SociallyConstructedObject<T> {
 }

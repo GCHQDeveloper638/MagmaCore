@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of ClassOfReachingAgreement.
  */
-public class ClassOfReachingAgreementImpl extends HqdmObject implements ClassOfReachingAgreement {
+public class ClassOfReachingAgreementImpl<T> extends HqdmObject<T> implements ClassOfReachingAgreement<T> {
     /**
      * Constructs a new ClassOfReachingAgreement.
      *
      * @param id String of the ClassOfReachingAgreement.
      */
-    public ClassOfReachingAgreementImpl(final String id) {
+    public ClassOfReachingAgreementImpl(final T id) {
         super(id);
     }
 }

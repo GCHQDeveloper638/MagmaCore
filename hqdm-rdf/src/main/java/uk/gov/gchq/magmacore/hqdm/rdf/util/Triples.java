@@ -34,7 +34,7 @@ public abstract class Triples {
      * @param thing The {@link Thing} to convert.
      * @return A string of RDF triples.
      */
-    public static String toTriples(final Thing thing) {
+    public static String toTriples(final Thing<IRI> thing) {
         final String predicatesString = thing.getPredicates().entrySet().stream().map(predicate -> {
             final String predicateString = "<" + predicate.getKey().toString() + "> ";
 
@@ -42,7 +42,7 @@ public abstract class Triples {
                     .collect(Collectors.joining(";\n"));
         }).collect(Collectors.joining(";\n"));
 
-        return '<' + thing.getId() + "> " + predicatesString + ".\n";
+        return '<' + thing.getId().getIri() + "> " + predicatesString + ".\n";
     }
 
     /**

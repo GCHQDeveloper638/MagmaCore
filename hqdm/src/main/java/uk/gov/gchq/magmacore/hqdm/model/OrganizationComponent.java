@@ -19,6 +19,6 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * {@link SociallyConstructedObject} that is a {@code component_of} an {@link Organization} that can
  * be completely replaced without losing its identity.
  */
-public interface OrganizationComponent
-                extends StateOfOrganizationComponent, SystemComponent, SociallyConstructedObject {
+public interface OrganizationComponent<T>
+                extends StateOfOrganizationComponent<T>, SystemComponent<T>, SociallyConstructedObject<T> {
 }

@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfRepresentation} where the {@link Sign} in all the members are members of the
  * {@link Pattern} specified.
  */
-public interface RepresentationByPattern extends ClassOfRepresentation {
+public interface RepresentationByPattern<T> extends ClassOfRepresentation<T> {
 }

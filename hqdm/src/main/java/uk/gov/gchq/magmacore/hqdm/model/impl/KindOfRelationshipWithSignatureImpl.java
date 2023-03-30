@@ -20,13 +20,15 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of KindOfRelationshipWithSignature.
  */
-public class KindOfRelationshipWithSignatureImpl extends HqdmObject implements KindOfRelationshipWithSignature {
+public class KindOfRelationshipWithSignatureImpl<T> extends HqdmObject<T>
+        implements KindOfRelationshipWithSignature<T> {
     /**
      * Constructs a new KindOfRelationshipWithSignature.
      *
-     * @param id String of the KindOfRelationshipWithSignature.
+     * @param id
+     *            String of the KindOfRelationshipWithSignature.
      */
-    public KindOfRelationshipWithSignatureImpl(final String id) {
+    public KindOfRelationshipWithSignatureImpl(final T id) {
         super(id);
     }
 }

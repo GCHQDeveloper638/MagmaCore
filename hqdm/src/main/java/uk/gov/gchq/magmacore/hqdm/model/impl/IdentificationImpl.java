@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Identification.
  */
-public class IdentificationImpl extends HqdmObject implements Identification {
+public class IdentificationImpl<T> extends HqdmObject<T> implements Identification<T> {
     /**
      * Constructs a new Identification.
      *
      * @param id String of the Identification.
      */
-    public IdentificationImpl(final String id) {
+    public IdentificationImpl(final T id) {
         super(id);
     }
 }

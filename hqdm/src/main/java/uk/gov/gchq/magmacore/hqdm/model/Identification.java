@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link RepresentationByPattern} that is a surrogate for the {@link Thing} {@code represented}.
  */
-public interface Identification extends RepresentationByPattern {
+public interface Identification<T> extends RepresentationByPattern<T> {
 }

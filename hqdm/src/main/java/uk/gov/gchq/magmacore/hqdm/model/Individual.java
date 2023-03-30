@@ -23,5 +23,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * {@link Individual} excluding itself are called proper parts.
  * </p>
  */
-public interface Individual extends State {
+public interface Individual<T> extends State<T> {
 }

@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * An {@link Event} that is the {@code ending} of an {@link Ownership}.
  */
-public interface EndingOfOwnership extends Event {
+public interface EndingOfOwnership<T> extends Event<T> {
 }

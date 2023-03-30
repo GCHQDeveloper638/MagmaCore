@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfSpatioTemporalExtent} that is the {@code intersection_of} one or more
  * {@link ClassOfState}.
  */
-public interface RequirementSpecification extends ClassOfSpatioTemporalExtent {
+public interface RequirementSpecification<T> extends ClassOfSpatioTemporalExtent<T> {
 }

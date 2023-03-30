@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link SpatioTemporalExtent} that has zero temporal thickness and may bound some
  * {@link SpatioTemporalExtent}.
  */
-public interface Event extends SpatioTemporalExtent {
+public interface Event<T> extends SpatioTemporalExtent<T> {
 }

@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of LanguageCommunity.
  */
-public class LanguageCommunityImpl extends HqdmObject implements LanguageCommunity {
+public class LanguageCommunityImpl<T> extends HqdmObject<T> implements LanguageCommunity<T> {
     /**
      * Constructs a new LanguageCommunity.
      *
      * @param id String of the LanguageCommunity.
      */
-    public LanguageCommunityImpl(final String id) {
+    public LanguageCommunityImpl(final T id) {
         super(id);
     }
 }

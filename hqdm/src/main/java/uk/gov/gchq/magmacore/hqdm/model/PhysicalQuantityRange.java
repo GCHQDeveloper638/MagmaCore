@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link PhysicalPropertyRange} that ranges over {@link PhysicalQuantity} values.
  */
-public interface PhysicalQuantityRange extends PhysicalPropertyRange {
+public interface PhysicalQuantityRange<T> extends PhysicalPropertyRange<T> {
 }

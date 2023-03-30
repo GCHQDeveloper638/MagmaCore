@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Function.
  */
-public class FunctionImpl extends HqdmObject implements Function_ {
+public class FunctionImpl<T> extends HqdmObject<T> implements Function_<T> {
     /**
      * Constructs a new Function_.
      *
      * @param id String of the Function_.
      */
-    public FunctionImpl(final String id) {
+    public FunctionImpl(final T id) {
         super(id);
     }
 }

@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of PhysicalProperty.
  */
-public class PhysicalPropertyImpl extends HqdmObject implements PhysicalProperty {
+public class PhysicalPropertyImpl<T> extends HqdmObject<T> implements PhysicalProperty<T> {
     /**
      * Constructs a new PhysicalProperty.
      *
      * @param id String of the PhysicalProperty.
      */
-    public PhysicalPropertyImpl(final String id) {
+    public PhysicalPropertyImpl(final T id) {
         super(id);
     }
 }

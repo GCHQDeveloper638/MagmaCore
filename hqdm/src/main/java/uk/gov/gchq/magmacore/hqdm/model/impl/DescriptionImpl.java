@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Description.
  */
-public class DescriptionImpl extends HqdmObject implements Description {
+public class DescriptionImpl<T> extends HqdmObject<T> implements Description<T> {
     /**
      * Constructs a new Description.
      *
      * @param id String of the Description.
      */
-    public DescriptionImpl(final String id) {
+    public DescriptionImpl(final T id) {
         super(id);
     }
 }

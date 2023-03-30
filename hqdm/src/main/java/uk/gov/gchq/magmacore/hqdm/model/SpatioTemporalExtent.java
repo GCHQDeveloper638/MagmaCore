@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link Thing} that exists in time and space.
  */
-public interface SpatioTemporalExtent extends Thing {
+public interface SpatioTemporalExtent<T> extends Thing<T> {
 }

@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * An {@link AgreementProcess} that consists of an {@link AgreeContract} and a
  * {@link ContractExecution}.
  */
-public interface ContractProcess extends AgreementProcess {
+public interface ContractProcess<T> extends AgreementProcess<T> {
 }

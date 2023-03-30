@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link Relationship} that is defined by a {@link KindOfRelationshipWithSignature}.
  */
-public interface DefinedRelationship extends Relationship {
+public interface DefinedRelationship<T> extends Relationship<T> {
 }

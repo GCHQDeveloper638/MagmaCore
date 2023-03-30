@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A plus one {@link Function_} for a {@link Scale}.
  */
-public interface UnitOfMeasure extends Function_ {
+public interface UnitOfMeasure<T> extends Function_<T> {
 }

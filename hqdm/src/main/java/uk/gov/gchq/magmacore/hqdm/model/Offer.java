@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link SociallyConstructedActivity} that proposes an exchange of some {@link Thing} for some
  * consideration.
  */
-public interface Offer extends SociallyConstructedActivity {
+public interface Offer<T> extends SociallyConstructedActivity<T> {
 }

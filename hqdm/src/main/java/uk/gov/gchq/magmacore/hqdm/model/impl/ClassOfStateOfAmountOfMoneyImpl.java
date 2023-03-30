@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of ClassOfStateOfAmountOfMoney.
  */
-public class ClassOfStateOfAmountOfMoneyImpl extends HqdmObject implements ClassOfStateOfAmountOfMoney {
+public class ClassOfStateOfAmountOfMoneyImpl<T> extends HqdmObject<T> implements ClassOfStateOfAmountOfMoney<T> {
     /**
      * Constructs a new ClassOfStateOfAmountOfMoney.
      *
      * @param id String of the ClassOfStateOfAmountOfMoney.
      */
-    public ClassOfStateOfAmountOfMoneyImpl(final String id) {
+    public ClassOfStateOfAmountOfMoneyImpl(final T id) {
         super(id);
     }
 }

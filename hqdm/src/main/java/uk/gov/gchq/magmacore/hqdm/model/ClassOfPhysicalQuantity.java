@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link ClassOfPhysicalProperty} that is {@link PhysicalQuantity} or any of its subsets.
  */
-public interface ClassOfPhysicalQuantity extends ClassOfPhysicalProperty {
+public interface ClassOfPhysicalQuantity<T> extends ClassOfPhysicalProperty<T> {
 }

@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link StateOfPhysicalObject} that is a {@link SystemComponent} or a {@code temporal_part_of} a
  * {@link SystemComponent}.
  */
-public interface StateOfSystemComponent extends StateOfPhysicalObject {
+public interface StateOfSystemComponent<T> extends StateOfPhysicalObject<T> {
 }

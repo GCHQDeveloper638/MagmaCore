@@ -20,13 +20,15 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of ClassOfInPlaceBiologicalComponent.
  */
-public class ClassOfInPlaceBiologicalComponentImpl extends HqdmObject implements ClassOfInPlaceBiologicalComponent {
+public class ClassOfInPlaceBiologicalComponentImpl<T> extends HqdmObject<T>
+        implements ClassOfInPlaceBiologicalComponent<T> {
     /**
      * Constructs a new ClassOfInPlaceBiologicalComponent.
      *
-     * @param id String of the ClassOfInPlaceBiologicalComponent.
+     * @param id
+     *            String of the ClassOfInPlaceBiologicalComponent.
      */
-    public ClassOfInPlaceBiologicalComponentImpl(final String id) {
+    public ClassOfInPlaceBiologicalComponentImpl(final T id) {
         super(id);
     }
 }

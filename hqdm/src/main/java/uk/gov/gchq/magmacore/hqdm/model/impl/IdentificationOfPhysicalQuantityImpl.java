@@ -20,13 +20,15 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of IdentificationOfPhysicalQuantity.
  */
-public class IdentificationOfPhysicalQuantityImpl extends HqdmObject implements IdentificationOfPhysicalQuantity {
+public class IdentificationOfPhysicalQuantityImpl<T> extends HqdmObject<T>
+        implements IdentificationOfPhysicalQuantity<T> {
     /**
      * Constructs a new IdentificationOfPhysicalQuantity.
      *
-     * @param id String of the IdentificationOfPhysicalQuantity.
+     * @param id
+     *            String of the IdentificationOfPhysicalQuantity.
      */
-    public IdentificationOfPhysicalQuantityImpl(final String id) {
+    public IdentificationOfPhysicalQuantityImpl(final T id) {
         super(id);
     }
 }

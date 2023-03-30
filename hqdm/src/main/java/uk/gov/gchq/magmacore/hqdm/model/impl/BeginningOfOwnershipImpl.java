@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of BeginningOfOwnership.
  */
-public class BeginningOfOwnershipImpl extends HqdmObject implements BeginningOfOwnership {
+public class BeginningOfOwnershipImpl<T> extends HqdmObject<T> implements BeginningOfOwnership<T> {
     /**
      * Constructs a BeginningOfOwnership.
      *
      * @param id String of the BeginningOfOwnership.
      */
-    public BeginningOfOwnershipImpl(final String id) {
+    public BeginningOfOwnershipImpl(final T id) {
         super(id);
     }
 }

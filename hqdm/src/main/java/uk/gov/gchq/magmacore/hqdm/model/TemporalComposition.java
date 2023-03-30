@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link Composition} where the part is the entire {@code whole} spatially, but part of the
  * {@code whole} temporally.
  */
-public interface TemporalComposition extends Composition {
+public interface TemporalComposition<T> extends Composition<T> {
 }

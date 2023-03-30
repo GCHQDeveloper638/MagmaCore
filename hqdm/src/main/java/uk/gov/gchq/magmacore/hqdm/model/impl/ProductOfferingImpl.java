@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of ProductOffering.
  */
-public class ProductOfferingImpl extends HqdmObject implements ProductOffering {
+public class ProductOfferingImpl<T> extends HqdmObject<T> implements ProductOffering<T> {
     /**
      * Constructs a new ProductOffering.
      *
      * @param id String of the ProductOffering.
      */
-    public ProductOfferingImpl(final String id) {
+    public ProductOfferingImpl(final T id) {
         super(id);
     }
 }

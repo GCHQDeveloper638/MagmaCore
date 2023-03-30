@@ -40,19 +40,19 @@ public class HqdmObjectTest {
 
     @Test
     public void testDateTimeFormattingForTriples() {
-        final PossibleWorld possibleWorld = new PossibleWorldImpl("World");
+        final PossibleWorld<String> possibleWorld = new PossibleWorldImpl<String>("World");
         final String beginDateTime = Instant.now().toString();
         final String endDate = Instant.now().toString();
 
-        final PointInTime beginEvent = new PointInTimeImpl(beginDateTime);
+        final PointInTime<String> beginEvent = new PointInTimeImpl<String>(beginDateTime);
 
         beginEvent.addValue("HQDM.PART_OF_POSSIBLE_WORLD", possibleWorld.getId());
 
-        final PointInTime endEvent = new PointInTimeImpl(endDate);
+        final PointInTime<String> endEvent = new PointInTimeImpl<String>(endDate);
 
         endEvent.addValue("HQDM.PART_OF_POSSIBLE_WORLD", possibleWorld.getId());
 
-        final SpatioTemporalExtent object1 = new SpatioTemporalExtentImpl("Object1");
+        final SpatioTemporalExtent<String> object1 = new SpatioTemporalExtentImpl<String>("Object1");
 
         object1.addValue("HQDM.BEGINNING", beginEvent.getId());
         object1.addValue("HQDM.ENDING", endEvent.getId());
@@ -64,7 +64,7 @@ public class HqdmObjectTest {
 
     @Test
     public void testDeleteValueFromThing() {
-        final var thing = new ThingImpl("test");
+        final var thing = new ThingImpl<String>("test");
 
         // Add a predicate and confirm it is present.
         thing.addValue("test-predicate", "test-value");
@@ -88,10 +88,10 @@ public class HqdmObjectTest {
      */
     @Test
     public void testTwoObjectsAreEqual() {
-        final Thing thing1 = new ThingImpl("thing1");
+        final Thing<String> thing1 = new ThingImpl<String>("thing1");
         thing1.addValue("test-predicate", "test-value");
 
-        final Thing thing2 = new ThingImpl("thing1");
+        final Thing<String> thing2 = new ThingImpl<String>("thing1");
         thing2.addValue("test-predicate2", "test-value2");
 
         assertEquals(thing1, thing2);
@@ -103,13 +103,13 @@ public class HqdmObjectTest {
      */
     @Test
     public void testSetContainsHqdmObject() {
-        final Thing thing1 = new ThingImpl("thing1");
+        final Thing<String> thing1 = new ThingImpl<String>("thing1");
         thing1.addValue("test-predicate", "test-value");
 
-        final SpatioTemporalExtent thing2 = new SpatioTemporalExtentImpl("thing1");
+        final SpatioTemporalExtent<String> thing2 = new SpatioTemporalExtentImpl<String>("thing1");
         thing2.addValue("test-predicate2", "test-value2");
 
-        final Set<Thing> things = new HashSet<>();
+        final Set<Thing<String>> things = new HashSet<>();
         things.add(thing2);
 
         assertTrue(things.contains(thing1));

@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of SociallyConstructedActivity.
  */
-public class SociallyConstructedActivityImpl extends HqdmObject implements SociallyConstructedActivity {
+public class SociallyConstructedActivityImpl<T> extends HqdmObject<T> implements SociallyConstructedActivity<T> {
     /**
      * Constructs a new SociallyConstructedActivity.
      *
      * @param id String of the SociallyConstructedActivity.
      */
-    public SociallyConstructedActivityImpl(final String id) {
+    public SociallyConstructedActivityImpl(final T id) {
         super(id);
     }
 }

@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of KindOfSystemComponent.
  */
-public class KindOfSystemComponentImpl extends HqdmObject implements KindOfSystemComponent {
+public class KindOfSystemComponentImpl<T> extends HqdmObject<T> implements KindOfSystemComponent<T> {
     /**
      * Constructs a new KindOfSystemComponent.
      *
      * @param id String of the KindOfSystemComponent.
      */
-    public KindOfSystemComponentImpl(final String id) {
+    public KindOfSystemComponentImpl(final T id) {
         super(id);
     }
 }

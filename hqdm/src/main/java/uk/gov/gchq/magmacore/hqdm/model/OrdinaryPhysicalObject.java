@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link PhysicalObject} that does not survive changing all its parts at once.
  */
-public interface OrdinaryPhysicalObject extends PhysicalObject, StateOfOrdinaryPhysicalObject {
+public interface OrdinaryPhysicalObject<T> extends PhysicalObject<T>, StateOfOrdinaryPhysicalObject<T> {
 }

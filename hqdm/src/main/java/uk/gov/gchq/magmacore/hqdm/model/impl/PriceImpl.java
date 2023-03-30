@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Price.
  */
-public class PriceImpl extends HqdmObject implements Price {
+public class PriceImpl<T> extends HqdmObject<T> implements Price<T> {
     /**
      * Constructs a new Price.
      *
      * @param id String of the Price.
      */
-    public PriceImpl(final String id) {
+    public PriceImpl(final T id) {
         super(id);
     }
 }

@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of PhysicalQuantityRange.
  */
-public class PhysicalQuantityRangeImpl extends HqdmObject implements PhysicalQuantityRange {
+public class PhysicalQuantityRangeImpl<T> extends HqdmObject<T> implements PhysicalQuantityRange<T> {
     /**
      * Constructs a new PhysicalQuantityRange.
      *
      * @param id String of the PhysicalQuantityRange.
      */
-    public PhysicalQuantityRangeImpl(final String id) {
+    public PhysicalQuantityRangeImpl(final T id) {
         super(id);
     }
 }

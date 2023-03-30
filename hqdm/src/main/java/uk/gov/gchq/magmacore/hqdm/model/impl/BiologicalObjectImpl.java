@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of BiologicalObject.
  */
-public class BiologicalObjectImpl extends HqdmObject implements BiologicalObject {
+public class BiologicalObjectImpl<T> extends HqdmObject<T> implements BiologicalObject<T> {
     /**
      * Constructs a new BiologicalObject.
      *
      * @param id String of the BiologicalObject.
      */
-    public BiologicalObjectImpl(final String id) {
+    public BiologicalObjectImpl(final T id) {
         super(id);
     }
 }

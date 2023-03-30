@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link PhysicalQuantity} is a {@link PhysicalProperty} that is a measurable quantity of a
  * {@link KindOfPhysicalProperty}.
  */
-public interface PhysicalQuantity extends PhysicalProperty {
+public interface PhysicalQuantity<T> extends PhysicalProperty<T> {
 }

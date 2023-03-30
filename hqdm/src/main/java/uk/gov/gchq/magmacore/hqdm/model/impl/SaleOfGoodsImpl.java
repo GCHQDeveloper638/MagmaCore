@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of SaleOfGoods.
  */
-public class SaleOfGoodsImpl extends HqdmObject implements SaleOfGoods {
+public class SaleOfGoodsImpl<T> extends HqdmObject<T> implements SaleOfGoods<T> {
     /**
      * Constructs a new SaleOfGoods.
      *
      * @param id String of the SaleOfGoods.
      */
-    public SaleOfGoodsImpl(final String id) {
+    public SaleOfGoodsImpl(final T id) {
         super(id);
     }
 }

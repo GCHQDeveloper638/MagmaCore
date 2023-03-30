@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Ownership.
  */
-public class OwnershipImpl extends HqdmObject implements Ownership {
+public class OwnershipImpl<T> extends HqdmObject<T> implements Ownership<T> {
     /**
      * Constructs a new Ownership.
      *
      * @param id String of the Ownership.
      */
-    public OwnershipImpl(final String id) {
+    public OwnershipImpl(final T id) {
         super(id);
     }
 }

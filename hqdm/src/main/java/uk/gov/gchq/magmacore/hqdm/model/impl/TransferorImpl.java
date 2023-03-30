@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Transferor.
  */
-public class TransferorImpl extends HqdmObject implements Transferor {
+public class TransferorImpl<T> extends HqdmObject<T> implements Transferor<T> {
     /**
      * Constructs a new Transferor.
      *
      * @param id String of the Transferor.
      */
-    public TransferorImpl(final String id) {
+    public TransferorImpl(final T id) {
         super(id);
     }
 }

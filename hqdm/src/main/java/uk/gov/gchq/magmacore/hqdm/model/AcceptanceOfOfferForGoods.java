@@ -19,5 +19,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * {@link TransferOfOwnershipOfMoney} for a {@link TransferOfOwnership} of goods where one
  * {@link Offer} is accepted.
  */
-public interface AcceptanceOfOfferForGoods extends AcceptanceOfOffer {
+public interface AcceptanceOfOfferForGoods<T> extends AcceptanceOfOffer<T> {
 }

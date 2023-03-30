@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ReachingAgreement} that consists of an {@link Offer} of some {@link Thing} in exchange
  * for some consideration, and an {@link AcceptanceOfOffer}.
  */
-public interface AgreeContract extends ReachingAgreement {
+public interface AgreeContract<T> extends ReachingAgreement<T> {
 }

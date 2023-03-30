@@ -15,8 +15,10 @@
 package uk.gov.gchq.magmacore.hqdm.model;
 
 /**
- * A {@link StateOfSystemComponent} that is also a {@link StateOfSociallyConstructedObject} that is
+ * A {@link StateOfSystemComponent} that is also a
+ * {@link StateOfSociallyConstructedObject} that is
  * a {@code temporal_part_of} an {@link OrganizationComponent}.
  */
-public interface StateOfOrganizationComponent extends StateOfSystemComponent, StateOfSociallyConstructedObject {
+public interface StateOfOrganizationComponent<T>
+        extends StateOfSystemComponent<T>, StateOfSociallyConstructedObject<T> {
 }

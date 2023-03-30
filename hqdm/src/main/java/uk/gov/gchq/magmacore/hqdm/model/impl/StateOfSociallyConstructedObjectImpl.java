@@ -20,13 +20,15 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of StateOfSociallyConstructedObject.
  */
-public class StateOfSociallyConstructedObjectImpl extends HqdmObject implements StateOfSociallyConstructedObject {
+public class StateOfSociallyConstructedObjectImpl<T> extends HqdmObject<T>
+        implements StateOfSociallyConstructedObject<T> {
     /**
      * Constructs a new StateOfSociallyConstructedObject.
      *
-     * @param id String of the StateOfSociallyConstructedObject.
+     * @param id
+     *            String of the StateOfSociallyConstructedObject.
      */
-    public StateOfSociallyConstructedObjectImpl(final String id) {
+    public StateOfSociallyConstructedObjectImpl(final T id) {
         super(id);
     }
 }

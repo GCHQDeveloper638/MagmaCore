@@ -15,9 +15,10 @@
 package uk.gov.gchq.magmacore.hqdm.model;
 
 /**
- * A {@link ClassOfStateOfBiologicalObject} and {@link ClassOfStateOfSystemComponent} that is
+ * A {@link ClassOfStateOfBiologicalObject} and
+ * {@link ClassOfStateOfSystemComponent} that is
  * {@link StateOfBiologicalSystemComponent} or any of its subsets.
  */
-public interface ClassOfStateOfBiologicalSystemComponent
-        extends ClassOfStateOfBiologicalObject, ClassOfStateOfSystemComponent {
+public interface ClassOfStateOfBiologicalSystemComponent<T>
+                extends ClassOfStateOfBiologicalObject<T>, ClassOfStateOfSystemComponent<T> {
 }

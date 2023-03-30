@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of ClassOfSign.
  */
-public class ClassOfSignImpl extends HqdmObject implements ClassOfSign {
+public class ClassOfSignImpl<T> extends HqdmObject<T> implements ClassOfSign<T> {
     /**
      * Constructs a new ClassOfSign.
      *
      * @param id String of the ClassOfSign.
      */
-    public ClassOfSignImpl(final String id) {
+    public ClassOfSignImpl(final T id) {
         super(id);
     }
 }

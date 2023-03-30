@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfStateOfAssociation} that is also a {@link ClassOfIndividual} that is
  * {@link Association} or any of its subsets.
  */
-public interface ClassOfAssociation extends ClassOfIndividual, ClassOfStateOfAssociation {
+public interface ClassOfAssociation<T> extends ClassOfIndividual<T>, ClassOfStateOfAssociation<T> {
 }

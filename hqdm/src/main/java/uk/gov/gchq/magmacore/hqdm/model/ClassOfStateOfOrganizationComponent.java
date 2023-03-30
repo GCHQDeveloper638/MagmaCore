@@ -19,6 +19,6 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * {@link ClassOfStateOfSociallyConstructedObject} that is {@link StateOfOrganizationComponent} or
  * any of its subsets.
  */
-public interface ClassOfStateOfOrganizationComponent
-                extends ClassOfStateOfSystemComponent, ClassOfStateOfSociallyConstructedObject {
+public interface ClassOfStateOfOrganizationComponent<T>
+                extends ClassOfStateOfSystemComponent<T>, ClassOfStateOfSociallyConstructedObject<T> {
 }

@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Pattern.
  */
-public class PatternImpl extends HqdmObject implements Pattern {
+public class PatternImpl<T> extends HqdmObject<T> implements Pattern<T> {
     /**
      * Constructs a new Pattern.
      *
      * @param id String of the Pattern.
      */
-    public PatternImpl(final String id) {
+    public PatternImpl(final T id) {
         super(id);
     }
 }

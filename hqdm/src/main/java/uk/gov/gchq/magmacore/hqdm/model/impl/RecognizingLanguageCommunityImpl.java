@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of RecognizingLanguageCommunity.
  */
-public class RecognizingLanguageCommunityImpl extends HqdmObject implements RecognizingLanguageCommunity {
+public class RecognizingLanguageCommunityImpl<T> extends HqdmObject<T> implements RecognizingLanguageCommunity<T> {
     /**
      * Constructs a new RecognizingLanguageCommunity.
      *
      * @param id String of the RecognizingLanguageCommunity.
      */
-    public RecognizingLanguageCommunityImpl(final String id) {
+    public RecognizingLanguageCommunityImpl(final T id) {
         super(id);
     }
 }

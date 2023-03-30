@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link StateOfOrganization}, that is also a {@link Party}, and a
  * {@link SociallyConstructedObject} that is an organized body of people.
  */
-public interface Organization extends StateOfOrganization, Party, SociallyConstructedObject {
+public interface Organization<T> extends StateOfOrganization<T>, Party<T>, SociallyConstructedObject<T> {
 }

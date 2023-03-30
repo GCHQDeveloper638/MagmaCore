@@ -23,5 +23,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * is the {@link Individual} for the period of time that the {@link Class} applies for.
  * </p>
  */
-public interface ClassOfIndividual extends ClassOfState {
+public interface ClassOfIndividual<T> extends ClassOfState<T> {
 }

@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Definition.
  */
-public class DefinitionImpl extends HqdmObject implements Definition {
+public class DefinitionImpl<T> extends HqdmObject<T> implements Definition<T> {
     /**
      * Constructs a new Definition.
      *
      * @param id String of the Definition.
      */
-    public DefinitionImpl(final String id) {
+    public DefinitionImpl(final T id) {
         super(id);
     }
 }

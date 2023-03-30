@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link Class} where each {@code member__of} the {@link Class} is known.
  */
-public interface EnumeratedClass extends Class {
+public interface EnumeratedClass<T> extends Class<T> {
 }

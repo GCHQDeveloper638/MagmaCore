@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link ClassOfAmountOfMoney} that is the {@code consideration_by_class} in an {@link Offering}.
  */
-public interface Price extends ClassOfAmountOfMoney {
+public interface Price<T> extends ClassOfAmountOfMoney<T> {
 }

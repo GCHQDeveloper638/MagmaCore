@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link SpatioTemporalExtent} that is {@code part_of_plan} at least one {@link Plan} and is
  * {@code defined_by} exactly one {@link RequirementSpecification}.
  */
-public interface Requirement extends SpatioTemporalExtent {
+public interface Requirement<T> extends SpatioTemporalExtent<T> {
 }

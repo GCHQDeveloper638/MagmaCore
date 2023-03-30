@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of ContractProcess.
  */
-public class ContractProcessImpl extends HqdmObject implements ContractProcess {
+public class ContractProcessImpl<T> extends HqdmObject<T> implements ContractProcess<T> {
     /**
      * Constructs a new ContractProcess.
      *
      * @param id String of the ContractProcess.
      */
-    public ContractProcessImpl(final String id) {
+    public ContractProcessImpl(final T id) {
         super(id);
     }
 }

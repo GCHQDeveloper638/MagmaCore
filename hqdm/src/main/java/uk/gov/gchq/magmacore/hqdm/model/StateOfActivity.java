@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A state that is an {@link Activity} or a {@code temporal_part_of} an {@link Activity}.
  */
-public interface StateOfActivity extends State {
+public interface StateOfActivity<T> extends State<T> {
 }

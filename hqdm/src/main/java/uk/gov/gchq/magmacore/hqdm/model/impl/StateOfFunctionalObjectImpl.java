@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of StateOfFunctionalObject.
  */
-public class StateOfFunctionalObjectImpl extends HqdmObject implements StateOfFunctionalObject {
+public class StateOfFunctionalObjectImpl<T> extends HqdmObject<T> implements StateOfFunctionalObject<T> {
     /**
      * Constructs a new StateOfFunctionalObject.
      *
      * @param id String of the StateOfFunctionalObject.
      */
-    public StateOfFunctionalObjectImpl(final String id) {
+    public StateOfFunctionalObjectImpl(final T id) {
         super(id);
     }
 }

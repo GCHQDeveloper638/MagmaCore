@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of PhysicalPropertyRange.
  */
-public class PhysicalPropertyRangeImpl extends HqdmObject implements PhysicalPropertyRange {
+public class PhysicalPropertyRangeImpl<T> extends HqdmObject<T> implements PhysicalPropertyRange<T> {
     /**
      * Constructs a new PhysicalPropertyRange.
      *
      * @param id String of the PhysicalPropertyRange.
      */
-    public PhysicalPropertyRangeImpl(final String id) {
+    public PhysicalPropertyRangeImpl(final T id) {
         super(id);
     }
 }

@@ -19,5 +19,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * {@link IdentificationOfPhysicalQuantity} consists of a REAL that is a representation of the
  * {@code value_} the physical quantity maps to on the {@link Scale}.
  */
-public interface IdentificationOfPhysicalQuantity extends Identification {
+public interface IdentificationOfPhysicalQuantity<T> extends Identification<T> {
 }

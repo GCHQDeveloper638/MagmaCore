@@ -18,6 +18,6 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfOrganizationComponent} that is also a {@link KindOfSystemComponent} whose members
  * are all of the same kind.
  */
-public interface KindOfOrganizationComponent
-                extends ClassOfOrganizationComponent, KindOfSystemComponent, KindOfSociallyConstructedObject {
+public interface KindOfOrganizationComponent<T>
+                extends ClassOfOrganizationComponent<T>, KindOfSystemComponent<T>, KindOfSociallyConstructedObject<T> {
 }

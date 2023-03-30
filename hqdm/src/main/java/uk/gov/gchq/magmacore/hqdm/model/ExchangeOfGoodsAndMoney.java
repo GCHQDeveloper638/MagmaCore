@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * An {@link AgreementExecution} that consists of a {@link TransferOfOwnership} of goods and a
  * {@link TransferOfOwnershipOfMoney}.
  */
-public interface ExchangeOfGoodsAndMoney extends ContractExecution {
+public interface ExchangeOfGoodsAndMoney<T> extends ContractExecution<T> {
 }

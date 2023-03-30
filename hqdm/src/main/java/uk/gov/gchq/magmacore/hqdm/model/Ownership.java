@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * An {@link Association} that {@code consists_of} an {@link Owner} and an {@link Asset} where the
  * {@link Owner} owns the {@link Asset}.
  */
-public interface Ownership extends Association {
+public interface Ownership<T> extends Association<T> {
 }

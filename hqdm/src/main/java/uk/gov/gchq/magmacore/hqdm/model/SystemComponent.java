@@ -23,5 +23,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * of, unlike any {@link OrdinaryPhysicalObject} that may be installed as the component.
  * </p>
  */
-public interface SystemComponent extends PhysicalObject, StateOfSystemComponent {
+public interface SystemComponent<T> extends PhysicalObject<T>, StateOfSystemComponent<T> {
 }

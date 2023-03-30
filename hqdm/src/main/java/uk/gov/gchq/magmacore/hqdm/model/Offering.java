@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfOffer} that is for a {@link ClassOfIndividual}, at a {@link Price}, by a
  * {@link Party}, for a {@link PeriodOfTime}.
  */
-public interface Offering extends ClassOfOffer {
+public interface Offering<T> extends ClassOfOffer<T> {
 }

@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Requirement.
  */
-public class RequirementImpl extends HqdmObject implements Requirement {
+public class RequirementImpl<T> extends HqdmObject<T> implements Requirement<T> {
     /**
      * Constructs a new Requirement.
      *
      * @param id String of the Requirement.
      */
-    public RequirementImpl(final String id) {
+    public RequirementImpl(final T id) {
         super(id);
     }
 }

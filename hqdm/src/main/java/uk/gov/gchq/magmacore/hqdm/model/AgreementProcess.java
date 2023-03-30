@@ -19,5 +19,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * {@link AgreementExecution}, where the {@link AgreementExecution} is the course of action agreed
  * to in the {@link ReachingAgreement}.
  */
-public interface AgreementProcess extends SociallyConstructedActivity {
+public interface AgreementProcess<T> extends SociallyConstructedActivity<T> {
 }

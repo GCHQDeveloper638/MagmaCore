@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Currency.
  */
-public class CurrencyImpl extends HqdmObject implements Currency {
+public class CurrencyImpl<T> extends HqdmObject<T> implements Currency<T> {
     /**
      * Constructs a new Currency.
      *
      * @param id String of the Currency.
      */
-    public CurrencyImpl(final String id) {
+    public CurrencyImpl(final T id) {
         super(id);
     }
 }

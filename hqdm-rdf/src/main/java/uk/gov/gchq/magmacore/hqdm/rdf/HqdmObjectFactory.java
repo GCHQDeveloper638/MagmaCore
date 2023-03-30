@@ -53,7 +53,7 @@ public final class HqdmObjectFactory {
      * @return The constructed HQDM object.
      * @throws HqdmException If the HqdmObject could not be built.
      */
-    public static <T extends Thing> T create(final HqdmIri hqdmType, final IRI iri) throws HqdmException {
+    public static <T extends Thing<IRI>> T create(final HqdmIri hqdmType, final IRI iri) throws HqdmException {
         return (T) mapToThing(hqdmType.getResource(), iri);
     }
 
@@ -65,7 +65,7 @@ public final class HqdmObjectFactory {
      * @return The constructed HQDM object.
      * @throws HqdmException If the HqdmObject could not be built.
      */
-    public static Thing create(final IRI iri, final List<Pair<Object, Object>> pairs) throws HqdmException {
+    public static Thing<IRI> create(final IRI iri, final List<Pair<Object, Object>> pairs) throws HqdmException {
         try {
             final Set<IRI> iris = new HashSet<>();
             for (final Pair<Object, Object> pair : pairs.stream()
@@ -76,12 +76,12 @@ public final class HqdmObjectFactory {
             }
 
             if (!iris.isEmpty()) {
-                final Thing result;
+                final Thing<IRI> result;
 
                 if (iris.size() == 1) {
                     result = mapToThing(iris.iterator().next().getResource(), iri);
                 } else {
-                    result = DynamicObjects.create(iri.toString(), Thing.class, irisToClasses(iris));
+                    result = DynamicObjects.create(iri, Thing.class, irisToClasses(iris));
                 }
 
                 for (final Pair<Object, Object> pair : pairs) {
@@ -106,8 +106,8 @@ public final class HqdmObjectFactory {
      * @param iris List of {@link IRI}.
      * @return Array of Class.
      */
-    private static <T extends Thing> java.lang.Class<T>[] irisToClasses(final Set<IRI> iris) {
-        final List<java.lang.Class<? extends Thing>> classes = new ArrayList<>(3);
+    private static <T extends Thing<IRI>> java.lang.Class<T>[] irisToClasses(final Set<IRI> iris) {
+        final List<java.lang.Class<T>> classes = new ArrayList<>(3);
 
         // It will be a small list so just iterate it.
         for (final IRI iri : iris) {
@@ -118,10 +118,10 @@ public final class HqdmObjectFactory {
     }
 
     // A statically initialized Map of IRIs to HQDM classes.
-    private static final Map<IRI, java.lang.Class<? extends Thing>> iriToClassMap = new HashMap<>(250);
+    private static final Map<IRI, java.lang.Class> iriToClassMap = new HashMap<>(250);
 
     static {
-        iriToClassMap.put(HQDM.ABSTRACT_OBJECT, AbstractObject.class);
+        iriToClassMap.put(HQDM.ABSTRACT_OBJECT,  AbstractObject.class);
         iriToClassMap.put(HQDM.ACCEPTANCE_OF_OFFER, AcceptanceOfOffer.class);
         iriToClassMap.put(HQDM.ACCEPTANCE_OF_OFFER_FOR_GOODS, AcceptanceOfOfferForGoods.class);
         iriToClassMap.put(HQDM.ACTIVITY, Activity.class);
@@ -370,7 +370,7 @@ public final class HqdmObjectFactory {
      * @return A {@link Thing}.
      * @throws HqdmException If the typeName is invalid.
      */
-    private static Thing mapToThing(final String typeName, final IRI iri) {
+    private static Thing<IRI> mapToThing(final String typeName, final IRI iri) {
 
         switch (typeName) {
             case "abstract_object":

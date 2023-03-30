@@ -23,5 +23,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * to be the case.
  * </P>
  */
-public interface Position extends OrganizationComponent, StateOfPosition {
+public interface Position<T> extends OrganizationComponent<T>, StateOfPosition<T> {
 }

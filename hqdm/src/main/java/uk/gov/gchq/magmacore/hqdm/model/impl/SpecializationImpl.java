@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Specialization.
  */
-public class SpecializationImpl extends HqdmObject implements Specialization {
+public class SpecializationImpl<T> extends HqdmObject<T> implements Specialization<T> {
     /**
      * Constructs a new Specialization.
      *
      * @param id String of the Specialization.
      */
-    public SpecializationImpl(final String id) {
+    public SpecializationImpl(final T id) {
         super(id);
     }
 }

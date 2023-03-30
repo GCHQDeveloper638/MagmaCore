@@ -23,5 +23,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * range.
  * </p>
  */
-public interface PhysicalPropertyRange extends ClassOfState {
+public interface PhysicalPropertyRange<T> extends ClassOfState<T> {
 }

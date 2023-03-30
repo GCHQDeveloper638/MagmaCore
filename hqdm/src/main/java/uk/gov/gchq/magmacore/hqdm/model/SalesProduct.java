@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfSalesProductInstance} that is a set of {@link SalesProductInstance} sold under
  * the same product name.
  */
-public interface SalesProduct extends ClassOfSalesProductInstance {
+public interface SalesProduct<T> extends ClassOfSalesProductInstance<T> {
 }

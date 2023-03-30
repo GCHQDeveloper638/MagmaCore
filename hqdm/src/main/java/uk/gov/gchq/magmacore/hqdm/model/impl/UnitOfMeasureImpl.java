@@ -20,13 +20,14 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of UnitOfMeasure.
  */
-public class UnitOfMeasureImpl extends HqdmObject implements UnitOfMeasure {
+public class UnitOfMeasureImpl<T> extends HqdmObject<T> implements UnitOfMeasure<T> {
     /**
      * Constructs a new UnitOfMeasure.
      *
-     * @param id String of the UnitOfMeasure.
+     * @param id
+     *            String of the UnitOfMeasure.
      */
-    public UnitOfMeasureImpl(final String id) {
+    public UnitOfMeasureImpl(final T id) {
         super(id);
     }
 }

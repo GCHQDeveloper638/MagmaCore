@@ -18,6 +18,6 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfStateOfFunctionalSystem}, that is also a {@link ClassOfOrdinaryFunctionalObject},
  * and a {@link ClassOfSystem} that is {@link FunctionalSystem} or any of its subsets.
  */
-public interface ClassOfFunctionalSystem
-        extends ClassOfStateOfFunctionalSystem, ClassOfOrdinaryFunctionalObject, ClassOfSystem {
+public interface ClassOfFunctionalSystem<T>
+        extends ClassOfStateOfFunctionalSystem<T>, ClassOfOrdinaryFunctionalObject<T>, ClassOfSystem<T> {
 }

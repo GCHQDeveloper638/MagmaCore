@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfPhysicalQuantity} that is also a {@link KindOfPhysicalProperty} such that each
  * {@code member_of} the same {@link KindOfPhysicalQuantity} is comparable to the others.
  */
-public interface KindOfPhysicalQuantity extends ClassOfPhysicalQuantity, KindOfPhysicalProperty {
+public interface KindOfPhysicalQuantity<T> extends ClassOfPhysicalQuantity<T>, KindOfPhysicalProperty<T> {
 }

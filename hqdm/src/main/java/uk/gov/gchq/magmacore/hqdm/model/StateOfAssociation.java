@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link State} that is an {@link Association} or a {@code temporal_part_of} an
  * {@link Association}.
  */
-public interface StateOfAssociation extends State {
+public interface StateOfAssociation<T> extends State<T> {
 }

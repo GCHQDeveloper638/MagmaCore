@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link StateOfSociallyConstructedObject} that is a {@link Sign} or a {@code temporal_part_of} a
  * {@link Sign}.
  */
-public interface StateOfSign extends StateOfSociallyConstructedObject {
+public interface StateOfSign<T> extends StateOfSociallyConstructedObject<T> {
 }

@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfIndividual} that is also a {@link ClassOfPeriodOfTime} that is
  * {@link PossibleWorld} or any of its subsets.
  */
-public interface ClassOfPossibleWorld extends ClassOfIndividual, ClassOfPeriodOfTime {
+public interface ClassOfPossibleWorld<T> extends ClassOfIndividual<T>, ClassOfPeriodOfTime<T> {
 }

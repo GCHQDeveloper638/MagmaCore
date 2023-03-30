@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link SpatioTemporalExtent} that is an {@link Individual} or a {@code temporal_part_of} some
  * {@link Individual}.
  */
-public interface State extends SpatioTemporalExtent {
+public interface State<T> extends SpatioTemporalExtent<T> {
 }

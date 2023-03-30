@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link SociallyConstructedActivity} where two or more parties determine a course of action.
  */
-public interface ReachingAgreement extends SociallyConstructedActivity {
+public interface ReachingAgreement<T> extends SociallyConstructedActivity<T> {
 }

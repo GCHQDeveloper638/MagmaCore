@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * Any {@link System} that is also an {@link OrdinaryBiologicalObject} and a
  * {@link StateOfBiologicalSystem}.
  */
-public interface BiologicalSystem extends OrdinaryBiologicalObject, StateOfBiologicalSystem, System {
+public interface BiologicalSystem<T> extends OrdinaryBiologicalObject<T>, StateOfBiologicalSystem<T>, System<T> {
 }

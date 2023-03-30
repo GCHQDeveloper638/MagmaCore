@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfInstalledObject} that is also a {@link ClassOfStateOfPosition} that is
  * {@link PersonInPosition} or any of its subsets.
  */
-public interface ClassOfPersonInPosition extends ClassOfInstalledObject, ClassOfStateOfPosition {
+public interface ClassOfPersonInPosition<T> extends ClassOfInstalledObject<T>, ClassOfStateOfPosition<T> {
 }

@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of TemporalComposition.
  */
-public class TemporalCompositionImpl extends HqdmObject implements TemporalComposition {
+public class TemporalCompositionImpl<T> extends HqdmObject<T> implements TemporalComposition<T> {
     /**
      * Constructs a new TemporalComposition.
      *
      * @param id String of the TemporalComposition.
      */
-    public TemporalCompositionImpl(final String id) {
+    public TemporalCompositionImpl(final T id) {
         super(id);
     }
 }

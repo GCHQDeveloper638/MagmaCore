@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link RepresentationByPattern} that describes some {@link Thing}.
  */
-public interface Description extends RepresentationByPattern {
+public interface Description<T> extends RepresentationByPattern<T> {
 }

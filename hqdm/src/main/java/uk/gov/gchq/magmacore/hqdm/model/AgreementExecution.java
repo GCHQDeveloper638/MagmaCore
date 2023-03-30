@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link SociallyConstructedActivity} where two or more parties carry out a course of action
  * previously agreed upon.
  */
-public interface AgreementExecution extends SociallyConstructedActivity {
+public interface AgreementExecution<T> extends SociallyConstructedActivity<T> {
 }

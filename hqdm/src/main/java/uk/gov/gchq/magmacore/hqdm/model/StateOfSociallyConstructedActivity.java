@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * Any {@link StateOfSociallyConstructedObject} that is also a {@link StateOfActivity}.
  */
-public interface StateOfSociallyConstructedActivity extends StateOfSociallyConstructedObject, StateOfActivity {
+public interface StateOfSociallyConstructedActivity<T> extends StateOfSociallyConstructedObject<T>, StateOfActivity<T> {
 }

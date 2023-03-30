@@ -15,8 +15,10 @@
 package uk.gov.gchq.magmacore.hqdm.model;
 
 /**
- * A {@link ClassOfOrdinaryPhysicalObject} that is also a {@link KindOfPhysicalObject} where each
+ * A {@link ClassOfOrdinaryPhysicalObject} that is also a
+ * {@link KindOfPhysicalObject} where each
  * {@link OrdinaryPhysicalObject} has members that are of the same kind.
  */
-public interface KindOfOrganization extends ClassOfOrganization, KindOfParty, KindOfSociallyConstructedObject {
+public interface KindOfOrganization<T>
+        extends ClassOfOrganization<T>, KindOfParty<T>, KindOfSociallyConstructedObject<T> {
 }

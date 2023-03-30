@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Composition.
  */
-public class CompositionImpl extends HqdmObject implements Composition {
+public class CompositionImpl<T> extends HqdmObject<T> implements Composition<T> {
     /**
      * Constructs a new Composition.
      *
      * @param id String of the Composition.
      */
-    public CompositionImpl(final String id) {
+    public CompositionImpl(final T id) {
         super(id);
     }
 }

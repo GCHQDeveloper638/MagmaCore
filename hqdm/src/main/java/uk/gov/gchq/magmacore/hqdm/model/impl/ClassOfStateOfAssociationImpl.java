@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of ClassOfStateOfAssociation.
  */
-public class ClassOfStateOfAssociationImpl extends HqdmObject implements ClassOfStateOfAssociation {
+public class ClassOfStateOfAssociationImpl<T> extends HqdmObject<T> implements ClassOfStateOfAssociation<T> {
     /**
      * Constructs a new ClassOfStateOfAssociation.
      *
      * @param id String of the ClassOfStateOfAssociation.
      */
-    public ClassOfStateOfAssociationImpl(final String id) {
+    public ClassOfStateOfAssociationImpl(final T id) {
         super(id);
     }
 }

@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link ClassOfReachingAgreement} that is {@link AgreeContract} or any of its subsets.
  */
-public interface ClassOfAgreeContract extends ClassOfReachingAgreement {
+public interface ClassOfAgreeContract<T> extends ClassOfReachingAgreement<T> {
 }

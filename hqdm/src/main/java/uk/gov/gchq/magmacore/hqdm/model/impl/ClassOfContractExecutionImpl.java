@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of ClassOfContractExecution.
  */
-public class ClassOfContractExecutionImpl extends HqdmObject implements ClassOfContractExecution {
+public class ClassOfContractExecutionImpl<T> extends HqdmObject<T> implements ClassOfContractExecution<T> {
     /**
      * Constructs a new ClassOfContractExecution.
      *
      * @param id String of the ClassOfContractExecution.
      */
-    public ClassOfContractExecutionImpl(final String id) {
+    public ClassOfContractExecutionImpl(final T id) {
         super(id);
     }
 }

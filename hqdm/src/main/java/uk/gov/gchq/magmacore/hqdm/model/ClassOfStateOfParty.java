@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link ClassOfStateOfSystem} that is {@link StateOfParty} or any of its subtypes.
  */
-public interface ClassOfStateOfParty extends ClassOfStateOfSystem {
+public interface ClassOfStateOfParty<T> extends ClassOfStateOfSystem<T> {
 }

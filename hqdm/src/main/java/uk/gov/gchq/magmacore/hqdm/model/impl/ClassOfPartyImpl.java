@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of ClassOfParty.
  */
-public class ClassOfPartyImpl extends HqdmObject implements ClassOfParty {
+public class ClassOfPartyImpl<T> extends HqdmObject<T> implements ClassOfParty<T> {
     /**
      * Constructs a new ClassOfParty.
      *
      * @param id String of the ClassOfParty.
      */
-    public ClassOfPartyImpl(final String id) {
+    public ClassOfPartyImpl(final T id) {
         super(id);
     }
 }

@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfAmountOfMoney} that is the subset of {@link AmountOfMoney} that has as members
  * all the money issued by an issuing authority.
  */
-public interface Currency extends ClassOfAmountOfMoney {
+public interface Currency<T> extends ClassOfAmountOfMoney<T> {
 }

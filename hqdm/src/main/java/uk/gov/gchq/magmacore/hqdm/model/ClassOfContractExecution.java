@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link ClassOfAgreementExecution} that is {@link ContractExecution} or any of its subsets.
  */
-public interface ClassOfContractExecution extends ClassOfAgreementExecution {
+public interface ClassOfContractExecution<T> extends ClassOfAgreementExecution<T> {
 }

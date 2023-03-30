@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of InstalledObject.
  */
-public class InstalledObjectImpl extends HqdmObject implements InstalledObject {
+public class InstalledObjectImpl<T> extends HqdmObject<T> implements InstalledObject<T> {
     /**
      * Constructs a new InstalledObject.
      *
      * @param id String of the InstalledObject.
      */
-    public InstalledObjectImpl(final String id) {
+    public InstalledObjectImpl(final T id) {
         super(id);
     }
 }

@@ -22,5 +22,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * Note: This is not restricted to natural languages, but also controlled languages, taxonomies etc.
  * </p>
  */
-public interface LanguageCommunity extends StateOfLanguageCommunity, Organization {
+public interface LanguageCommunity<T> extends StateOfLanguageCommunity<T>, Organization<T> {
 }

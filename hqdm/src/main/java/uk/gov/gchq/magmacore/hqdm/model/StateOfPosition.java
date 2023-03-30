@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link StateOfOrganizationComponent} that is a {@link Position} or a {@code temporal_part_of} a
  * {@link Position}.
  */
-public interface StateOfPosition extends StateOfOrganizationComponent {
+public interface StateOfPosition<T> extends StateOfOrganizationComponent<T> {
 }

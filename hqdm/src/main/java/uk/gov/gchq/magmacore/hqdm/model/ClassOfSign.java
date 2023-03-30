@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfStateOfSign} that is also a {@link ClassOfSociallyConstructedObject} that is
  * {@link Sign} or any of its subsets.
  */
-public interface ClassOfSign extends ClassOfStateOfSign, ClassOfSociallyConstructedObject {
+public interface ClassOfSign<T> extends ClassOfStateOfSign<T>, ClassOfSociallyConstructedObject<T> {
 }

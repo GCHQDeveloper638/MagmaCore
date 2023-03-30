@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfStateOfOrganizationComponent} that is {@link StateOfPosition} and any of its
  * subsets.
  */
-public interface ClassOfStateOfPosition extends ClassOfStateOfOrganizationComponent {
+public interface ClassOfStateOfPosition<T> extends ClassOfStateOfOrganizationComponent<T> {
 }

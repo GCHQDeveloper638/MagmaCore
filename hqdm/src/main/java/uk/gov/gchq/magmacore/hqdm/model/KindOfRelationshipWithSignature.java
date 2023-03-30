@@ -19,5 +19,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * {@link Classification}s involved in each {@link DefinedRelationship} have as {@code classifier}s
  * the {@code roles} specified by the {@link KindOfRelationshipWithSignature}.
  */
-public interface KindOfRelationshipWithSignature extends ClassOfRelationship {
+public interface KindOfRelationshipWithSignature<T> extends ClassOfRelationship<T> {
 }

@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link StateOfAmountOfMoney}, that is also a {@link SociallyConstructedObject}, and a
  * {@link PhysicalObject} that is intended and accepted for use as a means of exchange.
  */
-public interface AmountOfMoney extends StateOfAmountOfMoney, SociallyConstructedObject, PhysicalObject {
+public interface AmountOfMoney<T> extends StateOfAmountOfMoney<T>, SociallyConstructedObject<T>, PhysicalObject<T> {
 }

@@ -52,7 +52,7 @@ public class HqdmObjectFactoryTest {
         // Assert the ENTITY_NAME and person IRI are as expected.
         assertNotNull(person);
         assertEquals(Set.of(personId), person.value(HQDM.ENTITY_NAME));
-        assertEquals(personIri.getIri(), person.getId());
+        assertEquals(personIri, person.getId());
     }
 
     /**
@@ -84,7 +84,7 @@ public class HqdmObjectFactoryTest {
         assertNotNull(person);
         assertEquals(Set.of(personId), person.value(HQDM.ENTITY_NAME));
         assertEquals(Set.of("PERSON_KIND"), person.value(HQDM.MEMBER_OF_KIND));
-        assertEquals(personIri.getIri(), person.getId());
+        assertEquals(personIri, person.getId());
     }
 
     /**
@@ -106,7 +106,7 @@ public class HqdmObjectFactoryTest {
         assertTrue(person instanceof Person);
         assertTrue(person instanceof Participant);
         assertEquals(Set.of(personId), person.value(HQDM.ENTITY_NAME));
-        assertEquals(personIri.getIri(), person.getId());
+        assertEquals(personIri, person.getId());
     }
 
     /**
@@ -117,6 +117,6 @@ public class HqdmObjectFactoryTest {
         final var id = "enum_class";
         final var iri = new IRI(HQDM.HQDM, id);
         final var clss = HqdmObjectFactory.create(HQDM.ENUMERATED_CLASS, iri);
-        assertEquals(iri.getIri(), clss.getId());
+        assertEquals(iri, clss.getId());
     }
 }

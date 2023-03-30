@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of AgreementProcess.
  */
-public class AgreementProcessImpl extends HqdmObject implements AgreementProcess {
+public class AgreementProcessImpl<T> extends HqdmObject<T> implements AgreementProcess<T> {
     /**
      * Constructs a new AgreementProcess.
      *
      * @param id String of the AgreementProcess.
      */
-    public AgreementProcessImpl(final String id) {
+    public AgreementProcessImpl(final T id) {
         super(id);
     }
 }

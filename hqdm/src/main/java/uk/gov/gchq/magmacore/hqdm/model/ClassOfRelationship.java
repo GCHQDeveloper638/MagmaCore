@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link Class} that is {@link Relationship} or any of its subsets.
  */
-public interface ClassOfRelationship extends ClassOfAbstractObject {
+public interface ClassOfRelationship<T> extends ClassOfAbstractObject<T> {
 }

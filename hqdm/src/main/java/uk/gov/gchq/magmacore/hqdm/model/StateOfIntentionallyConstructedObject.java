@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A state that is an {@link IntentionallyConstructedObject} or a {@code temporal_part_of} an
  * {@link IntentionallyConstructedObject}.
  */
-public interface StateOfIntentionallyConstructedObject extends State {
+public interface StateOfIntentionallyConstructedObject<T> extends State<T> {
 }

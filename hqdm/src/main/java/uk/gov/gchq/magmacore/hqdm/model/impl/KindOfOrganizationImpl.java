@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of KindOfOrganization.
  */
-public class KindOfOrganizationImpl extends HqdmObject implements KindOfOrganization {
+public class KindOfOrganizationImpl<T> extends HqdmObject<T> implements KindOfOrganization<T> {
     /**
      * Constructs a new KindOfOrganization.
      *
      * @param id String of the KindOfOrganization.
      */
-    public KindOfOrganizationImpl(final String id) {
+    public KindOfOrganizationImpl(final T id) {
         super(id);
     }
 }

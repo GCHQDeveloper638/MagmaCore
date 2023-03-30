@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link StateOfBiologicalObject} that is also a {@link PhysicalObject} that sustains itself and
  * reproduces.
  */
-public interface BiologicalObject extends StateOfBiologicalObject, PhysicalObject {
+public interface BiologicalObject<T> extends StateOfBiologicalObject<T>, PhysicalObject<T> {
 }

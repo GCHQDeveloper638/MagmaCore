@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of SalesProductInstance.
  */
-public class SalesProductInstanceImpl extends HqdmObject implements SalesProductInstance {
+public class SalesProductInstanceImpl<T> extends HqdmObject<T> implements SalesProductInstance<T> {
     /**
      * Constructs a new SalesProductInstance.
      *
      * @param id String of the SalesProductInstance.
      */
-    public SalesProductInstanceImpl(final String id) {
+    public SalesProductInstanceImpl(final T id) {
         super(id);
     }
 }

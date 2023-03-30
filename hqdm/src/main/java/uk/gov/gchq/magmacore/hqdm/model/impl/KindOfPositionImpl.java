@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of KindOfPosition.
  */
-public class KindOfPositionImpl extends HqdmObject implements KindOfPosition {
+public class KindOfPositionImpl<T> extends HqdmObject<T> implements KindOfPosition<T> {
     /**
      * Constructs a new KindOfPosition.
      *
      * @param id String of the KindOfPosition.
      */
-    public KindOfPositionImpl(final String id) {
+    public KindOfPositionImpl(final T id) {
         super(id);
     }
 }

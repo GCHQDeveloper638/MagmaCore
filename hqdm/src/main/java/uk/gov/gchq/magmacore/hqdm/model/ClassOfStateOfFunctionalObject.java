@@ -15,9 +15,10 @@
 package uk.gov.gchq.magmacore.hqdm.model;
 
 /**
- * A {@link ClassOfStateOfPhysicalObject} and {@link ClassOfStateOfIntentionallyConstructedObject}
+ * A {@link ClassOfStateOfPhysicalObject} and
+ * {@link ClassOfStateOfIntentionallyConstructedObject}
  * that is {@link StateOfFunctionalObject} or any of its subsets.
  */
-public interface ClassOfStateOfFunctionalObject
-                extends ClassOfStateOfPhysicalObject, ClassOfStateOfIntentionallyConstructedObject {
+public interface ClassOfStateOfFunctionalObject<T>
+        extends ClassOfStateOfPhysicalObject<T>, ClassOfStateOfIntentionallyConstructedObject<T> {
 }

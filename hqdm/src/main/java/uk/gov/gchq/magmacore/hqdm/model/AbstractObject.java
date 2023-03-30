@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link Thing} that does not exist in space or time.
  */
-public interface AbstractObject extends Thing {
+public interface AbstractObject<T> extends Thing<T> {
 }

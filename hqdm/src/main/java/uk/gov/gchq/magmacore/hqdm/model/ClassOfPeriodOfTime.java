@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link ClassOfState} that is {@link PeriodOfTime} or any of its subsets.
  */
-public interface ClassOfPeriodOfTime extends ClassOfState {
+public interface ClassOfPeriodOfTime<T> extends ClassOfState<T> {
 }

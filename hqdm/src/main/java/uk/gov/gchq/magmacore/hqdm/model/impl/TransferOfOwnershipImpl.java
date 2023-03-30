@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of TransferOfOwnership.
  */
-public class TransferOfOwnershipImpl extends HqdmObject implements TransferOfOwnership {
+public class TransferOfOwnershipImpl<T> extends HqdmObject<T> implements TransferOfOwnership<T> {
     /**
      * Constructs a new TransferOfOwnership.
      *
      * @param id String of the TransferOfOwnership.
      */
-    public TransferOfOwnershipImpl(final String id) {
+    public TransferOfOwnershipImpl(final T id) {
         super(id);
     }
 }

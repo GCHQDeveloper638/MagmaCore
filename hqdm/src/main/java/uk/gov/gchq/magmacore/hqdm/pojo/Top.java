@@ -20,21 +20,21 @@ import java.util.Set;
 /**
  * Top-level interface for HQDM objects.
  */
-public interface Top {
+public interface Top<T> {
 
     /**
-     * Get the ID of the HQDM object.
+     * Get the T of the HQDM object.
      *
-     * @return ID of the HQDM object.
+     * @return T of the HQDM object.
      */
-    String getId();
+    T getId();
 
     /**
-     * Set the ID of the HQDM object.
+     * Set the T of the HQDM object.
      *
-     * @param id ID of the HQDM object.
+     * @param id T of the HQDM object.
      */
-    void setId(String id);
+    void setId(T id);
 
     /**
      * Get the predications of the HQDM object.

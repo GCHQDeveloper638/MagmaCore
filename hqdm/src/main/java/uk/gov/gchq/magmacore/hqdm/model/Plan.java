@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link PossibleWorld} that some party would like to bring about.
  */
-public interface Plan extends PossibleWorld {
+public interface Plan<T> extends PossibleWorld<T> {
 }

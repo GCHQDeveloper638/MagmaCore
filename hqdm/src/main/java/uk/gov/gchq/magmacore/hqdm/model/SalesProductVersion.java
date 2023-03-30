@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfSalesProductInstance} that is the customer facing specification of a version of a
  * {@link SalesProduct}.
  */
-public interface SalesProductVersion extends ClassOfSalesProductInstance {
+public interface SalesProductVersion<T> extends ClassOfSalesProductInstance<T> {
 }

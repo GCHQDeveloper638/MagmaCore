@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link StateOfIntentionallyConstructedObject} and {@link StateOfPhysicalObject} that is a
  * {@link FunctionalObject} or a {@code temporal_part_of} a {@link FunctionalObject}.
  */
-public interface StateOfFunctionalObject extends StateOfIntentionallyConstructedObject, StateOfPhysicalObject {
+public interface StateOfFunctionalObject<T> extends StateOfIntentionallyConstructedObject<T>, StateOfPhysicalObject<T> {
 }

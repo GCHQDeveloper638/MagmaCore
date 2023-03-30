@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link StateOfParty} that is also a {@link Participant} that is a {@code participant_in} an
  * {@link Ownership}.
  */
-public interface Owner extends StateOfParty, Participant {
+public interface Owner<T> extends StateOfParty<T>, Participant<T> {
 }

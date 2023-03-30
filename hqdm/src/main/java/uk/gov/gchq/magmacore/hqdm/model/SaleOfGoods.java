@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * An {@link AgreementProcess} that consists of an {@link OfferAndAcceptanceForGoods} and an
  * {@link ExchangeOfGoodsAndMoney}.
  */
-public interface SaleOfGoods extends ContractProcess {
+public interface SaleOfGoods<T> extends ContractProcess<T> {
 }

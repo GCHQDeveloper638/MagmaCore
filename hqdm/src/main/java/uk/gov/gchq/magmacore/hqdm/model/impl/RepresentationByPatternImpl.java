@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of RepresentationByPattern.
  */
-public class RepresentationByPatternImpl extends HqdmObject implements RepresentationByPattern {
+public class RepresentationByPatternImpl<T> extends HqdmObject<T> implements RepresentationByPattern<T> {
     /**
      * Constructs a new RepresentationByPattern.
      *
      * @param id String of the RepresentationByPattern.
      */
-    public RepresentationByPatternImpl(final String id) {
+    public RepresentationByPatternImpl(final T id) {
         super(id);
     }
 }

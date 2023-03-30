@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of SpatioTemporalExtent.
  */
-public class SpatioTemporalExtentImpl extends HqdmObject implements SpatioTemporalExtent {
+public class SpatioTemporalExtentImpl<T> extends HqdmObject<T> implements SpatioTemporalExtent<T> {
     /**
      * Constructs a new SpatioTemporalExtent.
      *
      * @param id String of the SpatioTemporalExtent.
      */
-    public SpatioTemporalExtentImpl(final String id) {
+    public SpatioTemporalExtentImpl(final T id) {
         super(id);
     }
 }

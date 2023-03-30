@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link State} that is a {@code temporal_part_of} some {@link PossibleWorld}.
  */
-public interface PeriodOfTime extends State {
+public interface PeriodOfTime<T> extends State<T> {
 }

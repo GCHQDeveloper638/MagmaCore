@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * An {@link Asset} that is a {@link StateOfAmountOfMoney}.
  */
-public interface MoneyAsset extends Asset, StateOfAmountOfMoney {
+public interface MoneyAsset<T> extends Asset<T>, StateOfAmountOfMoney<T> {
 }

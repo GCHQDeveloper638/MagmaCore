@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link ClassOfEvent} that is {@link PointInTime} or any of its subsets.
  */
-public interface ClassOfPointInTime extends ClassOfEvent {
+public interface ClassOfPointInTime<T> extends ClassOfEvent<T> {
 }

@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of AbstractObject.
  */
-public class AbstractObjectImpl extends HqdmObject implements AbstractObject {
+public class AbstractObjectImpl<T> extends HqdmObject<T> implements AbstractObject<T> {
     /**
      * Constructs a new AbstractObject.
      *
      * @param id String of the AbstractObject.
      */
-    public AbstractObjectImpl(final String id) {
+    public AbstractObjectImpl(final T id) {
         super(id);
     }
 }

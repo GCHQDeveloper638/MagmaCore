@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * An {@link OrdinaryFunctionalObject} that is produced in order to be sold.
  */
-public interface SalesProductInstance extends StateOfSalesProductInstance, OrdinaryFunctionalObject {
+public interface SalesProductInstance<T> extends StateOfSalesProductInstance<T>, OrdinaryFunctionalObject<T> {
 }

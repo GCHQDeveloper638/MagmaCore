@@ -23,5 +23,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * what it is.
  * </p>
  */
-public interface IntentionallyConstructedObject extends Individual, StateOfIntentionallyConstructedObject {
+public interface IntentionallyConstructedObject<T> extends Individual<T>, StateOfIntentionallyConstructedObject<T> {
 }

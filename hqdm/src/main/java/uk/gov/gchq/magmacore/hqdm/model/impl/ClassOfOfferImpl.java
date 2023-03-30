@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of ClassOfOffer.
  */
-public class ClassOfOfferImpl extends HqdmObject implements ClassOfOffer {
+public class ClassOfOfferImpl<T> extends HqdmObject<T> implements ClassOfOffer<T> {
     /**
      * Constructs a new ClassOfOffer.
      *
      * @param id String of the ClassOfOffer.
      */
-    public ClassOfOfferImpl(final String id) {
+    public ClassOfOfferImpl(final T id) {
         super(id);
     }
 }

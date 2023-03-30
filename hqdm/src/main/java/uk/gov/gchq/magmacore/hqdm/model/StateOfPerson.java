@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link StateOfBiologicalSystem} and {@link StateOfParty} that is a {@link Person} or a
  * {@code temporal_part_of} a {@link Person}.
  */
-public interface StateOfPerson extends StateOfBiologicalSystem, StateOfParty {
+public interface StateOfPerson<T> extends StateOfBiologicalSystem<T>, StateOfParty<T> {
 }

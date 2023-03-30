@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Aggregation.
  */
-public class AggregationImpl extends HqdmObject implements Aggregation {
+public class AggregationImpl<T> extends HqdmObject<T> implements Aggregation<T> {
     /**
      * Constructs a new Aggregation.
      *
      * @param id String of the Aggregation.
      */
-    public AggregationImpl(final String id) {
+    public AggregationImpl(final T id) {
         super(id);
     }
 }

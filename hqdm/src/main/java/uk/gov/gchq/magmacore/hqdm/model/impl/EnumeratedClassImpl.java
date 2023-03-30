@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of EnumeratedClass.
  */
-public class EnumeratedClassImpl extends HqdmObject implements EnumeratedClass {
+public class EnumeratedClassImpl<T> extends HqdmObject<T> implements EnumeratedClass<T> {
     /**
      * Constructs a new EnumeratedClass.
      *
      * @param id String of the EnumeratedClass.
      */
-    public EnumeratedClassImpl(final String id) {
+    public EnumeratedClassImpl(final T id) {
         super(id);
     }
 }

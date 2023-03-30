@@ -18,6 +18,6 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfStateOfAmountOfMoney}, that is also a {@link ClassOfSociallyConstructedObject},
  * and a {@link ClassOfPhysicalObject} that is {@link AmountOfMoney} or any of its subsets.
  */
-public interface ClassOfAmountOfMoney
-        extends ClassOfStateOfAmountOfMoney, ClassOfSociallyConstructedObject, ClassOfPhysicalObject {
+public interface ClassOfAmountOfMoney<T>
+        extends ClassOfStateOfAmountOfMoney<T>, ClassOfSociallyConstructedObject<T>, ClassOfPhysicalObject<T> {
 }

@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Classification.
  */
-public class ClassificationImpl extends HqdmObject implements Classification {
+public class ClassificationImpl<T> extends HqdmObject<T> implements Classification<T> {
     /**
      * Constructs a new Classification.
      *
      * @param id String of the Classification.
      */
-    public ClassificationImpl(final String id) {
+    public ClassificationImpl(final T id) {
         super(id);
     }
 }

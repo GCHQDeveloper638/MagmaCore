@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link Relationship} where the whole is at least the sum of the parts.
  */
-public interface Aggregation extends Relationship {
+public interface Aggregation<T> extends Relationship<T> {
 }

@@ -15,7 +15,9 @@
 package uk.gov.gchq.magmacore.hqdm.model;
 
 /**
- * Any {@link StateOfFunctionalObject} that is also a {@link StateOfOrdinaryPhysicalObject}.
+ * Any {@link StateOfFunctionalObject} that is also a
+ * {@link StateOfOrdinaryPhysicalObject}.
  */
-public interface StateOfOrdinaryFunctionalObject extends StateOfFunctionalObject, StateOfOrdinaryPhysicalObject {
+public interface StateOfOrdinaryFunctionalObject<T>
+        extends StateOfFunctionalObject<T>, StateOfOrdinaryPhysicalObject<T> {
 }

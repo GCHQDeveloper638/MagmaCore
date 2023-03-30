@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link ClassOfIndividual} where all the members possess attributes in common.
  */
-public interface KindOfIndividual extends ClassOfIndividual {
+public interface KindOfIndividual<T> extends ClassOfIndividual<T> {
 }

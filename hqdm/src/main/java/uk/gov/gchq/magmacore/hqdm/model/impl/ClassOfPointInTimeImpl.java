@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of ClassOfPointInTime.
  */
-public class ClassOfPointInTimeImpl extends HqdmObject implements ClassOfPointInTime {
+public class ClassOfPointInTimeImpl<T> extends HqdmObject<T> implements ClassOfPointInTime<T> {
     /**
      * Constructs a new ClassOfPointInTime.
      *
      * @param id String of the ClassOfPointInTime.
      */
-    public ClassOfPointInTimeImpl(final String id) {
+    public ClassOfPointInTimeImpl(final T id) {
         super(id);
     }
 }

@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * An {@link Individual} that {@code consists_of} the {@link Participant}s that are associated, and
  * where the {@link Participant}s are {@code part_of} the same {@link PeriodOfTime}.
  */
-public interface Association extends Individual, StateOfAssociation, ParticipantInActivityOrAssociation {
+public interface Association<T> extends Individual<T>, StateOfAssociation<T>, ParticipantInActivityOrAssociation<T> {
 }

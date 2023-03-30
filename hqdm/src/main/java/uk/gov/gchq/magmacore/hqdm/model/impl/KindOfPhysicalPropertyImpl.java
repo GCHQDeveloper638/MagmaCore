@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of KindOfPhysicalProperty.
  */
-public class KindOfPhysicalPropertyImpl extends HqdmObject implements KindOfPhysicalProperty {
+public class KindOfPhysicalPropertyImpl<T> extends HqdmObject<T> implements KindOfPhysicalProperty<T> {
     /**
      * Constructs a new KindOfPhysicalProperty.
      *
      * @param id String of the KindOfPhysicalProperty.
      */
-    public KindOfPhysicalPropertyImpl(final String id) {
+    public KindOfPhysicalPropertyImpl(final T id) {
         super(id);
     }
 }

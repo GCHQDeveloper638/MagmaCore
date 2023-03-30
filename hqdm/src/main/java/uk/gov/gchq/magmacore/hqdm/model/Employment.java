@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * An {@link Association} that consists of an {@link Employer} and an {@link Employee} where the
  * {@link Employer} pays the {@link Employee} to work for them.
  */
-public interface Employment extends Association {
+public interface Employment<T> extends Association<T> {
 }

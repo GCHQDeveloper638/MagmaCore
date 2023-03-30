@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * An {@link Individual} that consists of a distribution of matter and/or energy.
  */
-public interface PhysicalObject extends Individual, StateOfPhysicalObject {
+public interface PhysicalObject<T> extends Individual<T>, StateOfPhysicalObject<T> {
 }

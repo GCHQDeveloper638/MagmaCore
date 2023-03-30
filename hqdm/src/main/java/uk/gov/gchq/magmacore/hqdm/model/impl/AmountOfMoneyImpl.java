@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of AmountOfMoney.
  */
-public class AmountOfMoneyImpl extends HqdmObject implements AmountOfMoney {
+public class AmountOfMoneyImpl<T> extends HqdmObject<T> implements AmountOfMoney<T> {
     /**
      * Constructs a new AmountOfMoney.
      *
      * @param id String of the AmountOfMoney.
      */
-    public AmountOfMoneyImpl(final String id) {
+    public AmountOfMoneyImpl(final T id) {
         super(id);
     }
 }

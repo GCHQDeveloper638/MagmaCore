@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A one-to-many {@link Relationship}.
  */
-public interface Function_ extends Relationship {
+public interface Function_<T> extends Relationship<T> {
 }

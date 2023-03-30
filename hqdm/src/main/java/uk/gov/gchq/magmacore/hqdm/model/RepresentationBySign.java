@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * An {@link Association} of a {@link Sign} and a {@link RecognizingLanguageCommunity} that
  * recognizes the {@link Sign} as representing some {@link Thing}.
  */
-public interface RepresentationBySign extends Association {
+public interface RepresentationBySign<T> extends Association<T> {
 }

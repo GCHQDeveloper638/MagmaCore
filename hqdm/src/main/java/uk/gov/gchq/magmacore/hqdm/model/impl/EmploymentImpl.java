@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Employment.
  */
-public class EmploymentImpl extends HqdmObject implements Employment {
+public class EmploymentImpl<T> extends HqdmObject<T> implements Employment<T> {
     /**
      * Constructs a new Employment.
      *
      * @param id String of the Employment.
      */
-    public EmploymentImpl(final String id) {
+    public EmploymentImpl(final T id) {
         super(id);
     }
 }

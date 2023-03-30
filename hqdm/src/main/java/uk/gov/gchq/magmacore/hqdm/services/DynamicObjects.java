@@ -39,10 +39,10 @@ public class DynamicObjects {
      * @param classes    The array of classes to implement.
      * @return An object of type U.
      */
-    public static <T extends Thing, U extends Thing> U create(final String id, final java.lang.Class<U> returnType,
+    public static <I, T extends Thing<I>, U extends Thing<I>> U create(final I id, final java.lang.Class<U> returnType,
             final java.lang.Class<T>[] classes) {
 
-        return (U) implementInterfaces((T) new ThingImpl(id), returnType, classes);
+        return (U) implementInterfaces((T) new ThingImpl<I>(id), returnType, classes);
     }
 
     /**
@@ -55,7 +55,7 @@ public class DynamicObjects {
      * @param classes    The array of classes to implement.
      * @return An object of type U.
      */
-    public static <T extends Thing, U extends Thing> U implementInterfaces(final T thing,
+    public static <I, T extends Thing<I>, U extends Thing<I>> U implementInterfaces(final T thing,
             final java.lang.Class<U> returnType, final java.lang.Class<T>[] classes) {
         return (U) Proxy.newProxyInstance(ClassServices.class.getClassLoader(), classes, new ThingHandler(thing));
     }

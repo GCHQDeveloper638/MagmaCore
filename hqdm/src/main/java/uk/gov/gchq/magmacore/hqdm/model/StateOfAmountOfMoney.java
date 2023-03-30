@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link SociallyConstructedObject} that is also a {@link StateOfPhysicalObject} that is a
  * {@code temporal_part_of} an {@link AmountOfMoney}.
  */
-public interface StateOfAmountOfMoney extends StateOfSociallyConstructedObject, StateOfPhysicalObject {
+public interface StateOfAmountOfMoney<T> extends StateOfSociallyConstructedObject<T>, StateOfPhysicalObject<T> {
 }

@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link ClassOfAssociation} where all the members are of the same kind.
  */
-public interface KindOfAssociation extends ClassOfAssociation {
+public interface KindOfAssociation<T> extends ClassOfAssociation<T> {
 }

@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfPhysicalProperty} where each {@code member_of} a {@link KindOfPhysicalProperty}
  * is of the same kind.
  */
-public interface KindOfPhysicalProperty extends ClassOfPhysicalProperty {
+public interface KindOfPhysicalProperty<T> extends ClassOfPhysicalProperty<T> {
 }

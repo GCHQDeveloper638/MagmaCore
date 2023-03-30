@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link StateOfPhysicalObject} that is also a {@link Participant} that is the
  * {@code participant_in} an {@link Ownership} that is owned.
  */
-public interface Asset extends Participant {
+public interface Asset<T> extends Participant<T> {
 }

@@ -20,14 +20,14 @@ import uk.gov.gchq.magmacore.hqdm.pojo.Top;
 /**
  * Anything that exists, real or imagined.
  */
-public interface Thing extends Top {
+public interface Thing<T> extends Top<T> {
     /**
      * Create a Thing with an String.
      *
      * @param id the String.
      * @return a Thing instance.
      */
-    public static Thing createThing(final String id) {
-        return new ThingImpl(id);
+    public static <T> Thing<T> createThing(final T id) {
+        return new ThingImpl<T>(id);
     }
 }

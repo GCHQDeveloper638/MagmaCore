@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfState} that is some characteristic that is the same for each {@link State} that
  * possesses it (is a {@code member_of} it).
  */
-public interface PhysicalProperty extends ClassOfState {
+public interface PhysicalProperty<T> extends ClassOfState<T> {
 }

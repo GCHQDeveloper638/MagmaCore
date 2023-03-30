@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link ClassOfState} that is {@link StateOfActivity} or any of its subsets.
  */
-public interface ClassOfStateOfActivity extends ClassOfState {
+public interface ClassOfStateOfActivity<T> extends ClassOfState<T> {
 }

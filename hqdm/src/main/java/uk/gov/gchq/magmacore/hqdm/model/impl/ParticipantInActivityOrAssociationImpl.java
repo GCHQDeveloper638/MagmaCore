@@ -20,13 +20,15 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of ParticipantInActivityOrAssociation.
  */
-public class ParticipantInActivityOrAssociationImpl extends HqdmObject implements ParticipantInActivityOrAssociation {
+public class ParticipantInActivityOrAssociationImpl<T> extends HqdmObject<T>
+        implements ParticipantInActivityOrAssociation<T> {
     /**
      * Constructs a new ParticipantInActivityOrAssociation.
      *
-     * @param id String of the ParticipantInActivityOrAssociation.
+     * @param id
+     *            String of the ParticipantInActivityOrAssociation.
      */
-    public ParticipantInActivityOrAssociationImpl(final String id) {
+    public ParticipantInActivityOrAssociationImpl(final T id) {
         super(id);
     }
 }

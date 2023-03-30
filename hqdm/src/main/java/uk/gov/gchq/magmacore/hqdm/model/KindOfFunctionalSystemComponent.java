@@ -15,8 +15,11 @@
 package uk.gov.gchq.magmacore.hqdm.model;
 
 /**
- * A {@link ClassOfFunctionalSystemComponent} that is also a {@link KindOfSystemComponent} where
- * each {@code member_of} a {@link KindOfFunctionalSystemComponent} is of the same kind.
+ * A {@link ClassOfFunctionalSystemComponent} that is also a
+ * {@link KindOfSystemComponent} where
+ * each {@code member_of} a {@link KindOfFunctionalSystemComponent} is of the
+ * same kind.
  */
-public interface KindOfFunctionalSystemComponent extends ClassOfFunctionalSystemComponent, KindOfSystemComponent {
+public interface KindOfFunctionalSystemComponent<T>
+        extends ClassOfFunctionalSystemComponent<T>, KindOfSystemComponent<T> {
 }

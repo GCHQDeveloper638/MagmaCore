@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Employee.
  */
-public class EmployeeImpl extends HqdmObject implements Employee {
+public class EmployeeImpl<T> extends HqdmObject<T> implements Employee<T> {
     /**
      * Constructs a new Employee.
      *
      * @param id String of the Employee.
      */
-    public EmployeeImpl(final String id) {
+    public EmployeeImpl(final T id) {
         super(id);
     }
 }

@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfParticipant} where each member participates in the same way in an
  * {@link Activity} or {@link Association}.
  */
-public interface Role extends ClassOfParticipant {
+public interface Role<T> extends ClassOfParticipant<T> {
 }

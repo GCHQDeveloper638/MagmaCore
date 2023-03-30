@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * An {@link Aggregation} where the {@code whole} is an arrangement of the parts that results in
  * emergent properties.
  */
-public interface Composition extends Aggregation {
+public interface Composition<T> extends Aggregation<T> {
 }

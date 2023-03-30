@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of AgreeContract.
  */
-public class AgreeContractImpl extends HqdmObject implements AgreeContract {
+public class AgreeContractImpl<T> extends HqdmObject<T> implements AgreeContract<T> {
     /**
      * Constructs a new AgreeContract.
      *
      * @param id String of the AgreeContract.
      */
-    public AgreeContractImpl(final String id) {
+    public AgreeContractImpl(final T id) {
         super(id);
     }
 }

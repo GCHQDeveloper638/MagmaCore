@@ -20,13 +20,14 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Organization.
  */
-public class OrganizationImpl extends HqdmObject implements Organization {
+public class OrganizationImpl<T> extends HqdmObject<T> implements Organization<T> {
     /**
      * Constructs a new Organization.
      *
-     * @param id String of the Organization.
+     * @param id
+     *            String of the Organization.
      */
-    public OrganizationImpl(final String id) {
+    public OrganizationImpl(final T id) {
         super(id);
     }
 }

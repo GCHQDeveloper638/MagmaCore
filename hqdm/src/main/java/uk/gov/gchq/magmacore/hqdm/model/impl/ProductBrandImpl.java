@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of ProductBrand.
  */
-public class ProductBrandImpl extends HqdmObject implements ProductBrand {
+public class ProductBrandImpl<T> extends HqdmObject<T> implements ProductBrand<T> {
     /**
      * Constructs a new ProductBrand.
      *
      * @param id String of the ProductBrand.
      */
-    public ProductBrandImpl(final String id) {
+    public ProductBrandImpl(final T id) {
         super(id);
     }
 }

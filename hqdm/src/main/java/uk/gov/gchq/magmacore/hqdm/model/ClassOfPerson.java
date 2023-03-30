@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfBiologicalSystem}, {@link ClassOfStateOfPerson} and {@link ClassOfParty} that is
  * {@link Person} or any of its subsets.
  */
-public interface ClassOfPerson extends ClassOfBiologicalSystem, ClassOfStateOfPerson, ClassOfParty {
+public interface ClassOfPerson<T> extends ClassOfBiologicalSystem<T>, ClassOfStateOfPerson<T>, ClassOfParty<T> {
 }

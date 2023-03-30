@@ -15,8 +15,10 @@
 package uk.gov.gchq.magmacore.hqdm.model;
 
 /**
- * A {@link ClassOfStateOfOrdinaryPhysicalObject} that is also a {@link ClassOfPhysicalObject} that
+ * A {@link ClassOfStateOfOrdinaryPhysicalObject} that is also a
+ * {@link ClassOfPhysicalObject} that
  * is {@link OrdinaryPhysicalObject} or any of its subsets.
  */
-public interface ClassOfOrdinaryPhysicalObject extends ClassOfStateOfOrdinaryPhysicalObject, ClassOfPhysicalObject {
+public interface ClassOfOrdinaryPhysicalObject<T>
+        extends ClassOfStateOfOrdinaryPhysicalObject<T>, ClassOfPhysicalObject<T> {
 }

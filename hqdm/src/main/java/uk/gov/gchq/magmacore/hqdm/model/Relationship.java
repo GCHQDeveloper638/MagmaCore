@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * An {@link AbstractObject} that is what one {@link Thing} has to do with one or more others.
  */
-public interface Relationship extends AbstractObject {
+public interface Relationship<T> extends AbstractObject<T> {
 }

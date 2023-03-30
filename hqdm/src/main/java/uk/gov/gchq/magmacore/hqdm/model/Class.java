@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * An {@link AbstractObject} that has members and whose identity is defined by its membership.
  */
-public interface Class extends AbstractObject {
+public interface Class<T> extends AbstractObject<T> {
 }

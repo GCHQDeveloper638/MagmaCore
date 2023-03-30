@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of EndingOfOwnership.
  */
-public class EndingOfOwnershipImpl extends HqdmObject implements EndingOfOwnership {
+public class EndingOfOwnershipImpl<T> extends HqdmObject<T> implements EndingOfOwnership<T> {
     /**
      * Constructs a new EndingOfOwnership.
      *
      * @param id String of the EndingOfOwnership.
      */
-    public EndingOfOwnershipImpl(final String id) {
+    public EndingOfOwnershipImpl(final T id) {
         super(id);
     }
 }

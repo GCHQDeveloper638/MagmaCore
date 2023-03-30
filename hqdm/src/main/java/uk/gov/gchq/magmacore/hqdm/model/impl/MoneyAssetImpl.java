@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of MoneyAsset.
  */
-public class MoneyAssetImpl extends HqdmObject implements MoneyAsset {
+public class MoneyAssetImpl<T> extends HqdmObject<T> implements MoneyAsset<T> {
     /**
      * Constructs a new MoneyAsset.
      *
      * @param id String of the MoneyAsset.
      */
-    public MoneyAssetImpl(final String id) {
+    public MoneyAssetImpl(final T id) {
         super(id);
     }
 }

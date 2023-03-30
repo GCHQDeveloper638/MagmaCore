@@ -18,6 +18,6 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ClassOfStateOfFunctionalSystemComponent} that is also a {@link ClassOfInstalledObject}
  * that is {@link InstalledFunctionalSystemComponent} and any of its subsets.
  */
-public interface ClassOfInstalledFunctionalSystemComponent
-        extends ClassOfStateOfFunctionalSystemComponent, ClassOfInstalledObject {
+public interface ClassOfInstalledFunctionalSystemComponent<T>
+        extends ClassOfStateOfFunctionalSystemComponent<T>, ClassOfInstalledObject<T> {
 }

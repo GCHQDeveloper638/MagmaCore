@@ -28,8 +28,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the AbstractObject.
      * @return A AbstractObject instance.
      */
-    public static AbstractObject createAbstractObject(final String id) {
-        return new AbstractObjectImpl(id);
+    public static <T> AbstractObject<T> createAbstractObject(final T id) {
+        return new AbstractObjectImpl<T>(id);
     }
 
     /**
@@ -38,8 +38,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the AcceptanceOfOffer.
      * @return A AcceptanceOfOffer instance.
      */
-    public static AcceptanceOfOffer createAcceptanceOfOffer(final String id) {
-        return new AcceptanceOfOfferImpl(id);
+    public static <T> AcceptanceOfOffer<T> createAcceptanceOfOffer(final T id) {
+        return new AcceptanceOfOfferImpl<T>(id);
     }
 
     /**
@@ -48,8 +48,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the AcceptanceOfOfferForGoods.
      * @return A AcceptanceOfOfferForGoods instance.
      */
-    public static AcceptanceOfOfferForGoods createAcceptanceOfOfferForGoods(final String id) {
-        return new AcceptanceOfOfferForGoodsImpl(id);
+    public static <T> AcceptanceOfOfferForGoods<T> createAcceptanceOfOfferForGoods(final T id) {
+        return new AcceptanceOfOfferForGoodsImpl<T>(id);
     }
 
     /**
@@ -58,8 +58,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Activity.
      * @return A Activity instance.
      */
-    public static Activity createActivity(final String id) {
-        return new ActivityImpl(id);
+    public static <T> Activity<T> createActivity(final T id) {
+        return new ActivityImpl<T>(id);
     }
 
     /**
@@ -68,8 +68,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the AgreeContract.
      * @return A AgreeContract instance.
      */
-    public static AgreeContract createAgreeContract(final String id) {
-        return new AgreeContractImpl(id);
+    public static <T> AgreeContract<T> createAgreeContract(final T id) {
+        return new AgreeContractImpl<T>(id);
     }
 
     /**
@@ -78,8 +78,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the AgreementExecution.
      * @return A AgreementExecution instance.
      */
-    public static AgreementExecution createAgreementExecution(final String id) {
-        return new AgreementExecutionImpl(id);
+    public static <T> AgreementExecution<T> createAgreementExecution(final T id) {
+        return new AgreementExecutionImpl<T>(id);
     }
 
     /**
@@ -88,8 +88,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the AgreementProcess.
      * @return A AgreementProcess instance.
      */
-    public static AgreementProcess createAgreementProcess(final String id) {
-        return new AgreementProcessImpl(id);
+    public static <T> AgreementProcess<T> createAgreementProcess(final T id) {
+        return new AgreementProcessImpl<T>(id);
     }
 
     /**
@@ -98,8 +98,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the AmountOfMoney.
      * @return A AmountOfMoney instance.
      */
-    public static AmountOfMoney createAmountOfMoney(final String id) {
-        return new AmountOfMoneyImpl(id);
+    public static <T> AmountOfMoney<T> createAmountOfMoney(final T id) {
+        return new AmountOfMoneyImpl<T>(id);
     }
 
     /**
@@ -108,8 +108,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Asset.
      * @return A Asset instance.
      */
-    public static Asset createAsset(final String id) {
-        return new AssetImpl(id);
+    public static <T> Asset<T> createAsset(final T id) {
+        return new AssetImpl<T>(id);
     }
 
     /**
@@ -118,8 +118,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Association.
      * @return A Association instance.
      */
-    public static Association createAssociation(final String id) {
-        return new AssociationImpl(id);
+    public static <T> Association<T> createAssociation(final T id) {
+        return new AssociationImpl<T>(id);
     }
 
     /**
@@ -128,8 +128,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the BeginningOfOwnership.
      * @return A BeginningOfOwnership instance.
      */
-    public static BeginningOfOwnership createBeginningOfOwnership(final String id) {
-        return new BeginningOfOwnershipImpl(id);
+    public static <T> BeginningOfOwnership<T> createBeginningOfOwnership(final T id) {
+        return new BeginningOfOwnershipImpl<T>(id);
     }
 
     /**
@@ -138,8 +138,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the BiologicalObject.
      * @return A BiologicalObject instance.
      */
-    public static BiologicalObject createBiologicalObject(final String id) {
-        return new BiologicalObjectImpl(id);
+    public static <T> BiologicalObject<T> createBiologicalObject(final T id) {
+        return new BiologicalObjectImpl<T>(id);
     }
 
     /**
@@ -148,8 +148,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the BiologicalSystem.
      * @return A BiologicalSystem instance.
      */
-    public static BiologicalSystem createBiologicalSystem(final String id) {
-        return new BiologicalSystemImpl(id);
+    public static <T> BiologicalSystem<T> createBiologicalSystem(final T id) {
+        return new BiologicalSystemImpl<T>(id);
     }
 
     /**
@@ -158,8 +158,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the BiologicalSystemComponent.
      * @return A BiologicalSystemComponent instance.
      */
-    public static BiologicalSystemComponent createBiologicalSystemComponent(final String id) {
-        return new BiologicalSystemComponentImpl(id);
+    public static <T> BiologicalSystemComponent<T> createBiologicalSystemComponent(final T id) {
+        return new BiologicalSystemComponentImpl<T>(id);
     }
 
     /**
@@ -168,8 +168,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the ContractExecution.
      * @return A ContractExecution instance.
      */
-    public static ContractExecution createContractExecution(final String id) {
-        return new ContractExecutionImpl(id);
+    public static <T> ContractExecution<T> createContractExecution(final T id) {
+        return new ContractExecutionImpl<T>(id);
     }
 
     /**
@@ -178,8 +178,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the ContractProcess.
      * @return A ContractProcess instance.
      */
-    public static ContractProcess createContractProcess(final String id) {
-        return new ContractProcessImpl(id);
+    public static <T> ContractProcess<T> createContractProcess(final T id) {
+        return new ContractProcessImpl<T>(id);
     }
 
     /**
@@ -188,8 +188,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Currency.
      * @return A Currency instance.
      */
-    public static Currency createCurrency(final String id) {
-        return new CurrencyImpl(id);
+    public static <T> Currency<T> createCurrency(final T id) {
+        return new CurrencyImpl<T>(id);
     }
 
     /**
@@ -198,8 +198,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Employee.
      * @return A Employee instance.
      */
-    public static Employee createEmployee(final String id) {
-        return new EmployeeImpl(id);
+    public static <T> Employee<T> createEmployee(final T id) {
+        return new EmployeeImpl<T>(id);
     }
 
     /**
@@ -208,8 +208,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Employer.
      * @return A Employer instance.
      */
-    public static Employer createEmployer(final String id) {
-        return new EmployerImpl(id);
+    public static <T> Employer<T> createEmployer(final T id) {
+        return new EmployerImpl<T>(id);
     }
 
     /**
@@ -218,8 +218,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Employment.
      * @return A Employment instance.
      */
-    public static Employment createEmployment(final String id) {
-        return new EmploymentImpl(id);
+    public static <T> Employment<T> createEmployment(final T id) {
+        return new EmploymentImpl<T>(id);
     }
 
     /**
@@ -228,8 +228,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the EndingOfOwnership.
      * @return A EndingOfOwnership instance.
      */
-    public static EndingOfOwnership createEndingOfOwnership(final String id) {
-        return new EndingOfOwnershipImpl(id);
+    public static <T> EndingOfOwnership<T> createEndingOfOwnership(final T id) {
+        return new EndingOfOwnershipImpl<T>(id);
     }
 
     /**
@@ -238,8 +238,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Event.
      * @return A Event instance.
      */
-    public static Event createEvent(final String id) {
-        return new EventImpl(id);
+    public static <T> Event<T> createEvent(final T id) {
+        return new EventImpl<T>(id);
     }
 
     /**
@@ -248,8 +248,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the ExchangeOfGoodsAndMoney.
      * @return A ExchangeOfGoodsAndMoney instance.
      */
-    public static ExchangeOfGoodsAndMoney createExchangeOfGoodsAndMoney(final String id) {
-        return new ExchangeOfGoodsAndMoneyImpl(id);
+    public static <T> ExchangeOfGoodsAndMoney<T> createExchangeOfGoodsAndMoney(final T id) {
+        return new ExchangeOfGoodsAndMoneyImpl<T>(id);
     }
 
     /**
@@ -258,8 +258,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the FunctionalObject.
      * @return A FunctionalObject instance.
      */
-    public static FunctionalObject createFunctionalObject(final String id) {
-        return new FunctionalObjectImpl(id);
+    public static <T> FunctionalObject<T> createFunctionalObject(final T id) {
+        return new FunctionalObjectImpl<T>(id);
     }
 
     /**
@@ -268,8 +268,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the FunctionalSystem.
      * @return A FunctionalSystem instance.
      */
-    public static FunctionalSystem createFunctionalSystem(final String id) {
-        return new FunctionalSystemImpl(id);
+    public static <T> FunctionalSystem<T> createFunctionalSystem(final T id) {
+        return new FunctionalSystemImpl<T>(id);
     }
 
     /**
@@ -278,8 +278,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the FunctionalSystemComponent.
      * @return A FunctionalSystemComponent instance.
      */
-    public static FunctionalSystemComponent createFunctionalSystemComponent(final String id) {
-        return new FunctionalSystemComponentImpl(id);
+    public static <T> FunctionalSystemComponent<T> createFunctionalSystemComponent(final T id) {
+        return new FunctionalSystemComponentImpl<T>(id);
     }
 
     /**
@@ -288,8 +288,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the IdentificationOfPhysicalQuantity.
      * @return A IdentificationOfPhysicalQuantity instance.
      */
-    public static IdentificationOfPhysicalQuantity createIdentificationOfPhysicalQuantity(final String id) {
-        return new IdentificationOfPhysicalQuantityImpl(id);
+    public static <T> IdentificationOfPhysicalQuantity<T> createIdentificationOfPhysicalQuantity(final T id) {
+        return new IdentificationOfPhysicalQuantityImpl<T>(id);
     }
 
     /**
@@ -298,8 +298,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the InPlaceBiologicalComponent.
      * @return A InPlaceBiologicalComponent instance.
      */
-    public static InPlaceBiologicalComponent createInPlaceBiologicalComponent(final String id) {
-        return new InPlaceBiologicalComponentImpl(id);
+    public static <T> InPlaceBiologicalComponent<T> createInPlaceBiologicalComponent(final T id) {
+        return new InPlaceBiologicalComponentImpl<T>(id);
     }
 
     /**
@@ -308,8 +308,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Individual.
      * @return A Individual instance.
      */
-    public static Individual createIndividual(final String id) {
-        return new IndividualImpl(id);
+    public static <T> Individual<T> createIndividual(final T id) {
+        return new IndividualImpl<T>(id);
     }
 
     /**
@@ -318,8 +318,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the InstalledFunctionalSystemComponent.
      * @return A InstalledFunctionalSystemComponent instance.
      */
-    public static InstalledFunctionalSystemComponent createInstalledFunctionalSystemComponent(final String id) {
-        return new InstalledFunctionalSystemComponentImpl(id);
+    public static <T> InstalledFunctionalSystemComponent<T> createInstalledFunctionalSystemComponent(final T id) {
+        return new InstalledFunctionalSystemComponentImpl<T>(id);
     }
 
     /**
@@ -328,8 +328,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the InstalledObject.
      * @return A InstalledObject instance.
      */
-    public static InstalledObject createInstalledObject(final String id) {
-        return new InstalledObjectImpl(id);
+    public static <T> InstalledObject<T> createInstalledObject(final T id) {
+        return new InstalledObjectImpl<T>(id);
     }
 
     /**
@@ -338,8 +338,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the IntentionallyConstructedObject.
      * @return A IntentionallyConstructedObject instance.
      */
-    public static IntentionallyConstructedObject createIntentionallyConstructedObject(final String id) {
-        return new IntentionallyConstructedObjectImpl(id);
+    public static <T> IntentionallyConstructedObject<T> createIntentionallyConstructedObject(final T id) {
+        return new IntentionallyConstructedObjectImpl<T>(id);
     }
 
     /**
@@ -348,8 +348,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the LanguageCommunity.
      * @return A LanguageCommunity instance.
      */
-    public static LanguageCommunity createLanguageCommunity(final String id) {
-        return new LanguageCommunityImpl(id);
+    public static <T> LanguageCommunity<T> createLanguageCommunity(final T id) {
+        return new LanguageCommunityImpl<T>(id);
     }
 
     /**
@@ -358,8 +358,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the MoneyAsset.
      * @return A MoneyAsset instance.
      */
-    public static MoneyAsset createMoneyAsset(final String id) {
-        return new MoneyAssetImpl(id);
+    public static <T> MoneyAsset<T> createMoneyAsset(final T id) {
+        return new MoneyAssetImpl<T>(id);
     }
 
     /**
@@ -368,8 +368,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Offer.
      * @return A Offer instance.
      */
-    public static Offer createOffer(final String id) {
-        return new OfferImpl(id);
+    public static <T> Offer<T> createOffer(final T id) {
+        return new OfferImpl<T>(id);
     }
 
     /**
@@ -378,8 +378,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the OfferAndAcceptanceForGoods.
      * @return A OfferAndAcceptanceForGoods instance.
      */
-    public static OfferAndAcceptanceForGoods createOfferAndAcceptanceForGoods(final String id) {
-        return new OfferAndAcceptanceForGoodsImpl(id);
+    public static <T> OfferAndAcceptanceForGoods<T> createOfferAndAcceptanceForGoods(final T id) {
+        return new OfferAndAcceptanceForGoodsImpl<T>(id);
     }
 
     /**
@@ -388,8 +388,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the OfferForGoods.
      * @return A OfferForGoods instance.
      */
-    public static OfferForGoods createOfferForGoods(final String id) {
-        return new OfferForGoodsImpl(id);
+    public static <T> OfferForGoods<T> createOfferForGoods(final T id) {
+        return new OfferForGoodsImpl<T>(id);
     }
 
     /**
@@ -398,8 +398,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Offering.
      * @return A Offering instance.
      */
-    public static Offering createOffering(final String id) {
-        return new OfferingImpl(id);
+    public static <T> Offering<T> createOffering(final T id) {
+        return new OfferingImpl<T>(id);
     }
 
     /**
@@ -408,8 +408,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the OrdinaryBiologicalObject.
      * @return A OrdinaryBiologicalObject instance.
      */
-    public static OrdinaryBiologicalObject createOrdinaryBiologicalObject(final String id) {
-        return new OrdinaryBiologicalObjectImpl(id);
+    public static <T> OrdinaryBiologicalObject<T> createOrdinaryBiologicalObject(final T id) {
+        return new OrdinaryBiologicalObjectImpl<T>(id);
     }
 
     /**
@@ -418,8 +418,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the OrdinaryFunctionalObject.
      * @return A OrdinaryFunctionalObject instance.
      */
-    public static OrdinaryFunctionalObject createOrdinaryFunctionalObject(final String id) {
-        return new OrdinaryFunctionalObjectImpl(id);
+    public static <T> OrdinaryFunctionalObject<T> createOrdinaryFunctionalObject(final T id) {
+        return new OrdinaryFunctionalObjectImpl<T>(id);
     }
 
     /**
@@ -428,8 +428,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the OrdinaryPhysicalObject.
      * @return A OrdinaryPhysicalObject instance.
      */
-    public static OrdinaryPhysicalObject createOrdinaryPhysicalObject(final String id) {
-        return new OrdinaryPhysicalObjectImpl(id);
+    public static <T> OrdinaryPhysicalObject<T> createOrdinaryPhysicalObject(final T id) {
+        return new OrdinaryPhysicalObjectImpl<T>(id);
     }
 
     /**
@@ -438,8 +438,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Organization.
      * @return A Organization instance.
      */
-    public static Organization createOrganization(final String id) {
-        return new OrganizationImpl(id);
+    public static <T> Organization<T> createOrganization(final T id) {
+        return new OrganizationImpl<T>(id);
     }
 
     /**
@@ -448,8 +448,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the OrganizationComponent.
      * @return A OrganizationComponent instance.
      */
-    public static OrganizationComponent createOrganizationComponent(final String id) {
-        return new OrganizationComponentImpl(id);
+    public static <T> OrganizationComponent<T> createOrganizationComponent(final T id) {
+        return new OrganizationComponentImpl<T>(id);
     }
 
     /**
@@ -458,8 +458,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Owner.
      * @return A Owner instance.
      */
-    public static Owner createOwner(final String id) {
-        return new OwnerImpl(id);
+    public static <T> Owner<T> createOwner(final T id) {
+        return new OwnerImpl<T>(id);
     }
 
     /**
@@ -468,8 +468,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Ownership.
      * @return A Ownership instance.
      */
-    public static Ownership createOwnership(final String id) {
-        return new OwnershipImpl(id);
+    public static <T> Ownership<T> createOwnership(final T id) {
+        return new OwnershipImpl<T>(id);
     }
 
     /**
@@ -478,8 +478,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Participant.
      * @return A Participant instance.
      */
-    public static Participant createParticipant(final String id) {
-        return new ParticipantImpl(id);
+    public static <T> Participant<T> createParticipant(final T id) {
+        return new ParticipantImpl<T>(id);
     }
 
     /**
@@ -488,8 +488,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the ParticipantInActivityOrAssociation.
      * @return A ParticipantInActivityOrAssociation instance.
      */
-    public static ParticipantInActivityOrAssociation createParticipantInActivityOrAssociation(final String id) {
-        return new ParticipantInActivityOrAssociationImpl(id);
+    public static <T> ParticipantInActivityOrAssociation<T> createParticipantInActivityOrAssociation(final T id) {
+        return new ParticipantInActivityOrAssociationImpl<T>(id);
     }
 
     /**
@@ -498,8 +498,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Party.
      * @return A Party instance.
      */
-    public static Party createParty(final String id) {
-        return new PartyImpl(id);
+    public static <T> Party<T> createParty(final T id) {
+        return new PartyImpl<T>(id);
     }
 
     /**
@@ -508,8 +508,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the PeriodOfTime.
      * @return A PeriodOfTime instance.
      */
-    public static PeriodOfTime createPeriodOfTime(final String id) {
-        return new PeriodOfTimeImpl(id);
+    public static <T> PeriodOfTime<T> createPeriodOfTime(final T id) {
+        return new PeriodOfTimeImpl<T>(id);
     }
 
     /**
@@ -518,8 +518,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Person.
      * @return A Person instance.
      */
-    public static Person createPerson(final String id) {
-        return new PersonImpl(id);
+    public static <T> Person<T> createPerson(final T id) {
+        return new PersonImpl<T>(id);
     }
 
     /**
@@ -528,8 +528,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the PersonInPosition.
      * @return A PersonInPosition instance.
      */
-    public static PersonInPosition createPersonInPosition(final String id) {
-        return new PersonInPositionImpl(id);
+    public static <T> PersonInPosition<T> createPersonInPosition(final T id) {
+        return new PersonInPositionImpl<T>(id);
     }
 
     /**
@@ -538,8 +538,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the PhysicalObject.
      * @return A PhysicalObject instance.
      */
-    public static PhysicalObject createPhysicalObject(final String id) {
-        return new PhysicalObjectImpl(id);
+    public static <T> PhysicalObject<T> createPhysicalObject(final T id) {
+        return new PhysicalObjectImpl<T>(id);
     }
 
     /**
@@ -548,8 +548,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the PhysicalProperty.
      * @return A PhysicalProperty instance.
      */
-    public static PhysicalProperty createPhysicalProperty(final String id) {
-        return new PhysicalPropertyImpl(id);
+    public static <T> PhysicalProperty<T> createPhysicalProperty(final T id) {
+        return new PhysicalPropertyImpl<T>(id);
     }
 
     /**
@@ -558,8 +558,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the PhysicalPropertyRange.
      * @return A PhysicalPropertyRange instance.
      */
-    public static PhysicalPropertyRange createPhysicalPropertyRange(final String id) {
-        return new PhysicalPropertyRangeImpl(id);
+    public static <T> PhysicalPropertyRange<T> createPhysicalPropertyRange(final T id) {
+        return new PhysicalPropertyRangeImpl<T>(id);
     }
 
     /**
@@ -568,8 +568,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the PhysicalQuantity.
      * @return A PhysicalQuantity instance.
      */
-    public static PhysicalQuantity createPhysicalQuantity(final String id) {
-        return new PhysicalQuantityImpl(id);
+    public static <T> PhysicalQuantity<T> createPhysicalQuantity(final T id) {
+        return new PhysicalQuantityImpl<T>(id);
     }
 
     /**
@@ -578,8 +578,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the PhysicalQuantityRange.
      * @return A PhysicalQuantityRange instance.
      */
-    public static PhysicalQuantityRange createPhysicalQuantityRange(final String id) {
-        return new PhysicalQuantityRangeImpl(id);
+    public static <T> PhysicalQuantityRange<T> createPhysicalQuantityRange(final T id) {
+        return new PhysicalQuantityRangeImpl<T>(id);
     }
 
     /**
@@ -588,8 +588,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Plan.
      * @return A Plan instance.
      */
-    public static Plan createPlan(final String id) {
-        return new PlanImpl(id);
+    public static <T> Plan<T> createPlan(final T id) {
+        return new PlanImpl<T>(id);
     }
 
     /**
@@ -598,8 +598,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the PointInTime.
      * @return A PointInTime instance.
      */
-    public static PointInTime createPointInTime(final String id) {
-        return new PointInTimeImpl(id);
+    public static <T> PointInTime<T> createPointInTime(final T id) {
+        return new PointInTimeImpl<T>(id);
     }
 
     /**
@@ -608,8 +608,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Position.
      * @return A Position instance.
      */
-    public static Position createPosition(final String id) {
-        return new PositionImpl(id);
+    public static <T> Position<T> createPosition(final T id) {
+        return new PositionImpl<T>(id);
     }
 
     /**
@@ -618,8 +618,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the PossibleWorld.
      * @return A PossibleWorld instance.
      */
-    public static PossibleWorld createPossibleWorld(final String id) {
-        return new PossibleWorldImpl(id);
+    public static <T> PossibleWorld<T> createPossibleWorld(final T id) {
+        return new PossibleWorldImpl<T>(id);
     }
 
     /**
@@ -628,8 +628,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Price.
      * @return A Price instance.
      */
-    public static Price createPrice(final String id) {
-        return new PriceImpl(id);
+    public static <T> Price<T> createPrice(final T id) {
+        return new PriceImpl<T>(id);
     }
 
     /**
@@ -638,8 +638,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the ProductBrand.
      * @return A ProductBrand instance.
      */
-    public static ProductBrand createProductBrand(final String id) {
-        return new ProductBrandImpl(id);
+    public static <T> ProductBrand<T> createProductBrand(final T id) {
+        return new ProductBrandImpl<T>(id);
     }
 
     /**
@@ -648,8 +648,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the ProductOffering.
      * @return A ProductOffering instance.
      */
-    public static ProductOffering createProductOffering(final String id) {
-        return new ProductOfferingImpl(id);
+    public static <T> ProductOffering<T> createProductOffering(final T id) {
+        return new ProductOfferingImpl<T>(id);
     }
 
     /**
@@ -658,8 +658,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the ReachingAgreement.
      * @return A ReachingAgreement instance.
      */
-    public static ReachingAgreement createReachingAgreement(final String id) {
-        return new ReachingAgreementImpl(id);
+    public static <T> ReachingAgreement<T> createReachingAgreement(final T id) {
+        return new ReachingAgreementImpl<T>(id);
     }
 
     /**
@@ -668,8 +668,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the RecognizingLanguageCommunity.
      * @return A RecognizingLanguageCommunity instance.
      */
-    public static RecognizingLanguageCommunity createRecognizingLanguageCommunity(final String id) {
-        return new RecognizingLanguageCommunityImpl(id);
+    public static <T> RecognizingLanguageCommunity<T> createRecognizingLanguageCommunity(final T id) {
+        return new RecognizingLanguageCommunityImpl<T>(id);
     }
 
     /**
@@ -678,8 +678,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the RepresentationBySign.
      * @return A RepresentationBySign instance.
      */
-    public static RepresentationBySign createRepresentationBySign(final String id) {
-        return new RepresentationBySignImpl(id);
+    public static <T> RepresentationBySign<T> createRepresentationBySign(final T id) {
+        return new RepresentationBySignImpl<T>(id);
     }
 
     /**
@@ -688,8 +688,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Requirement.
      * @return A Requirement instance.
      */
-    public static Requirement createRequirement(final String id) {
-        return new RequirementImpl(id);
+    public static <T> Requirement<T> createRequirement(final T id) {
+        return new RequirementImpl<T>(id);
     }
 
     /**
@@ -698,8 +698,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the RequirementSpecification.
      * @return A RequirementSpecification instance.
      */
-    public static RequirementSpecification createRequirementSpecification(final String id) {
-        return new RequirementSpecificationImpl(id);
+    public static <T> RequirementSpecification<T> createRequirementSpecification(final T id) {
+        return new RequirementSpecificationImpl<T>(id);
     }
 
     /**
@@ -708,8 +708,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the SaleOfGoods.
      * @return A SaleOfGoods instance.
      */
-    public static SaleOfGoods createSaleOfGoods(final String id) {
-        return new SaleOfGoodsImpl(id);
+    public static <T> SaleOfGoods<T> createSaleOfGoods(final T id) {
+        return new SaleOfGoodsImpl<T>(id);
     }
 
     /**
@@ -718,8 +718,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the SalesProduct.
      * @return A SalesProduct instance.
      */
-    public static SalesProduct createSalesProduct(final String id) {
-        return new SalesProductImpl(id);
+    public static <T> SalesProduct<T> createSalesProduct(final T id) {
+        return new SalesProductImpl<T>(id);
     }
 
     /**
@@ -728,8 +728,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the SalesProductInstance.
      * @return A SalesProductInstance instance.
      */
-    public static SalesProductInstance createSalesProductInstance(final String id) {
-        return new SalesProductInstanceImpl(id);
+    public static <T> SalesProductInstance<T> createSalesProductInstance(final T id) {
+        return new SalesProductInstanceImpl<T>(id);
     }
 
     /**
@@ -738,8 +738,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the SalesProductVersion.
      * @return A SalesProductVersion instance.
      */
-    public static SalesProductVersion createSalesProductVersion(final String id) {
-        return new SalesProductVersionImpl(id);
+    public static <T> SalesProductVersion<T> createSalesProductVersion(final T id) {
+        return new SalesProductVersionImpl<T>(id);
     }
 
     /**
@@ -748,8 +748,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Sign.
      * @return A Sign instance.
      */
-    public static Sign createSign(final String id) {
-        return new SignImpl(id);
+    public static <T> Sign<T> createSign(final T id) {
+        return new SignImpl<T>(id);
     }
 
     /**
@@ -758,8 +758,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the SociallyConstructedActivity.
      * @return A SociallyConstructedActivity instance.
      */
-    public static SociallyConstructedActivity createSociallyConstructedActivity(final String id) {
-        return new SociallyConstructedActivityImpl(id);
+    public static <T> SociallyConstructedActivity<T> createSociallyConstructedActivity(final T id) {
+        return new SociallyConstructedActivityImpl<T>(id);
     }
 
     /**
@@ -768,8 +768,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the SociallyConstructedObject.
      * @return A SociallyConstructedObject instance.
      */
-    public static SociallyConstructedObject createSociallyConstructedObject(final String id) {
-        return new SociallyConstructedObjectImpl(id);
+    public static <T> SociallyConstructedObject<T> createSociallyConstructedObject(final T id) {
+        return new SociallyConstructedObjectImpl<T>(id);
     }
 
     /**
@@ -778,8 +778,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the SpatioTemporalExtent.
      * @return A SpatioTemporalExtent instance.
      */
-    public static SpatioTemporalExtent createSpatioTemporalExtent(final String id) {
-        return new SpatioTemporalExtentImpl(id);
+    public static <T> SpatioTemporalExtent<T> createSpatioTemporalExtent(final T id) {
+        return new SpatioTemporalExtentImpl<T>(id);
     }
 
     /**
@@ -788,8 +788,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the State.
      * @return A State instance.
      */
-    public static State createState(final String id) {
-        return new StateImpl(id);
+    public static <T> State<T> createState(final T id) {
+        return new StateImpl<T>(id);
     }
 
     /**
@@ -798,8 +798,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfActivity.
      * @return A StateOfActivity instance.
      */
-    public static StateOfActivity createStateOfActivity(final String id) {
-        return new StateOfActivityImpl(id);
+    public static <T> StateOfActivity<T> createStateOfActivity(final T id) {
+        return new StateOfActivityImpl<T>(id);
     }
 
     /**
@@ -808,8 +808,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfAmountOfMoney.
      * @return A StateOfAmountOfMoney instance.
      */
-    public static StateOfAmountOfMoney createStateOfAmountOfMoney(final String id) {
-        return new StateOfAmountOfMoneyImpl(id);
+    public static <T> StateOfAmountOfMoney<T> createStateOfAmountOfMoney(final T id) {
+        return new StateOfAmountOfMoneyImpl<T>(id);
     }
 
     /**
@@ -818,8 +818,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfAssociation.
      * @return A StateOfAssociation instance.
      */
-    public static StateOfAssociation createStateOfAssociation(final String id) {
-        return new StateOfAssociationImpl(id);
+    public static <T> StateOfAssociation<T> createStateOfAssociation(final T id) {
+        return new StateOfAssociationImpl<T>(id);
     }
 
     /**
@@ -828,8 +828,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfBiologicalObject.
      * @return A StateOfBiologicalObject instance.
      */
-    public static StateOfBiologicalObject createStateOfBiologicalObject(final String id) {
-        return new StateOfBiologicalObjectImpl(id);
+    public static <T> StateOfBiologicalObject<T> createStateOfBiologicalObject(final T id) {
+        return new StateOfBiologicalObjectImpl<T>(id);
     }
 
     /**
@@ -838,8 +838,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfBiologicalSystem.
      * @return A StateOfBiologicalSystem instance.
      */
-    public static StateOfBiologicalSystem createStateOfBiologicalSystem(final String id) {
-        return new StateOfBiologicalSystemImpl(id);
+    public static <T> StateOfBiologicalSystem<T> createStateOfBiologicalSystem(final T id) {
+        return new StateOfBiologicalSystemImpl<T>(id);
     }
 
     /**
@@ -848,8 +848,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfBiologicalSystemComponent.
      * @return A StateOfBiologicalSystemComponent instance.
      */
-    public static StateOfBiologicalSystemComponent createStateOfBiologicalSystemComponent(final String id) {
-        return new StateOfBiologicalSystemComponentImpl(id);
+    public static <T> StateOfBiologicalSystemComponent<T> createStateOfBiologicalSystemComponent(final T id) {
+        return new StateOfBiologicalSystemComponentImpl<T>(id);
     }
 
     /**
@@ -858,8 +858,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfFunctionalObject.
      * @return A StateOfFunctionalObject instance.
      */
-    public static StateOfFunctionalObject createStateOfFunctionalObject(final String id) {
-        return new StateOfFunctionalObjectImpl(id);
+    public static <T> StateOfFunctionalObject<T> createStateOfFunctionalObject(final T id) {
+        return new StateOfFunctionalObjectImpl<T>(id);
     }
 
     /**
@@ -868,8 +868,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfFunctionalSystem.
      * @return A StateOfFunctionalSystem instance.
      */
-    public static StateOfFunctionalSystem createStateOfFunctionalSystem(final String id) {
-        return new StateOfFunctionalSystemImpl(id);
+    public static <T> StateOfFunctionalSystem<T> createStateOfFunctionalSystem(final T id) {
+        return new StateOfFunctionalSystemImpl<T>(id);
     }
 
     /**
@@ -878,8 +878,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfFunctionalSystemComponent.
      * @return A StateOfFunctionalSystemComponent instance.
      */
-    public static StateOfFunctionalSystemComponent createStateOfFunctionalSystemComponent(final String id) {
-        return new StateOfFunctionalSystemComponentImpl(id);
+    public static <T> StateOfFunctionalSystemComponent<T> createStateOfFunctionalSystemComponent(final T id) {
+        return new StateOfFunctionalSystemComponentImpl<T>(id);
     }
 
     /**
@@ -888,8 +888,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfIntentionallyConstructedObject.
      * @return A StateOfIntentionallyConstructedObject instance.
      */
-    public static StateOfIntentionallyConstructedObject createStateOfIntentionallyConstructedObject(final String id) {
-        return new StateOfIntentionallyConstructedObjectImpl(id);
+    public static <T> StateOfIntentionallyConstructedObject<T> createStateOfIntentionallyConstructedObject(final T id) {
+        return new StateOfIntentionallyConstructedObjectImpl<T>(id);
     }
 
     /**
@@ -898,8 +898,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfLanguageCommunity.
      * @return A StateOfLanguageCommunity instance.
      */
-    public static StateOfLanguageCommunity createStateOfLanguageCommunity(final String id) {
-        return new StateOfLanguageCommunityImpl(id);
+    public static <T> StateOfLanguageCommunity<T> createStateOfLanguageCommunity(final T id) {
+        return new StateOfLanguageCommunityImpl<T>(id);
     }
 
     /**
@@ -908,8 +908,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfOrdinaryBiologicalObject.
      * @return A StateOfOrdinaryBiologicalObject instance.
      */
-    public static StateOfOrdinaryBiologicalObject createStateOfOrdinaryBiologicalObject(final String id) {
-        return new StateOfOrdinaryBiologicalObjectImpl(id);
+    public static <T> StateOfOrdinaryBiologicalObject<T> createStateOfOrdinaryBiologicalObject(final T id) {
+        return new StateOfOrdinaryBiologicalObjectImpl<T>(id);
     }
 
     /**
@@ -918,8 +918,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfOrdinaryFunctionalObject.
      * @return A StateOfOrdinaryFunctionalObject instance.
      */
-    public static StateOfOrdinaryFunctionalObject createStateOfOrdinaryFunctionalObject(final String id) {
-        return new StateOfOrdinaryFunctionalObjectImpl(id);
+    public static <T> StateOfOrdinaryFunctionalObject<T> createStateOfOrdinaryFunctionalObject(final T id) {
+        return new StateOfOrdinaryFunctionalObjectImpl<T>(id);
     }
 
     /**
@@ -928,8 +928,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfOrdinaryPhysicalObject.
      * @return A StateOfOrdinaryPhysicalObject instance.
      */
-    public static StateOfOrdinaryPhysicalObject createStateOfOrdinaryPhysicalObject(final String id) {
-        return new StateOfOrdinaryPhysicalObjectImpl(id);
+    public static <T> StateOfOrdinaryPhysicalObject<T> createStateOfOrdinaryPhysicalObject(final T id) {
+        return new StateOfOrdinaryPhysicalObjectImpl<T>(id);
     }
 
     /**
@@ -938,8 +938,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfOrganization.
      * @return A StateOfOrganization instance.
      */
-    public static StateOfOrganization createStateOfOrganization(final String id) {
-        return new StateOfOrganizationImpl(id);
+    public static <T> StateOfOrganization<T> createStateOfOrganization(final T id) {
+        return new StateOfOrganizationImpl<T>(id);
     }
 
     /**
@@ -948,8 +948,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfOrganizationComponent.
      * @return A StateOfOrganizationComponent instance.
      */
-    public static StateOfOrganizationComponent createStateOfOrganizationComponent(final String id) {
-        return new StateOfOrganizationComponentImpl(id);
+    public static <T> StateOfOrganizationComponent<T> createStateOfOrganizationComponent(final T id) {
+        return new StateOfOrganizationComponentImpl<T>(id);
     }
 
     /**
@@ -958,8 +958,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfParty.
      * @return A StateOfParty instance.
      */
-    public static StateOfParty createStateOfParty(final String id) {
-        return new StateOfPartyImpl(id);
+    public static <T> StateOfParty<T> createStateOfParty(final T id) {
+        return new StateOfPartyImpl<T>(id);
     }
 
     /**
@@ -968,8 +968,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfPerson.
      * @return A StateOfPerson instance.
      */
-    public static StateOfPerson createStateOfPerson(final String id) {
-        return new StateOfPersonImpl(id);
+    public static <T> StateOfPerson<T> createStateOfPerson(final T id) {
+        return new StateOfPersonImpl<T>(id);
     }
 
     /**
@@ -978,8 +978,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfPhysicalObject.
      * @return A StateOfPhysicalObject instance.
      */
-    public static StateOfPhysicalObject createStateOfPhysicalObject(final String id) {
-        return new StateOfPhysicalObjectImpl(id);
+    public static <T> StateOfPhysicalObject<T> createStateOfPhysicalObject(final T id) {
+        return new StateOfPhysicalObjectImpl<T>(id);
     }
 
     /**
@@ -988,8 +988,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfPosition.
      * @return A StateOfPosition instance.
      */
-    public static StateOfPosition createStateOfPosition(final String id) {
-        return new StateOfPositionImpl(id);
+    public static <T> StateOfPosition<T> createStateOfPosition(final T id) {
+        return new StateOfPositionImpl<T>(id);
     }
 
     /**
@@ -998,8 +998,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfSalesProductInstance.
      * @return A StateOfSalesProductInstance instance.
      */
-    public static StateOfSalesProductInstance createStateOfSalesProductInstance(final String id) {
-        return new StateOfSalesProductInstanceImpl(id);
+    public static <T> StateOfSalesProductInstance<T> createStateOfSalesProductInstance(final T id) {
+        return new StateOfSalesProductInstanceImpl<T>(id);
     }
 
     /**
@@ -1008,8 +1008,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfSign.
      * @return A StateOfSign instance.
      */
-    public static StateOfSign createStateOfSign(final String id) {
-        return new StateOfSignImpl(id);
+    public static <T> StateOfSign<T> createStateOfSign(final T id) {
+        return new StateOfSignImpl<T>(id);
     }
 
     /**
@@ -1018,8 +1018,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfSociallyConstructedActivity.
      * @return A StateOfSociallyConstructedActivity instance.
      */
-    public static StateOfSociallyConstructedActivity createStateOfSociallyConstructedActivity(final String id) {
-        return new StateOfSociallyConstructedActivityImpl(id);
+    public static <T> StateOfSociallyConstructedActivity<T> createStateOfSociallyConstructedActivity(final T id) {
+        return new StateOfSociallyConstructedActivityImpl<T>(id);
     }
 
     /**
@@ -1028,8 +1028,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfSociallyConstructedObject.
      * @return A StateOfSociallyConstructedObject instance.
      */
-    public static StateOfSociallyConstructedObject createStateOfSociallyConstructedObject(final String id) {
-        return new StateOfSociallyConstructedObjectImpl(id);
+    public static <T> StateOfSociallyConstructedObject<T> createStateOfSociallyConstructedObject(final T id) {
+        return new StateOfSociallyConstructedObjectImpl<T>(id);
     }
 
     /**
@@ -1038,8 +1038,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfSystem.
      * @return A StateOfSystem instance.
      */
-    public static StateOfSystem createStateOfSystem(final String id) {
-        return new StateOfSystemImpl(id);
+    public static <T> StateOfSystem<T> createStateOfSystem(final T id) {
+        return new StateOfSystemImpl<T>(id);
     }
 
     /**
@@ -1048,8 +1048,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the StateOfSystemComponent.
      * @return A StateOfSystemComponent instance.
      */
-    public static StateOfSystemComponent createStateOfSystemComponent(final String id) {
-        return new StateOfSystemComponentImpl(id);
+    public static <T> StateOfSystemComponent<T> createStateOfSystemComponent(final T id) {
+        return new StateOfSystemComponentImpl<T>(id);
     }
 
     /**
@@ -1058,8 +1058,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the System.
      * @return A System instance.
      */
-    public static uk.gov.gchq.magmacore.hqdm.model.System createSystem(final String id) {
-        return new SystemImpl(id);
+    public static <T> uk.gov.gchq.magmacore.hqdm.model.System<T> createSystem(final T id) {
+        return new SystemImpl<T>(id);
     }
 
     /**
@@ -1068,8 +1068,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the SystemComponent.
      * @return A SystemComponent instance.
      */
-    public static SystemComponent createSystemComponent(final String id) {
-        return new SystemComponentImpl(id);
+    public static <T> SystemComponent<T> createSystemComponent(final T id) {
+        return new SystemComponentImpl<T>(id);
     }
 
     /**
@@ -1078,8 +1078,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Thing.
      * @return A Thing instance.
      */
-    public static Thing createThing(final String id) {
-        return new ThingImpl(id);
+    public static <T> Thing<T> createThing(final T id) {
+        return new ThingImpl<T>(id);
     }
 
     /**
@@ -1088,8 +1088,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the TransferOfOwnership.
      * @return A TransferOfOwnership instance.
      */
-    public static TransferOfOwnership createTransferOfOwnership(final String id) {
-        return new TransferOfOwnershipImpl(id);
+    public static <T> TransferOfOwnership<T> createTransferOfOwnership(final T id) {
+        return new TransferOfOwnershipImpl<T>(id);
     }
 
     /**
@@ -1098,8 +1098,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the TransferOfOwnershipOfMoney.
      * @return A TransferOfOwnershipOfMoney instance.
      */
-    public static TransferOfOwnershipOfMoney createTransferOfOwnershipOfMoney(final String id) {
-        return new TransferOfOwnershipOfMoneyImpl(id);
+    public static <T> TransferOfOwnershipOfMoney<T> createTransferOfOwnershipOfMoney(final T id) {
+        return new TransferOfOwnershipOfMoneyImpl<T>(id);
     }
 
     /**
@@ -1108,8 +1108,8 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Transferee.
      * @return A Transferee instance.
      */
-    public static Transferee createTransferee(final String id) {
-        return new TransfereeImpl(id);
+    public static <T> Transferee<T> createTransferee(final T id) {
+        return new TransfereeImpl<T>(id);
     }
 
     /**
@@ -1118,7 +1118,7 @@ public class SpatioTemporalExtentServices {
      * @param id ID of the Transferor.
      * @return A Transferor instance.
      */
-    public static Transferor createTransferor(final String id) {
-        return new TransferorImpl(id);
+    public static <T> Transferor<T> createTransferor(final T id) {
+        return new TransferorImpl<T>(id);
     }
 }

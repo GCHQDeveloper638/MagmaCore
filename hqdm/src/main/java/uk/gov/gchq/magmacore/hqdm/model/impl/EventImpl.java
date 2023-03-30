@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Event.
  */
-public class EventImpl extends HqdmObject implements Event {
+public class EventImpl<T> extends HqdmObject<T> implements Event<T> {
     /**
      * Constructs a new Event.
      *
      * @param id String of the Event.
      */
-    public EventImpl(final String id) {
+    public EventImpl(final T id) {
         super(id);
     }
 }

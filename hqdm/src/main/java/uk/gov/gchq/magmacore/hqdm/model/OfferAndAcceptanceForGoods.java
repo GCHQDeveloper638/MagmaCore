@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link ReachingAgreement} that {@code consists_of} exactly one {@link Offer} of a
  * {@link TransferOfOwnershipOfMoney} for exactly one {@link TransferOfOwnership} that is accepted.
  */
-public interface OfferAndAcceptanceForGoods extends AgreeContract {
+public interface OfferAndAcceptanceForGoods<T> extends AgreeContract<T> {
 }

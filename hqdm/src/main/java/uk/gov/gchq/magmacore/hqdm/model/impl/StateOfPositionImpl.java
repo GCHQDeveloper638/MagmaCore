@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of StateOfPosition.
  */
-public class StateOfPositionImpl extends HqdmObject implements StateOfPosition {
+public class StateOfPositionImpl<T> extends HqdmObject<T> implements StateOfPosition<T> {
     /**
      * Constructs a new StateOfPosition.
      *
      * @param id String of the StateOfPosition.
      */
-    public StateOfPositionImpl(final String id) {
+    public StateOfPositionImpl(final T id) {
         super(id);
     }
 }

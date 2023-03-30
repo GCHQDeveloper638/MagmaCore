@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Role.
  */
-public class RoleImpl extends HqdmObject implements Role {
+public class RoleImpl<T> extends HqdmObject<T> implements Role<T> {
     /**
      * Constructs a new Role.
      *
      * @param id String of the Role.
      */
-    public RoleImpl(final String id) {
+    public RoleImpl(final T id) {
         super(id);
     }
 }

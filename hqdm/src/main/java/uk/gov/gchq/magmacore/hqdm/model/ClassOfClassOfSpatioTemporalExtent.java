@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link ClassOfClass} that is {@link ClassOfSpatioTemporalExtent} or any of its subsets.
  */
-public interface ClassOfClassOfSpatioTemporalExtent extends ClassOfClass {
+public interface ClassOfClassOfSpatioTemporalExtent<T> extends ClassOfClass<T> {
 }

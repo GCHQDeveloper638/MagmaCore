@@ -25,32 +25,32 @@ import uk.gov.gchq.magmacore.hqdm.model.Thing;
 /**
  * Basic implementation of a HQDM object.
  */
-public abstract class HqdmObject implements Thing {
+public abstract class HqdmObject<T> implements Thing<T> {
 
-    private String id;
+    private T id;
 
     private final Map<Object, Set<Object>> predicates = new HashMap<>();
 
     /**
      * Constructs a new {@code HqdmObject}.
      *
-     * @param id ID of the HQDM object.
+     * @param id T of the HQDM object.
      */
-    public HqdmObject(final String id) {
+    public HqdmObject(final T id) {
         this.id = id;
     }
 
     /**
      * {@inheritDoc}
      */
-    public String getId() {
+    public T getId() {
         return id;
     }
 
     /**
      * {@inheritDoc}
      */
-    public void setId(final String id) {
+    public void setId(final T id) {
         this.id = id;
     }
 

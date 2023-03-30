@@ -20,13 +20,15 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of KindOfRelationshipWithRestriction.
  */
-public class KindOfRelationshipWithRestrictionImpl extends HqdmObject implements KindOfRelationshipWithRestriction {
+public class KindOfRelationshipWithRestrictionImpl<T> extends HqdmObject<T>
+        implements KindOfRelationshipWithRestriction<T> {
     /**
      * Constructs a new KindOfRelationshipWithRestriction.
      *
-     * @param id String of the KindOfRelationshipWithRestriction.
+     * @param id
+     *            String of the KindOfRelationshipWithRestriction.
      */
-    public KindOfRelationshipWithRestrictionImpl(final String id) {
+    public KindOfRelationshipWithRestrictionImpl(final T id) {
         super(id);
     }
 }

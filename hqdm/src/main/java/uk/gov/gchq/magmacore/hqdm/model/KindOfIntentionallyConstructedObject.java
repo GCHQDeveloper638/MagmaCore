@@ -15,8 +15,11 @@
 package uk.gov.gchq.magmacore.hqdm.model;
 
 /**
- * A {@link ClassOfIntentionallyConstructedObject} that is also a {@link KindOfIndividual} where
- * each {@code member_of} a {@link KindOfIntentionallyConstructedObject} is of the same kind.
+ * A {@link ClassOfIntentionallyConstructedObject} that is also a
+ * {@link KindOfIndividual} where
+ * each {@code member_of} a {@link KindOfIntentionallyConstructedObject} is of
+ * the same kind.
  */
-public interface KindOfIntentionallyConstructedObject extends ClassOfIntentionallyConstructedObject, KindOfIndividual {
+public interface KindOfIntentionallyConstructedObject<T>
+        extends ClassOfIntentionallyConstructedObject<T>, KindOfIndividual<T> {
 }

@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link SociallyConstructedActivity} that is the acceptance of an {@link Offer} as
  * {@code part_of} an {@link AgreeContract}.
  */
-public interface AcceptanceOfOffer extends SociallyConstructedActivity {
+public interface AcceptanceOfOffer<T> extends SociallyConstructedActivity<T> {
 }

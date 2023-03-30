@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * An {@link AgreementExecution} that is the provision of some {@link Thing} in exchange for some
  * consideration.
  */
-public interface ContractExecution extends AgreementExecution {
+public interface ContractExecution<T> extends AgreementExecution<T> {
 }

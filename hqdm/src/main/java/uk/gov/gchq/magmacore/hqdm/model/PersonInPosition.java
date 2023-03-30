@@ -19,5 +19,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * that is a {@link Person} while they are in a {@link Position} and also the {@link Position} while
  * it is filled by the {@link Person}.
  */
-public interface PersonInPosition extends StateOfPosition, StateOfPerson, InstalledObject {
+public interface PersonInPosition<T> extends StateOfPosition<T>, StateOfPerson<T>, InstalledObject<T> {
 }

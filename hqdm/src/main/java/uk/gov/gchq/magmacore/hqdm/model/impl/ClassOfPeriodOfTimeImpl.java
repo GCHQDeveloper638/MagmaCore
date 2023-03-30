@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of ClassOfPeriodOfTime.
  */
-public class ClassOfPeriodOfTimeImpl extends HqdmObject implements ClassOfPeriodOfTime {
+public class ClassOfPeriodOfTimeImpl<T> extends HqdmObject<T> implements ClassOfPeriodOfTime<T> {
     /**
      * Constructs a new ClassOfPeriodOfTime.
      *
      * @param id String of the ClassOfPeriodOfTime.
      */
-    public ClassOfPeriodOfTimeImpl(final String id) {
+    public ClassOfPeriodOfTimeImpl(final T id) {
         super(id);
     }
 }

@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of ClassOfStateOfActivity.
  */
-public class ClassOfStateOfActivityImpl extends HqdmObject implements ClassOfStateOfActivity {
+public class ClassOfStateOfActivityImpl<T> extends HqdmObject<T> implements ClassOfStateOfActivity<T> {
     /**
      * Constructs a new ClassOfStateOfActivity.
      *
      * @param id String of the ClassOfStateOfActivity.
      */
-    public ClassOfStateOfActivityImpl(final String id) {
+    public ClassOfStateOfActivityImpl(final T id) {
         super(id);
     }
 }

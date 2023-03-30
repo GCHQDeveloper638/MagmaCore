@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link StateOfParty} that is also a {@link Participant} that is a {@code temporal_part_of} an
  * {@link Owner} that is a {@code participant_in} one or more {@link TransferOfOwnership}.
  */
-public interface Transferor extends StateOfParty, Participant {
+public interface Transferor<T> extends StateOfParty<T>, Participant<T> {
 }

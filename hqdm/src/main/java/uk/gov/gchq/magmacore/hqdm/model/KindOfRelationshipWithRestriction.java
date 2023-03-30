@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link KindOfRelationshipWithSignature} where one or more {@code roles} have fixed players.
  */
-public interface KindOfRelationshipWithRestriction extends KindOfRelationshipWithSignature {
+public interface KindOfRelationshipWithRestriction<T> extends KindOfRelationshipWithSignature<T> {
 }

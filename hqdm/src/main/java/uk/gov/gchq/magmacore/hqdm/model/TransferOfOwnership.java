@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link SociallyConstructedActivity} that ends one {@link Ownership} and begins another for
  * {@link Asset}s that are a {@code temporal_part_of} the same {@link PhysicalObject}.
  */
-public interface TransferOfOwnership extends SociallyConstructedActivity {
+public interface TransferOfOwnership<T> extends SociallyConstructedActivity<T> {
 }

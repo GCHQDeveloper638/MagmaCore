@@ -45,8 +45,8 @@ public class RelationshipServices {
      * @param id ID of the Specialization.
      * @return A Specialization instance.
      */
-    public static Specialization createSpecialization(final String id) {
-        return new SpecializationImpl(id);
+    public static <T> Specialization<T> createSpecialization(final T id) {
+        return new SpecializationImpl<T>(id);
     }
 
     /**
@@ -55,8 +55,8 @@ public class RelationshipServices {
      * @param id ID of the Scale.
      * @return A Scale instance.
      */
-    public static Scale createScale(final String id) {
-        return new ScaleImpl(id);
+    public static <T> Scale<T> createScale(final T id) {
+        return new ScaleImpl<T>(id);
     }
 
     /**
@@ -65,8 +65,8 @@ public class RelationshipServices {
      * @param id ID of the UnitOfMeasure.
      * @return A UnitOfMeasure instance.
      */
-    public static UnitOfMeasure createUnitOfMeasure(final String id) {
-        return new UnitOfMeasureImpl(id);
+    public static <T> UnitOfMeasure<T> createUnitOfMeasure(final T id) {
+        return new UnitOfMeasureImpl<T>(id);
     }
 
     /**
@@ -75,8 +75,8 @@ public class RelationshipServices {
      * @param id ID of the Function_.
      * @return A Function_ instance.
      */
-    public static Function_ createFunction(final String id) {
-        return new FunctionImpl(id);
+    public static <T> Function_<T> createFunction(final T id) {
+        return new FunctionImpl<T>(id);
     }
 
     /**
@@ -85,8 +85,8 @@ public class RelationshipServices {
      * @param id ID of the Classification.
      * @return A Classification instance.
      */
-    public static Classification createClassification(final String id) {
-        return new ClassificationImpl(id);
+    public static <T> Classification<T> createClassification(final T id) {
+        return new ClassificationImpl<T>(id);
     }
 
     /**
@@ -95,8 +95,8 @@ public class RelationshipServices {
      * @param id ID of the TemporalComposition.
      * @return A TemporalComposition instance.
      */
-    public static TemporalComposition createTemporalComposition(final String id) {
-        return new TemporalCompositionImpl(id);
+    public static <T> TemporalComposition<T> createTemporalComposition(final T id) {
+        return new TemporalCompositionImpl<T>(id);
     }
 
     /**
@@ -105,8 +105,8 @@ public class RelationshipServices {
      * @param id ID of the Composition.
      * @return A Composition instance.
      */
-    public static Composition createComposition(final String id) {
-        return new CompositionImpl(id);
+    public static <T> Composition<T> createComposition(final T id) {
+        return new CompositionImpl<T>(id);
     }
 
     /**
@@ -115,8 +115,8 @@ public class RelationshipServices {
      * @param id ID of the Aggregation.
      * @return A Aggregation instance.
      */
-    public static Aggregation createAggregation(final String id) {
-        return new AggregationImpl(id);
+    public static <T> Aggregation<T> createAggregation(final T id) {
+        return new AggregationImpl<T>(id);
     }
 
     /**
@@ -125,8 +125,8 @@ public class RelationshipServices {
      * @param id ID of the Relationship.
      * @return A Relationship instance.
      */
-    public static Relationship createRelationship(final String id) {
-        return new RelationshipImpl(id);
+    public static <T> Relationship<T> createRelationship(final T id) {
+        return new RelationshipImpl<T>(id);
     }
 
     /**
@@ -135,7 +135,7 @@ public class RelationshipServices {
      * @param id ID of the DefinedRelationship.
      * @return A DefinedRelationship instance.
      */
-    public static DefinedRelationship createDefinedRelationship(final String id) {
-        return new DefinedRelationshipImpl(id);
+    public static <T> DefinedRelationship<T> createDefinedRelationship(final T id) {
+        return new DefinedRelationshipImpl<T>(id);
     }
 }

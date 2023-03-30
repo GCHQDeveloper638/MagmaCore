@@ -18,5 +18,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
  * A {@link StateOfIntentionallyConstructedObject} that is a {@link SystemComponent} or a
  * {@code temporal_part_of} a {@link SystemComponent}.
  */
-public interface StateOfFunctionalSystemComponent extends StateOfFunctionalObject, StateOfSystemComponent {
+public interface StateOfFunctionalSystemComponent<T> extends StateOfFunctionalObject<T>, StateOfSystemComponent<T> {
 }

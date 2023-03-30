@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of Relationship.
  */
-public class RelationshipImpl extends HqdmObject implements Relationship {
+public class RelationshipImpl<T> extends HqdmObject<T> implements Relationship<T> {
     /**
      * Constructs a new Relationship.
      *
      * @param id String of the Relationship.
      */
-    public RelationshipImpl(final String id) {
+    public RelationshipImpl(final T id) {
         super(id);
     }
 }

@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link ClassOfAgreementProcess} that is {@link ContractProcess} or any of its subsets.
  */
-public interface ClassOfContractProcess extends ClassOfAgreementProcess {
+public interface ClassOfContractProcess<T> extends ClassOfAgreementProcess<T> {
 }

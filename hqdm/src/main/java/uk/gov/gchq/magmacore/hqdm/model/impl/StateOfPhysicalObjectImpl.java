@@ -20,13 +20,13 @@ import uk.gov.gchq.magmacore.hqdm.pojo.HqdmObject;
 /**
  * An implementation of StateOfPhysicalObject.
  */
-public class StateOfPhysicalObjectImpl extends HqdmObject implements StateOfPhysicalObject {
+public class StateOfPhysicalObjectImpl<T> extends HqdmObject<T> implements StateOfPhysicalObject<T> {
     /**
      * Constructs a new StateOfPhysicalObject.
      *
      * @param id String of the StateOfPhysicalObject.
      */
-    public StateOfPhysicalObjectImpl(final String id) {
+    public StateOfPhysicalObjectImpl(final T id) {
         super(id);
     }
 }

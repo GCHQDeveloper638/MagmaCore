@@ -17,5 +17,5 @@ package uk.gov.gchq.magmacore.hqdm.model;
 /**
  * A {@link TransferOfOwnership} where the {@link Asset} is a {@link MoneyAsset}.
  */
-public interface TransferOfOwnershipOfMoney extends TransferOfOwnership {
+public interface TransferOfOwnershipOfMoney<T> extends TransferOfOwnership<T> {
 }
