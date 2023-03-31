@@ -15,7 +15,7 @@ import uk.gov.gchq.magmacore.hqdm.model.PointInTime;
 import uk.gov.gchq.magmacore.hqdm.model.Thing;
 import uk.gov.gchq.magmacore.hqdm.rdf.iri.HQDM;
 import uk.gov.gchq.magmacore.hqdm.rdf.iri.IRI;
-import uk.gov.gchq.magmacore.hqdm.services.SpatioTemporalExtentServices;
+import uk.gov.gchq.magmacore.hqdm.rdfservices.RdfSpatioTemporalExtentServices;
 
 /**
  * Test the FindByTypeKindAndSignPattern service.
@@ -33,15 +33,16 @@ public class MagmaCoreServiceFindByTypeKindAndSignPatternTest {
         final MagmaCoreService service = new MagmaCoreService(db);
 
         // Create the PointInTime we're looking for
-        final PointInTime now = SpatioTemporalExtentServices.createPointInTime("now");
+        final PointInTime<IRI> now = RdfSpatioTemporalExtentServices
+                .createPointInTime(new IRI(SignPatternTestData.TEST_BASE, "now"));
         now.addValue(HQDM.ENTITY_NAME, Instant.now().toString());
 
         // Find the required Things by sign in a transaction.
         db.begin();
-        final List<? extends Thing> things = service.findByTypeKindAndSignPattern(
+        final List<? extends Thing<IRI>> things = service.findByTypeKindAndSignPattern(
                 HQDM.PERSON,
                 SignPatternTestData.kindOfPersonIri,
-                new IRI(SignPatternTestData.pattern1.getId()),
+                SignPatternTestData.pattern1.getId(),
                 now);
 
         db.commit();
@@ -50,11 +51,12 @@ public class MagmaCoreServiceFindByTypeKindAndSignPatternTest {
         assertNotNull(things);
         assertEquals(1, things.size());
 
-        final Thing person = things.get(0);
-        final String personIri = new IRI(SignPatternTestData.TEST_BASE, "person1").getIri();
+        final Thing<IRI> person = things.get(0);
+        final IRI personIri = new IRI(SignPatternTestData.TEST_BASE, "person1");
         assertEquals(personIri, person.getId());
 
-        // This query augments its object with HQDM.VALUE predicates for the current Sign values for the
+        // This query augments its object with HQDM.VALUE predicates for the current
+        // Sign values for the
         // object.
         final Set<Object> values = person.value(HQDM.VALUE_);
         assertNotNull(values);

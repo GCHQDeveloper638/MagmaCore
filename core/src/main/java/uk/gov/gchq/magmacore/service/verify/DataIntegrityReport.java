@@ -5,6 +5,7 @@ import java.util.List;
 
 import uk.gov.gchq.magmacore.database.MagmaCoreDatabase;
 import uk.gov.gchq.magmacore.hqdm.model.Thing;
+import uk.gov.gchq.magmacore.hqdm.rdf.iri.IRI;
 
 /**
  * Check an HQDM model for missing predicates.
@@ -585,10 +586,10 @@ public class DataIntegrityReport {
      * @param db {@link MagmaCoreDatabase}.
      * @return A {@link List} of {@link Thing} that represent data integrity errors.
      */
-    public static List<Thing> verify(final MagmaCoreDatabase db) {
+    public static List<Thing<IRI>> verify(final MagmaCoreDatabase db) {
         db.begin();
 
-        final List<Thing> errors = new ArrayList<>();
+        final List<Thing<IRI>> errors = new ArrayList<>();
 
         errors.addAll(db.executeConstruct(CHECK_POSSIBLE_WORLD_MEMBERSHIP));
         errors.addAll(db.executeConstruct(CHECK_MISSING_PARTICIPANT_ROLES));

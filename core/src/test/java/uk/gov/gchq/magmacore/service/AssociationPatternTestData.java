@@ -36,8 +36,8 @@ import uk.gov.gchq.magmacore.hqdm.rdf.iri.HQDM;
 import uk.gov.gchq.magmacore.hqdm.rdf.iri.IRI;
 import uk.gov.gchq.magmacore.hqdm.rdf.iri.IriBase;
 import uk.gov.gchq.magmacore.hqdm.rdf.iri.RDFS;
-import uk.gov.gchq.magmacore.hqdm.services.ClassServices;
-import uk.gov.gchq.magmacore.hqdm.services.SpatioTemporalExtentServices;
+import uk.gov.gchq.magmacore.hqdm.rdfservices.RdfClassServices;
+import uk.gov.gchq.magmacore.hqdm.rdfservices.RdfSpatioTemporalExtentServices;
 import uk.gov.gchq.magmacore.util.UID;
 
 /**
@@ -46,25 +46,25 @@ import uk.gov.gchq.magmacore.util.UID;
 public class AssociationPatternTestData {
 
     static final IriBase TEST_BASE = new IriBase("test", "http://example.com/test#");
-    static KindOfAssociation userAssociationKind;
+    static KindOfAssociation<IRI> userAssociationKind;
     static IRI userAssociationKindIri;
     static IRI possibleWorldIri;
-    static Person person1;
-    static Person person2;
-    static FunctionalSystem system1;
-    static FunctionalSystem system2;
+    static Person<IRI> person1;
+    static Person<IRI> person2;
+    static FunctionalSystem<IRI> system1;
+    static FunctionalSystem<IRI> system2;
     static IRI userRoleIri;
-    static Role userRole;
+    static Role<IRI> userRole;
     static IRI systemRoleIri;
-    static Role systemRole;
-    static StateOfPerson person1State1;
-    static StateOfFunctionalSystem system1State1;
-    static StateOfPerson person2State1;
-    static StateOfFunctionalSystem system2State1;
-    static StateOfPerson person1State2;
-    static StateOfPerson person2State2;
-    static StateOfPerson person2State3;
-    static StateOfPerson person3State1;
+    static Role<IRI> systemRole;
+    static StateOfPerson<IRI> person1State1;
+    static StateOfFunctionalSystem<IRI> system1State1;
+    static StateOfPerson<IRI> person2State1;
+    static StateOfFunctionalSystem<IRI> system2State1;
+    static StateOfPerson<IRI> person1State2;
+    static StateOfPerson<IRI> person2State2;
+    static StateOfPerson<IRI> person2State3;
+    static StateOfPerson<IRI> person3State1;
 
     /**
      * Create some Associations for the test.
@@ -77,69 +77,69 @@ public class AssociationPatternTestData {
 
         // Create KindOfAssociation objects
         userAssociationKindIri = new IRI(TEST_BASE, "userOfSystemKindOfAssociation");
-        userAssociationKind = ClassServices.createKindOfAssociation(userAssociationKindIri.getIri());
+        userAssociationKind = RdfClassServices.createKindOfAssociation(userAssociationKindIri);
         userAssociationKind.addValue(RDFS.RDF_TYPE, HQDM.KIND_OF_ASSOCIATION);
         userAssociationKind.addValue(HQDM.ENTITY_NAME, "userOfSystemKindOfAssociation");
 
         final IRI managerKindIri = new IRI(TEST_BASE, "managerKindOfAssociation");
-        final KindOfAssociation managerKind = ClassServices.createKindOfAssociation(managerKindIri.getIri());
+        final KindOfAssociation<IRI> managerKind = RdfClassServices.createKindOfAssociation(managerKindIri);
         managerKind.addValue(RDFS.RDF_TYPE, HQDM.KIND_OF_ASSOCIATION);
         managerKind.addValue(HQDM.ENTITY_NAME, "managerKindOfAssociation");
 
         // Create Roles
         userRoleIri = new IRI(TEST_BASE, "userRole");
-        userRole = ClassServices.createRole(userRoleIri.getIri());
+        userRole = RdfClassServices.createRole(userRoleIri);
         userRole.addValue(RDFS.RDF_TYPE, HQDM.ROLE);
         userRole.addValue(HQDM.ENTITY_NAME, "userRole");
         userRole.addValue(HQDM.PART_OF_BY_CLASS_, userAssociationKindIri);
 
         systemRoleIri = new IRI(TEST_BASE, "systemRole");
-        systemRole = ClassServices.createRole(systemRoleIri.getIri());
+        systemRole = RdfClassServices.createRole(systemRoleIri);
         systemRole.addValue(RDFS.RDF_TYPE, HQDM.ROLE);
         systemRole.addValue(HQDM.ENTITY_NAME, "systemRole");
         systemRole.addValue(HQDM.PART_OF_BY_CLASS_, userAssociationKindIri);
 
         final IRI managerRoleIri = new IRI(TEST_BASE, "managerRole");
-        final Role managerRole = ClassServices.createRole(managerRoleIri.getIri());
+        final Role<IRI> managerRole = RdfClassServices.createRole(managerRoleIri);
         managerRole.addValue(RDFS.RDF_TYPE, HQDM.ROLE);
         managerRole.addValue(HQDM.ENTITY_NAME, "managerRole");
         managerRole.addValue(HQDM.PART_OF_BY_CLASS_, managerKindIri);
 
         final IRI workerRoleIri = new IRI(TEST_BASE, "workerRole");
-        final Role workerRole = ClassServices.createRole(workerRoleIri.getIri());
+        final Role<IRI> workerRole = RdfClassServices.createRole(workerRoleIri);
         workerRole.addValue(RDFS.RDF_TYPE, HQDM.ROLE);
         workerRole.addValue(HQDM.ENTITY_NAME, "workerRole");
         workerRole.addValue(HQDM.PART_OF_BY_CLASS_, managerKindIri);
 
         // Create People
         final IRI person1Iri = new IRI(TEST_BASE, "person1");
-        person1 = SpatioTemporalExtentServices.createPerson(person1Iri.getIri());
+        person1 = RdfSpatioTemporalExtentServices.createPerson(person1Iri);
         person1.addValue(RDFS.RDF_TYPE, HQDM.PERSON);
         person1.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
 
         final IRI person2Iri = new IRI(TEST_BASE, "person2");
-        person2 = SpatioTemporalExtentServices.createPerson(person2Iri.getIri());
+        person2 = RdfSpatioTemporalExtentServices.createPerson(person2Iri);
         person2.addValue(RDFS.RDF_TYPE, HQDM.PERSON);
         person2.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
 
         final IRI person3Iri = new IRI(TEST_BASE, "person3");
-        final Person person3 = SpatioTemporalExtentServices.createPerson(person3Iri.getIri());
+        final Person<IRI> person3 = RdfSpatioTemporalExtentServices.createPerson(person3Iri);
         person3.addValue(RDFS.RDF_TYPE, HQDM.PERSON);
         person3.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
 
         // Create Systems
         final IRI system1Iri = new IRI(TEST_BASE, "system1");
         final IRI system2Iri = new IRI(TEST_BASE, "system2");
-        system1 = SpatioTemporalExtentServices.createFunctionalSystem(system1Iri.getIri());
-        system2 = SpatioTemporalExtentServices.createFunctionalSystem(system2Iri.getIri());
+        system1 = RdfSpatioTemporalExtentServices.createFunctionalSystem(system1Iri);
+        system2 = RdfSpatioTemporalExtentServices.createFunctionalSystem(system2Iri);
         system1.addValue(RDFS.RDF_TYPE, HQDM.FUNCTIONAL_SYSTEM);
         system1.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
         system2.addValue(RDFS.RDF_TYPE, HQDM.FUNCTIONAL_SYSTEM);
         system2.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
 
         // Create Events for the BEGINNING and ENDING of the Associations.
-        final PointInTime begin = SpatioTemporalExtentServices.createPointInTime(new IRI(TEST_BASE, "begin").getIri());
-        final PointInTime end = SpatioTemporalExtentServices.createPointInTime(new IRI(TEST_BASE, "end").getIri());
+        final PointInTime<IRI> begin = RdfSpatioTemporalExtentServices.createPointInTime(new IRI(TEST_BASE, "begin"));
+        final PointInTime<IRI> end = RdfSpatioTemporalExtentServices.createPointInTime(new IRI(TEST_BASE, "end"));
 
         begin.addValue(RDFS.RDF_TYPE, HQDM.POINT_IN_TIME);
         begin.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
@@ -149,8 +149,8 @@ public class AssociationPatternTestData {
         begin.addStringValue(HQDM.ENTITY_NAME, LocalDateTime.now().minusDays(1L).toInstant(ZoneOffset.UTC).toString());
         end.addStringValue(HQDM.ENTITY_NAME, LocalDateTime.now().plusDays(1L).toInstant(ZoneOffset.UTC).toString());
 
-        final IRI beginIri = new IRI(begin.getId());
-        final IRI endIri = new IRI(end.getId());
+        final IRI beginIri = begin.getId();
+        final IRI endIri = end.getId();
 
         // Create associations of the right Kinds.
         final IRI person1UserOfSystem1Iri = new IRI(TEST_BASE, "person1UserOfSystem1");
@@ -158,14 +158,14 @@ public class AssociationPatternTestData {
         final IRI person1WorkerForPerson2Iri = new IRI(TEST_BASE, "person1WorkerForPerson2");
         final IRI person2WorkerForPerson3Iri = new IRI(TEST_BASE, "person2WorkerForPerson3");
 
-        final Association person1UserOfSystem1 = SpatioTemporalExtentServices
-                .createAssociation(person1UserOfSystem1Iri.getIri());
-        final Association person2UserOfSystem2 = SpatioTemporalExtentServices
-                .createAssociation(person2UserOfSystem2Iri.getIri());
-        final Association person1WorkerForPerson2 = SpatioTemporalExtentServices
-                .createAssociation(person1WorkerForPerson2Iri.getIri());
-        final Association person2WorkerForPerson3 = SpatioTemporalExtentServices
-                .createAssociation(person2WorkerForPerson3Iri.getIri());
+        final Association<IRI> person1UserOfSystem1 = RdfSpatioTemporalExtentServices
+                .createAssociation(person1UserOfSystem1Iri);
+        final Association<IRI> person2UserOfSystem2 = RdfSpatioTemporalExtentServices
+                .createAssociation(person2UserOfSystem2Iri);
+        final Association<IRI> person1WorkerForPerson2 = RdfSpatioTemporalExtentServices
+                .createAssociation(person1WorkerForPerson2Iri);
+        final Association<IRI> person2WorkerForPerson3 = RdfSpatioTemporalExtentServices
+                .createAssociation(person2WorkerForPerson3Iri);
 
         person1UserOfSystem1.addValue(RDFS.RDF_TYPE, HQDM.ASSOCIATION);
         person1UserOfSystem1.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
@@ -192,7 +192,7 @@ public class AssociationPatternTestData {
         person2WorkerForPerson3.addValue(HQDM.ENDING, endIri);
 
         final IRI person1State1Iri = new IRI(TEST_BASE, "person1State1");
-        person1State1 = SpatioTemporalExtentServices.createStateOfPerson(person1State1Iri.getIri());
+        person1State1 = RdfSpatioTemporalExtentServices.createStateOfPerson(person1State1Iri);
         person1State1.addValue(RDFS.RDF_TYPE, HQDM.STATE_OF_PERSON);
         person1State1.addValue(RDFS.RDF_TYPE, HQDM.PARTICIPANT);
         person1State1.addValue(HQDM.TEMPORAL_PART_OF, person1Iri);
@@ -200,8 +200,8 @@ public class AssociationPatternTestData {
         person1State1.addValue(HQDM.PARTICIPANT_IN, person1UserOfSystem1Iri);
         person1State1.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
 
-        system1State1 = SpatioTemporalExtentServices
-                .createStateOfFunctionalSystem(new IRI(TEST_BASE, "system1State1").getIri());
+        system1State1 = RdfSpatioTemporalExtentServices
+                .createStateOfFunctionalSystem(new IRI(TEST_BASE, "system1State1"));
         system1State1.addValue(RDFS.RDF_TYPE, HQDM.STATE_OF_FUNCTIONAL_SYSTEM);
         system1State1.addValue(RDFS.RDF_TYPE, HQDM.PARTICIPANT);
         system1State1.addValue(HQDM.TEMPORAL_PART_OF, system1Iri);
@@ -210,7 +210,7 @@ public class AssociationPatternTestData {
         system1State1.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
 
         final IRI person2State1Iri = new IRI(TEST_BASE, "person2State1");
-        person2State1 = SpatioTemporalExtentServices.createStateOfPerson(person2State1Iri.getIri());
+        person2State1 = RdfSpatioTemporalExtentServices.createStateOfPerson(person2State1Iri);
         person2State1.addValue(RDFS.RDF_TYPE, HQDM.STATE_OF_PERSON);
         person2State1.addValue(RDFS.RDF_TYPE, HQDM.PARTICIPANT);
         person2State1.addValue(HQDM.TEMPORAL_PART_OF, person2Iri);
@@ -218,8 +218,8 @@ public class AssociationPatternTestData {
         person2State1.addValue(HQDM.PARTICIPANT_IN, person2UserOfSystem2Iri);
         person2State1.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
 
-        system2State1 = SpatioTemporalExtentServices
-                .createStateOfFunctionalSystem(new IRI(TEST_BASE, "system2State1").getIri());
+        system2State1 = RdfSpatioTemporalExtentServices
+                .createStateOfFunctionalSystem(new IRI(TEST_BASE, "system2State1"));
         system2State1.addValue(RDFS.RDF_TYPE, HQDM.STATE_OF_FUNCTIONAL_SYSTEM);
         system2State1.addValue(RDFS.RDF_TYPE, HQDM.PARTICIPANT);
         system2State1.addValue(HQDM.TEMPORAL_PART_OF, system2Iri);
@@ -227,7 +227,7 @@ public class AssociationPatternTestData {
         system2State1.addValue(HQDM.PARTICIPANT_IN, person2UserOfSystem2Iri);
         system2State1.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
 
-        person1State2 = SpatioTemporalExtentServices.createStateOfPerson(new IRI(TEST_BASE, "person1State2").getIri());
+        person1State2 = RdfSpatioTemporalExtentServices.createStateOfPerson(new IRI(TEST_BASE, "person1State2"));
         person1State2.addValue(RDFS.RDF_TYPE, HQDM.STATE_OF_PERSON);
         person1State2.addValue(RDFS.RDF_TYPE, HQDM.PARTICIPANT);
         person1State2.addValue(HQDM.TEMPORAL_PART_OF, person1Iri);
@@ -235,7 +235,7 @@ public class AssociationPatternTestData {
         person1State2.addValue(HQDM.PARTICIPANT_IN, person1WorkerForPerson2Iri);
         person1State2.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
 
-        person2State2 = SpatioTemporalExtentServices.createStateOfPerson(new IRI(TEST_BASE, "person2State2").getIri());
+        person2State2 = RdfSpatioTemporalExtentServices.createStateOfPerson(new IRI(TEST_BASE, "person2State2"));
         person2State2.addValue(RDFS.RDF_TYPE, HQDM.STATE_OF_PERSON);
         person2State2.addValue(RDFS.RDF_TYPE, HQDM.PARTICIPANT);
         person2State2.addValue(HQDM.TEMPORAL_PART_OF, person2Iri);
@@ -243,7 +243,7 @@ public class AssociationPatternTestData {
         person2State2.addValue(HQDM.PARTICIPANT_IN, person1WorkerForPerson2Iri);
         person2State2.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
 
-        person2State3 = SpatioTemporalExtentServices.createStateOfPerson(new IRI(TEST_BASE, "person2State3").getIri());
+        person2State3 = RdfSpatioTemporalExtentServices.createStateOfPerson(new IRI(TEST_BASE, "person2State3"));
         person2State3.addValue(RDFS.RDF_TYPE, HQDM.STATE_OF_PERSON);
         person2State3.addValue(RDFS.RDF_TYPE, HQDM.PARTICIPANT);
         person2State3.addValue(HQDM.TEMPORAL_PART_OF, person2Iri);
@@ -251,7 +251,7 @@ public class AssociationPatternTestData {
         person2State3.addValue(HQDM.PARTICIPANT_IN, person2WorkerForPerson3Iri);
         person2State3.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
 
-        person3State1 = SpatioTemporalExtentServices.createStateOfPerson(new IRI(TEST_BASE, "person3State1").getIri());
+        person3State1 = RdfSpatioTemporalExtentServices.createStateOfPerson(new IRI(TEST_BASE, "person3State1"));
         person3State1.addValue(RDFS.RDF_TYPE, HQDM.STATE_OF_PERSON);
         person3State1.addValue(RDFS.RDF_TYPE, HQDM.PARTICIPANT);
         person3State1.addValue(HQDM.TEMPORAL_PART_OF, person3Iri);
@@ -261,40 +261,40 @@ public class AssociationPatternTestData {
 
         // Add signs to name the people, re-using person states for brevity.
         final IRI patternIri = new IRI(TEST_BASE, UID.uid());
-        final Pattern pattern = ClassServices.createPattern(patternIri.getIri());
+        final Pattern<IRI> pattern = RdfClassServices.createPattern(patternIri);
         pattern.addValue(RDFS.RDF_TYPE, HQDM.PATTERN);
         pattern.addValue(HQDM.ENTITY_NAME, "pattern");
 
         final IRI repByPatternIri = new IRI(TEST_BASE, UID.uid());
-        final RepresentationByPattern repByPattern = ClassServices
-                .createRepresentationByPattern(repByPatternIri.getIri());
+        final RepresentationByPattern<IRI> repByPattern = RdfClassServices
+                .createRepresentationByPattern(repByPatternIri);
         repByPattern.addValue(RDFS.RDF_TYPE, HQDM.REPRESENTATION_BY_PATTERN);
         repByPattern.addValue(HQDM.CONSISTS_OF_BY_CLASS, patternIri);
 
         final IRI communityIri = new IRI(TEST_BASE, UID.uid());
-        final RecognizingLanguageCommunity community = SpatioTemporalExtentServices
-                .createRecognizingLanguageCommunity(communityIri.getIri());
+        final RecognizingLanguageCommunity<IRI> community = RdfSpatioTemporalExtentServices
+                .createRecognizingLanguageCommunity(communityIri);
         community.addValue(RDFS.RDF_TYPE, HQDM.RECOGNIZING_LANGUAGE_COMMUNITY);
         community.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
         repByPattern.addValue(HQDM.CONSISTS_OF_IN_MEMBERS, communityIri);
 
         // Represent person1State1 using sign1
         final IRI sign1Iri = new IRI(TEST_BASE, UID.uid());
-        final Sign sign1 = SpatioTemporalExtentServices.createSign(sign1Iri.getIri());
+        final Sign<IRI> sign1 = RdfSpatioTemporalExtentServices.createSign(sign1Iri);
         sign1.addValue(RDFS.RDF_TYPE, HQDM.SIGN);
         sign1.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
         sign1.addValue(HQDM.MEMBER_OF_, patternIri);
         sign1.addValue(HQDM.VALUE_, "sign1Value");
 
         final IRI stateOfSign1Iri = new IRI(TEST_BASE, UID.uid());
-        final StateOfSign stateOfSign1 = SpatioTemporalExtentServices.createStateOfSign(stateOfSign1Iri.getIri());
+        final StateOfSign<IRI> stateOfSign1 = RdfSpatioTemporalExtentServices.createStateOfSign(stateOfSign1Iri);
         stateOfSign1.addValue(RDFS.RDF_TYPE, HQDM.STATE_OF_SIGN);
         stateOfSign1.addValue(HQDM.TEMPORAL_PART_OF, sign1Iri);
         stateOfSign1.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
 
         final IRI repBySign1Iri = new IRI(TEST_BASE, UID.uid());
-        final RepresentationBySign repBySign1 = SpatioTemporalExtentServices
-                .createRepresentationBySign(repBySign1Iri.getIri());
+        final RepresentationBySign<IRI> repBySign1 = RdfSpatioTemporalExtentServices
+                .createRepresentationBySign(repBySign1Iri);
         repBySign1.addValue(RDFS.RDF_TYPE, HQDM.REPRESENTATION_BY_SIGN);
         repBySign1.addValue(HQDM.REPRESENTS, person1State1Iri);
         repBySign1.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
@@ -306,21 +306,21 @@ public class AssociationPatternTestData {
 
         // Represent person2State1 using sign2
         final IRI sign2Iri = new IRI(TEST_BASE, UID.uid());
-        final Sign sign2 = SpatioTemporalExtentServices.createSign(sign2Iri.getIri());
+        final Sign<IRI> sign2 = RdfSpatioTemporalExtentServices.createSign(sign2Iri);
         sign2.addValue(RDFS.RDF_TYPE, HQDM.SIGN);
         sign2.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
         sign2.addValue(HQDM.MEMBER_OF_, patternIri);
         sign2.addValue(HQDM.VALUE_, "sign2Value");
 
         final IRI stateOfSign2Iri = new IRI(TEST_BASE, UID.uid());
-        final StateOfSign stateOfSign2 = SpatioTemporalExtentServices.createStateOfSign(stateOfSign2Iri.getIri());
+        final StateOfSign<IRI> stateOfSign2 = RdfSpatioTemporalExtentServices.createStateOfSign(stateOfSign2Iri);
         stateOfSign2.addValue(RDFS.RDF_TYPE, HQDM.STATE_OF_SIGN);
         stateOfSign2.addValue(HQDM.TEMPORAL_PART_OF, sign2Iri);
         stateOfSign2.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);
 
         final IRI repBySign2Iri = new IRI(TEST_BASE, UID.uid());
-        final RepresentationBySign repBySign2 = SpatioTemporalExtentServices
-                .createRepresentationBySign(repBySign2Iri.getIri());
+        final RepresentationBySign<IRI> repBySign2 = RdfSpatioTemporalExtentServices
+                .createRepresentationBySign(repBySign2Iri);
         repBySign2.addValue(RDFS.RDF_TYPE, HQDM.REPRESENTATION_BY_SIGN);
         repBySign2.addValue(HQDM.REPRESENTS, person2State1Iri);
         repBySign2.addValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri);

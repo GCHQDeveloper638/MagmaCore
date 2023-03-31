@@ -17,7 +17,7 @@ import uk.gov.gchq.magmacore.hqdm.model.Thing;
 import uk.gov.gchq.magmacore.hqdm.rdf.iri.HQDM;
 import uk.gov.gchq.magmacore.hqdm.rdf.iri.IRI;
 import uk.gov.gchq.magmacore.hqdm.rdf.iri.RDFS;
-import uk.gov.gchq.magmacore.hqdm.services.SpatioTemporalExtentServices;
+import uk.gov.gchq.magmacore.hqdm.rdfservices.RdfSpatioTemporalExtentServices;
 
 /**
  * Test the FindByKindOfAssociation service.
@@ -35,12 +35,13 @@ public class MagmaCoreServiceFindByKindOfAssociationTest {
         final MagmaCoreService service = new MagmaCoreService(db);
 
         // Create the PointInTime we're looking for
-        final PointInTime now = SpatioTemporalExtentServices.createPointInTime("now");
+        final PointInTime<IRI> now = RdfSpatioTemporalExtentServices
+                .createPointInTime(new IRI(AssociationPatternTestData.TEST_BASE, "now"));
         now.addValue(HQDM.ENTITY_NAME, Instant.now().toString());
 
         // Find the required Things by sign in a transaction.
         db.begin();
-        final List<? extends Thing> participants = service
+        final List<? extends Thing<IRI>> participants = service
                 .findByKindOfAssociation(AssociationPatternTestData.userAssociationKindIri, now);
 
         db.commit();
@@ -50,20 +51,21 @@ public class MagmaCoreServiceFindByKindOfAssociationTest {
         assertEquals(4, participants.size());
 
         // Filter for person Things
-        final List<? extends Thing> people = participants
+        final List<? extends Thing<IRI>> people = participants
                 .stream()
                 .filter(p -> p.hasThisValue(RDFS.RDF_TYPE, HQDM.PERSON))
                 .toList();
 
         assertEquals(2, people.size());
 
-        final String person1Iri = new IRI(AssociationPatternTestData.TEST_BASE, "person1").getIri();
-        final String person2Iri = new IRI(AssociationPatternTestData.TEST_BASE, "person2").getIri();
+        final IRI person1Iri = new IRI(AssociationPatternTestData.TEST_BASE, "person1");
+        final IRI person2Iri = new IRI(AssociationPatternTestData.TEST_BASE, "person2");
 
         people.forEach(person -> {
             assertTrue(person1Iri.equals(person.getId()) || person2Iri.equals(person.getId()));
 
-            // This query augments its object with HQDM.VALUE predicates for the current Sign values for the
+            // This query augments its object with HQDM.VALUE predicates for the current
+            // Sign values for the
             // object.
 
             final Set<Object> values = person.value(HQDM.VALUE_);

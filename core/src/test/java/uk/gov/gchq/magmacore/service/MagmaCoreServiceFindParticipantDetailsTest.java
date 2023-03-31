@@ -31,8 +31,9 @@ import uk.gov.gchq.magmacore.database.MagmaCoreJenaDatabase;
 import uk.gov.gchq.magmacore.exception.MagmaCoreException;
 import uk.gov.gchq.magmacore.hqdm.model.PointInTime;
 import uk.gov.gchq.magmacore.hqdm.rdf.iri.HQDM;
+import uk.gov.gchq.magmacore.hqdm.rdf.iri.IRI;
 import uk.gov.gchq.magmacore.hqdm.rdf.iri.RDFS;
-import uk.gov.gchq.magmacore.hqdm.services.SpatioTemporalExtentServices;
+import uk.gov.gchq.magmacore.hqdm.rdfservices.RdfSpatioTemporalExtentServices;
 import uk.gov.gchq.magmacore.service.dto.ParticipantDetails;
 
 /**
@@ -43,7 +44,8 @@ public class MagmaCoreServiceFindParticipantDetailsTest {
     /**
      * Check that the findParticipantDetails method works correctly.
      *
-     * @throws MagmaCoreException on error
+     * @throws MagmaCoreException
+     *             on error
      */
     @Test
     public void testFindParticipantDetailsSuccess() throws MagmaCoreException {
@@ -56,7 +58,8 @@ public class MagmaCoreServiceFindParticipantDetailsTest {
         final MagmaCoreService service = new MagmaCoreService(db);
 
         // Create the PointInTime we're looking for
-        final PointInTime now = SpatioTemporalExtentServices.createPointInTime("now");
+        final PointInTime<IRI> now = RdfSpatioTemporalExtentServices
+                .createPointInTime(new IRI(AssociationPatternTestData.TEST_BASE, "now"));
         now.addValue(HQDM.ENTITY_NAME, Instant.now().toString());
 
         // Find the required Things by sign in a transaction.
@@ -86,7 +89,8 @@ public class MagmaCoreServiceFindParticipantDetailsTest {
         final ParticipantDetails found1Details1 = found1Iter.next();
         final ParticipantDetails found1Details2 = found1Iter.next();
 
-        // Check that the participant IDs are correct (no assumptions about the order of ParticipantDetails
+        // Check that the participant IDs are correct (no assumptions about the order of
+        // ParticipantDetails
         // in the Set).
 
         assertTrue(AssociationPatternTestData.person1State1.getId().equals(found1Details1.participant.getId())
@@ -94,7 +98,8 @@ public class MagmaCoreServiceFindParticipantDetailsTest {
         assertTrue(AssociationPatternTestData.person1State1.getId().equals(found1Details2.participant.getId())
                 || AssociationPatternTestData.system1State1.getId().equals(found1Details2.participant.getId()));
 
-        // Check that the Roles are correct (no assumptions about the order of ParticipantDetails
+        // Check that the Roles are correct (no assumptions about the order of
+        // ParticipantDetails
         // in the Set).
 
         assertTrue(found1Details1.roles.contains(AssociationPatternTestData.userRole)
@@ -108,14 +113,16 @@ public class MagmaCoreServiceFindParticipantDetailsTest {
         final ParticipantDetails found2Details1 = found2Iter.next();
         final ParticipantDetails found2Details2 = found2Iter.next();
 
-        // Check that the participant IDs are correct (no assumptions about the order of ParticipantDetails
+        // Check that the participant IDs are correct (no assumptions about the order of
+        // ParticipantDetails
         // in the Set).
         assertTrue(AssociationPatternTestData.person2State1.getId().equals(found2Details1.participant.getId())
                 || AssociationPatternTestData.system2State1.getId().equals(found2Details1.participant.getId()));
         assertTrue(AssociationPatternTestData.person2State1.getId().equals(found2Details2.participant.getId())
                 || AssociationPatternTestData.system2State1.getId().equals(found2Details2.participant.getId()));
 
-        // Check that the Roles are correct (no assumptions about the order of ParticipantDetails
+        // Check that the Roles are correct (no assumptions about the order of
+        // ParticipantDetails
         // in the Set).
 
         assertTrue(found2Details1.roles.contains(AssociationPatternTestData.userRole)

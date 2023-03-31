@@ -21,6 +21,7 @@ import java.util.List;
 import org.junit.Ignore;
 
 import uk.gov.gchq.magmacore.hqdm.model.Thing;
+import uk.gov.gchq.magmacore.hqdm.rdf.iri.IRI;
 
 /**
  * Check that {@link MagmaCoreService} can run a Data Integrity Check against a remote database.
@@ -34,7 +35,7 @@ public class MagmaCoreServiceRemoteSparqlDataIntegrityCheckTest {
     public void test() {
         final MagmaCoreService service = MagmaCoreServiceFactory
                 .attachRemoteSparqlEndpoint("http://localhost:3030/testdb");
-        final List<Thing> errors = service.verifyModel();
+        final List<Thing<IRI>> errors = service.verifyModel();
 
         if (errors.size() > 0) {
             System.out.println(errors);

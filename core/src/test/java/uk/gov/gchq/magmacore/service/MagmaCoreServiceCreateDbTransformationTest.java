@@ -13,7 +13,7 @@ import uk.gov.gchq.magmacore.hqdm.model.Thing;
 import uk.gov.gchq.magmacore.hqdm.rdf.iri.HQDM;
 import uk.gov.gchq.magmacore.hqdm.rdf.iri.IRI;
 import uk.gov.gchq.magmacore.hqdm.rdf.iri.RDFS;
-import uk.gov.gchq.magmacore.hqdm.services.SpatioTemporalExtentServices;
+import uk.gov.gchq.magmacore.hqdm.rdfservices.RdfSpatioTemporalExtentServices;
 import uk.gov.gchq.magmacore.service.transformation.DbTransformation;
 
 /**
@@ -35,7 +35,7 @@ public class MagmaCoreServiceCreateDbTransformationTest {
 
         // Create a new Thing
         final IRI iri = new IRI(TEST_IRI);
-        final Thing newThing = SpatioTemporalExtentServices.createThing(iri.getIri());
+        final Thing<IRI> newThing = RdfSpatioTemporalExtentServices.createThing(iri);
         newThing.addValue(RDFS.RDF_TYPE, HQDM.PERSON);
         newThing.addValue(HQDM.ENTITY_NAME, TEST_ENTITY_NAME);
 
@@ -44,12 +44,12 @@ public class MagmaCoreServiceCreateDbTransformationTest {
         svc.runInTransaction(transformation);
 
         // Retrieve the Thing and make sure it matches the original.
-        final Map<String, Thing> foundThings = svc.findByEntityNameInTransaction(List.of(TEST_ENTITY_NAME));
+        final Map<String, Thing<IRI>> foundThings = svc.findByEntityNameInTransaction(List.of(TEST_ENTITY_NAME));
 
         assertTrue(foundThings.containsKey(TEST_ENTITY_NAME));
-        final Thing found = foundThings.get(TEST_ENTITY_NAME);
+        final Thing<IRI> found = foundThings.get(TEST_ENTITY_NAME);
         assertNotNull(found);
-        assertEquals(TEST_IRI, found.getId());
+        assertEquals(TEST_IRI, found.getId().getIri());
     }
 
 }

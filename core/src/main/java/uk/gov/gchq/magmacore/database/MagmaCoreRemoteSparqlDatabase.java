@@ -125,11 +125,11 @@ public class MagmaCoreRemoteSparqlDatabase implements MagmaCoreDatabase {
      * {@inheritDoc}
      */
     @Override
-    public Thing get(final IRI iri) {
+    public Thing<IRI> get(final IRI iri) {
 
         final String query = String.format("SELECT (<%1$s> as ?s) ?p ?o WHERE {<%1$s> ?p ?o.}", iri.toString());
         final QueryResultList list = executeQuery(query);
-        final List<Thing> objects = toTopObjects(list);
+        final List<Thing<IRI>> objects = toTopObjects(list);
 
         if (!objects.isEmpty()) {
             return objects.get(0);
@@ -143,11 +143,11 @@ public class MagmaCoreRemoteSparqlDatabase implements MagmaCoreDatabase {
      * {@inheritDoc}
      */
     @Override
-    public void create(final Thing object) {
+    public void create(final Thing<IRI> object) {
 
         final Model model = ModelFactory.createDefaultModel();
 
-        final Resource resource = model.createResource(object.getId());
+        final Resource resource = model.createResource(object.getId().getIri());
 
         object.getPredicates().forEach((iri, predicates) -> predicates.forEach(value -> {
             if (value instanceof IRI) {
@@ -188,7 +188,7 @@ public class MagmaCoreRemoteSparqlDatabase implements MagmaCoreDatabase {
      * {@inheritDoc}
      */
     @Override
-    public void update(final Thing object) {
+    public void update(final Thing<IRI> object) {
         delete(object);
         create(object);
     }
@@ -197,7 +197,7 @@ public class MagmaCoreRemoteSparqlDatabase implements MagmaCoreDatabase {
      * {@inheritDoc}
      */
     @Override
-    public void delete(final Thing object) {
+    public void delete(final Thing<IRI> object) {
         executeUpdate(String.format("delete {<%s> ?p ?o} WHERE {<%s> ?p ?o}", object.getId(), object.getId()));
     }
 
@@ -240,7 +240,7 @@ public class MagmaCoreRemoteSparqlDatabase implements MagmaCoreDatabase {
      * {@inheritDoc}
      */
     @Override
-    public List<Thing> findByPredicateIri(final IRI predicateIri, final IRI objectIri) {
+    public List<Thing<IRI>> findByPredicateIri(final IRI predicateIri, final IRI objectIri) {
         final String query = "SELECT ?s ?p ?o WHERE {?s ?p ?o. ?s <" + predicateIri.toString() + "> <"
                 + objectIri.toString() + ">.}";
         final QueryResultList list = executeQuery(query);
@@ -251,7 +251,7 @@ public class MagmaCoreRemoteSparqlDatabase implements MagmaCoreDatabase {
      * {@inheritDoc}
      */
     @Override
-    public List<Thing> findByPredicateIriOnly(final IRI predicateIri) {
+    public List<Thing<IRI>> findByPredicateIriOnly(final IRI predicateIri) {
         final String query = "SELECT ?s ?p ?o WHERE {{select ?s ?p ?o where { ?s ?p ?o.}}{select ?s where {?s <"
                 + predicateIri.toString() + "> ?o.}}}";
         final QueryResultList list = executeQuery(query);
@@ -262,7 +262,7 @@ public class MagmaCoreRemoteSparqlDatabase implements MagmaCoreDatabase {
      * {@inheritDoc}
      */
     @Override
-    public List<Thing> findByPredicateIriAndValue(final IRI predicateIri, final Object value) {
+    public List<Thing<IRI>> findByPredicateIriAndValue(final IRI predicateIri, final Object value) {
         final String query;
 
         if (value instanceof IRI) {
@@ -280,7 +280,7 @@ public class MagmaCoreRemoteSparqlDatabase implements MagmaCoreDatabase {
      * {@inheritDoc}
      */
     @Override
-    public List<Thing> findByPredicateIriAndStringCaseInsensitive(final IRI predicateIri, final String value) {
+    public List<Thing<IRI>> findByPredicateIriAndStringCaseInsensitive(final IRI predicateIri, final String value) {
         final String query = "SELECT ?s ?p ?o WHERE {{ SELECT ?s ?p ?o where { ?s ?p ?o.}}{select ?s where {?s <"
                 + predicateIri.toString() + "> ?o. BIND(LCASE(?o) AS ?lcase) FILTER(?lcase= \"\"\"" + value
                 + "\"\"\")}}}";
@@ -294,7 +294,7 @@ public class MagmaCoreRemoteSparqlDatabase implements MagmaCoreDatabase {
      * @param sparqlQueryString a CONSTRUCT query {@link String}
      * @return a List of {@link Thing}
      */
-    public List<Thing> executeConstruct(final String sparqlQueryString) {
+    public List<Thing<IRI>> executeConstruct(final String sparqlQueryString) {
         final QueryExecution queryExec = connection.query(sparqlQueryString);
 
         final Model model = queryExec.execConstruct();
@@ -357,7 +357,7 @@ public class MagmaCoreRemoteSparqlDatabase implements MagmaCoreDatabase {
      * @param queryResultsList {@link QueryResultList}
      * @return a {@link List} of {@link Thing}
      */
-    public final List<Thing> toTopObjects(final QueryResultList queryResultsList) {
+    public final List<Thing<IRI>> toTopObjects(final QueryResultList queryResultsList) {
         final Map<RDFNode, List<Pair<Object, Object>>> objectMap = new HashMap<>();
         final List<String> varNames = (List<String>) queryResultsList.getVarNames();
         final String subjectVarName = varNames.get(0);

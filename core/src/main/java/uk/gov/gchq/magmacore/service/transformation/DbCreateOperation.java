@@ -19,7 +19,7 @@ import java.util.function.Function;
 import uk.gov.gchq.magmacore.exception.DbTransformationException;
 import uk.gov.gchq.magmacore.hqdm.model.Thing;
 import uk.gov.gchq.magmacore.hqdm.rdf.iri.IRI;
-import uk.gov.gchq.magmacore.hqdm.services.SpatioTemporalExtentServices;
+import uk.gov.gchq.magmacore.hqdm.rdfservices.RdfSpatioTemporalExtentServices;
 import uk.gov.gchq.magmacore.service.MagmaCoreService;
 
 /**
@@ -39,9 +39,12 @@ public class DbCreateOperation implements Function<MagmaCoreService, MagmaCoreSe
     /**
      * Constructs a DbCreateOperation to create a predicate.
      *
-     * @param subject   Subject {@link IRI}.
-     * @param predicate Predicate {@link IRI}.
-     * @param object    {@link Object} value.
+     * @param subject
+     *            Subject {@link IRI}.
+     * @param predicate
+     *            Predicate {@link IRI}.
+     * @param object
+     *            {@link Object} value.
      */
     public DbCreateOperation(final IRI subject, final IRI predicate, final Object object) {
         this.subject = subject;
@@ -54,10 +57,10 @@ public class DbCreateOperation implements Function<MagmaCoreService, MagmaCoreSe
      */
     @Override
     public MagmaCoreService apply(final MagmaCoreService mcService) {
-        final Thing thing = mcService.get(subject);
+        final Thing<IRI> thing = mcService.get(subject);
 
         if (thing == null) {
-            final Thing newThing = SpatioTemporalExtentServices.createThing(subject.getIri());
+            final Thing<IRI> newThing = RdfSpatioTemporalExtentServices.createThing(subject);
             newThing.addValue(predicate, object);
             mcService.create(newThing);
         } else {
@@ -76,7 +79,8 @@ public class DbCreateOperation implements Function<MagmaCoreService, MagmaCoreSe
     /**
      * Invert an operation.
      *
-     * @param createOperation {@link DbCreateOperation}
+     * @param createOperation
+     *            {@link DbCreateOperation}
      * @return The inverted {@link DbDeleteOperation}.
      */
     public static DbDeleteOperation invert(final DbCreateOperation createOperation) {
@@ -101,7 +105,8 @@ public class DbCreateOperation implements Function<MagmaCoreService, MagmaCoreSe
     /**
      * Check for equality.
      *
-     * @param obj The {@link Object} to compare.
+     * @param obj
+     *            The {@link Object} to compare.
      * @return {@code true} if the objects are equal, false otherwise.
      */
     @Override

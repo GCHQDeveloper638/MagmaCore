@@ -67,14 +67,14 @@ public class DbTransformationTest {
         mcService.runInTransaction(transformation);
 
         // Find the individual we just created and assert values are present.
-        final Thing individual = mcService.getInTransaction(individualIri);
+        final Thing<IRI> individual = mcService.getInTransaction(individualIri);
 
         assertNotNull(individual);
         assertTrue(individual.hasThisValue(RDFS.RDF_TYPE, HQDM.INDIVIDUAL));
         assertTrue(individual.hasThisValue(HQDM.MEMBER_OF, classOfIndividualIri));
         assertTrue(individual.hasThisValue(HQDM.PART_OF_POSSIBLE_WORLD, possibleWorldIri));
 
-        final Thing person = mcService.getInTransaction(personIri);
+        final Thing<IRI> person = mcService.getInTransaction(personIri);
 
         assertNotNull(person);
         assertTrue(person.hasThisValue(RDFS.RDF_TYPE, HQDM.PERSON));

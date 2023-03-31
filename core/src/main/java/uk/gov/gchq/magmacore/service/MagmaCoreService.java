@@ -78,8 +78,8 @@ public class MagmaCoreService {
      * @param pointInTime The {@link PointInTime} that the associations should exist.
      * @return A {@link Set} of {@link ParticipantDetails}.
      */
-    public Set<ParticipantDetails> findParticipantDetails(final Individual individual1, final Individual individual2,
-            final KindOfAssociation kind, final PointInTime pointInTime) {
+    public Set<ParticipantDetails> findParticipantDetails(final Individual<IRI> individual1, final Individual<IRI> individual2,
+            final KindOfAssociation<IRI> kind, final PointInTime<IRI> pointInTime) {
 
         final Instant when = Instant.parse(pointInTime.value(HQDM.ENTITY_NAME).iterator().next().toString());
 
@@ -97,13 +97,13 @@ public class MagmaCoreService {
                 // Map them to ParticipantDetails objects.
                 .map(p -> {
                     // Get the Roles of the Participant.
-                    final Set<Role> roles = p.value(HQDM.MEMBER_OF_KIND)
+                    final Set<Role<IRI>> roles = p.value(HQDM.MEMBER_OF_KIND)
                             .stream()
                             .map(o -> (IRI) o)
                             .map(roleIri -> database.get(roleIri))
-                            .map(role -> (Role) role)
+                            .map(role -> (Role<IRI>) role)
                             .collect(Collectors.toSet());
-                    return new ParticipantDetails((Participant) p, roles);
+                    return new ParticipantDetails((Participant<IRI>) p, roles);
                 })
                 .collect(Collectors.toSet());
     }
@@ -149,11 +149,11 @@ public class MagmaCoreService {
      * @return {@link List} of {@link Thing} represented by the value.
      * @throws MagmaCoreException if the number of {@link RepresentationByPattern} found is not 1.
      */
-    public List<? extends Thing> findBySignValue(
-            final RecognizingLanguageCommunity community,
-            final Pattern pattern,
+    public List<? extends Thing<IRI>> findBySignValue(
+            final RecognizingLanguageCommunity<IRI> community,
+            final Pattern<IRI> pattern,
             final String value,
-            final PointInTime pointInTime) throws MagmaCoreException {
+            final PointInTime<IRI> pointInTime) throws MagmaCoreException {
 
         final Set<Object> pointInTimeValues = pointInTime.value(HQDM.ENTITY_NAME);
         if (pointInTimeValues == null || pointInTimeValues.isEmpty()) {
@@ -183,11 +183,11 @@ public class MagmaCoreService {
      * @param pointInTime {@link PointInTime}.
      * @return A {@link List} of {@link Thing}.
      */
-    public List<? extends Thing> findByTypeClassAndSignPattern(
+    public List<? extends Thing<IRI>> findByTypeClassAndSignPattern(
             final IRI type,
             final IRI clazz,
             final IRI pattern,
-            final PointInTime pointInTime) {
+            final PointInTime<IRI> pointInTime) {
 
         final Set<Object> pointInTimeValues = pointInTime.value(HQDM.ENTITY_NAME);
         if (pointInTimeValues == null || pointInTimeValues.isEmpty()) {
@@ -215,11 +215,11 @@ public class MagmaCoreService {
      * @param pointInTime {@link PointInTime}.
      * @return A {@link List} of {@link Thing}.
      */
-    public List<? extends Thing> findByTypeKindAndSignPattern(
+    public List<? extends Thing<IRI>> findByTypeKindAndSignPattern(
             final IRI type,
             final IRI kind,
             final IRI pattern,
-            final PointInTime pointInTime) {
+            final PointInTime<IRI> pointInTime) {
 
         final Set<Object> pointInTimeValues = pointInTime.value(HQDM.ENTITY_NAME);
         if (pointInTimeValues == null || pointInTimeValues.isEmpty()) {
@@ -246,7 +246,7 @@ public class MagmaCoreService {
      * @param pointInTime       {@link PointInTime}.
      * @return A {@link List} of {@link Thing}.
      */
-    public List<? extends Thing> findByKindOfAssociation(final IRI kindOfAssociation, final PointInTime pointInTime) {
+    public List<? extends Thing<IRI>> findByKindOfAssociation(final IRI kindOfAssociation, final PointInTime<IRI> pointInTime) {
 
         final Set<Object> pointInTimeValues = pointInTime.value(HQDM.ENTITY_NAME);
         if (pointInTimeValues == null || pointInTimeValues.isEmpty()) {
@@ -273,7 +273,7 @@ public class MagmaCoreService {
      * @param kindOfAssociation IRI
      * @return {@link List} of {@link Thing}
      */
-    public List<? extends Thing> findAssociated(final IRI item, final IRI kindOfAssociation) {
+    public List<? extends Thing<IRI>> findAssociated(final IRI item, final IRI kindOfAssociation) {
 
         final QueryResultList queryResultList = database
                 .executeQuery(String.format(MagmaCoreServiceQueries.FIND_ASSOCIATED,
@@ -293,7 +293,7 @@ public class MagmaCoreService {
      * @param pointInTime {@link PointInTime}
      * @return {@link List} of {@link Thing}
      */
-    public List<? extends Thing> findAssociated(final IRI item, final IRI kindOfAssociation, final PointInTime pointInTime) {
+    public List<? extends Thing<IRI>> findAssociated(final IRI item, final IRI kindOfAssociation, final PointInTime<IRI> pointInTime) {
 
         final Set<Object> pointInTimeValues = pointInTime.value(HQDM.ENTITY_NAME);
         if (pointInTimeValues == null || pointInTimeValues.isEmpty()) {
@@ -321,8 +321,8 @@ public class MagmaCoreService {
      * @param pointInTime When the entities should have the matching sign.
      * @return A {@link List} of {@link Thing}.
      */
-    public List<? extends Thing> findByPartialSignAndClassCaseSensitive(final String text, final IRI classIri,
-            final PointInTime pointInTime) {
+    public List<? extends Thing<IRI>> findByPartialSignAndClassCaseSensitive(final String text, final IRI classIri,
+            final PointInTime<IRI> pointInTime) {
 
         final Set<Object> pointInTimeValues = pointInTime.value(HQDM.ENTITY_NAME);
         if (pointInTimeValues == null || pointInTimeValues.isEmpty()) {
@@ -355,9 +355,9 @@ public class MagmaCoreService {
      * @param pointInTime When the entities should have the matching sign.
      * @return A {@link List} of {@link Thing}.
      */
-    public List<? extends Thing> findByPartialSignByActivityReferenceAndClassCaseSensitive(final IRI wholeIri,
+    public List<? extends Thing<IRI>> findByPartialSignByActivityReferenceAndClassCaseSensitive(final IRI wholeIri,
             final String text, final IRI classIri,
-            final PointInTime pointInTime) {
+            final PointInTime<IRI> pointInTime) {
 
         final Set<Object> pointInTimeValues = pointInTime.value(HQDM.ENTITY_NAME);
         if (pointInTimeValues == null || pointInTimeValues.isEmpty()) {
@@ -389,9 +389,9 @@ public class MagmaCoreService {
      * @param pointInTime When the entities should have the matching sign.
      * @return A {@link List} of {@link Thing}.
      */
-    public List<? extends Thing> findByPartialSignCompositionAndClassCaseSensitive(final IRI wholeIri,
+    public List<? extends Thing<IRI>> findByPartialSignCompositionAndClassCaseSensitive(final IRI wholeIri,
             final String text, final IRI classIri,
-            final PointInTime pointInTime) {
+            final PointInTime<IRI> pointInTime) {
 
         final Set<Object> pointInTimeValues = pointInTime.value(HQDM.ENTITY_NAME);
         if (pointInTimeValues == null || pointInTimeValues.isEmpty()) {
@@ -420,7 +420,7 @@ public class MagmaCoreService {
      * @param pointInTime A {@link PointInTime}.
      * @return A {@link List} of {@link SignPatternDto} objects.
      */
-    public List<SignPatternDto> findSignsForEntity(final IRI entityIri, final PointInTime pointInTime) {
+    public List<SignPatternDto> findSignsForEntity(final IRI entityIri, final PointInTime<IRI> pointInTime) {
 
         final Set<Object> pointInTimeValues = pointInTime.value(HQDM.ENTITY_NAME);
         if (pointInTimeValues == null || pointInTimeValues.isEmpty()) {
@@ -448,7 +448,7 @@ public class MagmaCoreService {
      * @param classIri   The class {@link IRI}.
      * @return A {@link List} of {@link Thing}.
      */
-    public List<? extends Thing> findByFieldValueAndClass(
+    public List<? extends Thing<IRI>> findByFieldValueAndClass(
             final IRI fieldIri,
             final Object fieldValue,
             final IRI classIri) {
@@ -480,8 +480,8 @@ public class MagmaCoreService {
      * @return {@link Thing} that was found.
      * @throws RuntimeException If no or multiple results were found.
      */
-    public <T extends Thing> T findByEntityName(final String entityName) {
-        final List<Thing> searchResult = findByPredicateIriAndValue(HQDM.ENTITY_NAME, entityName);
+    public <T extends Thing<IRI>> T findByEntityName(final String entityName) {
+        final List<Thing<IRI>> searchResult = findByPredicateIriAndValue(HQDM.ENTITY_NAME, entityName);
 
         if (searchResult.size() == 1) {
             return (T) searchResult.get(0);
@@ -499,7 +499,7 @@ public class MagmaCoreService {
      * @param predicate the predicate {@link IRI}
      * @return a List of {@link Thing} that were found.
      */
-    public <T extends Thing> List<T> findByPredicateIriOnly(final IRI predicate) {
+    public <T extends Thing<IRI>> List<T> findByPredicateIriOnly(final IRI predicate) {
         return (List<T>) database.findByPredicateIriOnly(predicate);
     }
 
@@ -511,7 +511,7 @@ public class MagmaCoreService {
      * @param value     The value of the predicate.
      * @return a List of {@link Thing} that were found.
      */
-    public <T extends Thing> List<T> findByPredicateIriAndValue(final IRI predicate, final Object value) {
+    public <T extends Thing<IRI>> List<T> findByPredicateIriAndValue(final IRI predicate, final Object value) {
         return (List<T>) database.findByPredicateIriAndValue(predicate, value);
     }
 
@@ -521,7 +521,7 @@ public class MagmaCoreService {
      * @param classIri The class {@link IRI}.
      * @return A {@link List} of {@link Thing}.
      */
-    public List<? extends Thing> findByClass(final IRI classIri) {
+    public List<? extends Thing<IRI>> findByClass(final IRI classIri) {
         return database.findByPredicateIri(HQDM.MEMBER_OF, classIri);
     }
 
@@ -530,7 +530,7 @@ public class MagmaCoreService {
      *
      * @param thing {@link Thing} to create.
      */
-    public void create(final Thing thing) {
+    public void create(final Thing<IRI> thing) {
         database.create(thing);
     }
 
@@ -541,7 +541,7 @@ public class MagmaCoreService {
      * @param things a {@link Collection} of {@link Thing} objects to be persisted.
      * @return {@link DbTransformation}
      */
-    public DbTransformation createDbTransformation(final Collection<? extends Thing> things) {
+    public DbTransformation createDbTransformation(final Collection<? extends Thing<IRI>> things) {
         return new DbTransformation(things.stream()
                 .map(MagmaCoreService::toDbChangeSet)
                 .toList());
@@ -554,10 +554,10 @@ public class MagmaCoreService {
      * @param thing a {@link Thing}
      * @return a {@link DbChangeSet}
      */
-    private static DbChangeSet toDbChangeSet(final Thing thing) {
+    private static DbChangeSet toDbChangeSet(final Thing<IRI> thing) {
 
         // Map the Thing's predicates to DbCreateOperation objects.
-        final IRI iri = new IRI(thing.getId());
+        final IRI iri = thing.getId();
         final List<DbCreateOperation> creates = thing.getPredicates()
                 .entrySet()
                 .stream()
@@ -576,7 +576,7 @@ public class MagmaCoreService {
      *
      * @param thing {@link Thing} to update.
      */
-    public void update(final Thing thing) {
+    public void update(final Thing<IRI> thing) {
         database.update(thing);
     }
 
@@ -597,7 +597,7 @@ public class MagmaCoreService {
      * @param iri IRI of the thing.
      * @return {@link Thing} to get.
      */
-    public Thing get(final IRI iri) {
+    public Thing<IRI> get(final IRI iri) {
         return database.get(iri);
     }
 
@@ -607,10 +607,10 @@ public class MagmaCoreService {
      * @param iri {@link IRI} of the {@link Thing}.
      * @return {@link Thing} to get.
      */
-    public Thing getInTransaction(final IRI iri) {
+    public Thing<IRI> getInTransaction(final IRI iri) {
         try {
             database.begin();
-            final Thing result = database.get(iri);
+            final Thing<IRI> result = database.get(iri);
             database.commit();
             return result;
         } catch (final Exception e) {
@@ -641,10 +641,10 @@ public class MagmaCoreService {
      * @param entityNames {@link List} of entity names.
      * @return {@link Map} of {@link String} to {@link Thing}.
      */
-    public Map<String, Thing> findByEntityNameInTransaction(final List<String> entityNames) {
+    public Map<String, Thing<IRI>> findByEntityNameInTransaction(final List<String> entityNames) {
         try {
             database.begin();
-            final HashMap<String, Thing> result = new HashMap<String, Thing>();
+            final HashMap<String, Thing<IRI>> result = new HashMap<String, Thing<IRI>>();
 
             for (final String name : entityNames) {
                 result.put(name, findByEntityName(name));
@@ -682,7 +682,7 @@ public class MagmaCoreService {
      *
      * @return A {@link List} of {@link Thing} representing model integrity errors.
      */
-    public List<Thing> verifyModel() {
+    public List<Thing<IRI>> verifyModel() {
         return DataIntegrityReport.verify(database);
     }
 }

@@ -59,14 +59,14 @@ public interface MagmaCoreDatabase {
      * @param iri IRI of the object to get.
      * @return The fetched HQDM object.
      */
-    Thing get(IRI iri);
+    Thing<IRI> get(IRI iri);
 
     /**
      * Add an entity to the collection.
      *
      * @param object The HQDM-defined object to add.
      */
-    void create(Thing object);
+    void create(Thing<IRI> object);
 
     /**
      * Apply a set of creates to the database.
@@ -80,14 +80,14 @@ public interface MagmaCoreDatabase {
      *
      * @param object The HQDM object being updated.
      */
-    void update(Thing object);
+    void update(Thing<IRI> object);
 
     /**
      * Delete an entity from the collection.
      *
      * @param object Entity to delete.
      */
-    void delete(Thing object);
+    void delete(Thing<IRI> object);
 
     /**
      * Apply a set of deletes to the database.
@@ -103,7 +103,7 @@ public interface MagmaCoreDatabase {
      * @param objectIri    IRI of the object to match.
      * @return The {@link Thing}(s) found.
      */
-    List<Thing> findByPredicateIri(IRI predicateIri, IRI objectIri);
+    List<Thing<IRI>> findByPredicateIri(IRI predicateIri, IRI objectIri);
 
     /**
      * Find object(s) that have a specific HQDM-defined predication.
@@ -111,7 +111,7 @@ public interface MagmaCoreDatabase {
      * @param predicateIri IRI of the HQDM relationship type being queried.
      * @return The {@link Thing}(s) found.
      */
-    List<Thing> findByPredicateIriOnly(IRI predicateIri);
+    List<Thing<IRI>> findByPredicateIriOnly(IRI predicateIri);
 
     /**
      * Find object(s) that have a specific value attribute associated with them.
@@ -120,7 +120,7 @@ public interface MagmaCoreDatabase {
      * @param value        Object to match.
      * @return The {@link Thing}(s) found.
      */
-    List<Thing> findByPredicateIriAndValue(IRI predicateIri, Object value);
+    List<Thing<IRI>> findByPredicateIriAndValue(IRI predicateIri, Object value);
 
     /**
      * Find object(s) that have a specific string-value attribute associated with them.
@@ -129,7 +129,7 @@ public interface MagmaCoreDatabase {
      * @param value        Case-insensitive string to match.
      * @return The {@link Thing}(s).
      */
-    List<Thing> findByPredicateIriAndStringCaseInsensitive(IRI predicateIri, String value);
+    List<Thing<IRI>> findByPredicateIriAndStringCaseInsensitive(IRI predicateIri, String value);
 
     /**
      * Dump the contents of the collection as text.
@@ -168,7 +168,7 @@ public interface MagmaCoreDatabase {
      * @param queryResultsList {@link QueryResultList}
      * @return a {@link List} of {@link Thing}
      */
-    List<Thing> toTopObjects(final QueryResultList queryResultsList);
+    List<Thing<IRI>> toTopObjects(final QueryResultList queryResultsList);
 
     /**
      * Execute a CONSTRUCT query.
@@ -176,5 +176,5 @@ public interface MagmaCoreDatabase {
      * @param query a CONSTRUCT query {@link String}
      * @return a {@link List} of {@link Thing}
      */
-    List<Thing> executeConstruct(final String query);
+    List<Thing<IRI>> executeConstruct(final String query);
 }
