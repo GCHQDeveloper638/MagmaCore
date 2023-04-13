@@ -39,21 +39,23 @@ public class ExampleIndividuals {
     /**
      * Create a DbChangeSet that adds the whole life individuals.
      *
-     * @param mcService {@link MagmaCoreService}.
+     * @param mcService
+     *            {@link MagmaCoreService}.
      * @return {@link DbChangeSet}.
      */
     public static DbChangeSet addWholeLifeIndividuals(final MagmaCoreService mcService) {
 
-        final Map<String, Thing> entities = mcService.findByEntityNameInTransaction(List.of("KIND_OF_PERSON",
+        final Map<String, Thing<IRI>> entities = mcService.findByEntityNameInTransaction(List.of("KIND_OF_PERSON",
                 "NATURAL_MEMBER_OF_SOCIETY_ROLE", "KIND_OF_FUNCTIONAL_SYSTEM_DOMESTIC_PROPERTY",
                 "ACCEPTED_PLACE_OF_SEMI_PERMANENT_HABITATION_ROLE"));
 
         // Find the required classes, kinds, and roles.
-        final KindOfPerson kindOfPerson = (KindOfPerson) entities.get("KIND_OF_PERSON");
-        final Role personRole = (Role) entities.get("NATURAL_MEMBER_OF_SOCIETY_ROLE");
-        final KindOfFunctionalSystem kindOfFunctionalSystemDomesticProperty = (KindOfFunctionalSystem) entities
+        final KindOfPerson<IRI> kindOfPerson = (KindOfPerson<IRI>) entities.get("KIND_OF_PERSON");
+        final Role<IRI> personRole = (Role<IRI>) entities.get("NATURAL_MEMBER_OF_SOCIETY_ROLE");
+        final var kindOfFunctionalSystemDomesticProperty = (KindOfFunctionalSystem<IRI>) entities
                 .get("KIND_OF_FUNCTIONAL_SYSTEM_DOMESTIC_PROPERTY");
-        final Role domesticPropertyRole = (Role) entities.get("ACCEPTED_PLACE_OF_SEMI_PERMANENT_HABITATION_ROLE");
+        final Role<IRI> domesticPropertyRole = (Role<IRI>) entities
+                .get("ACCEPTED_PLACE_OF_SEMI_PERMANENT_HABITATION_ROLE");
 
         // Create IRIs for the objects we want to create.
         final IRI possibleWorld = new IRI(USER_BASE, uid());
@@ -78,16 +80,16 @@ public class ExampleIndividuals {
                 new DbCreateOperation(person, RDFS.RDF_TYPE, HQDM.PERSON),
                 new DbCreateOperation(person, HQDM.PART_OF_POSSIBLE_WORLD, possibleWorld),
                 new DbCreateOperation(person, HQDM.ENTITY_NAME, "PersonB1_Bob"),
-                new DbCreateOperation(person, HQDM.MEMBER_OF_KIND, new IRI(kindOfPerson.getId())),
-                new DbCreateOperation(person, HQDM.NATURAL_ROLE, new IRI(personRole.getId())),
+                new DbCreateOperation(person, HQDM.MEMBER_OF_KIND, kindOfPerson.getId()),
+                new DbCreateOperation(person, HQDM.NATURAL_ROLE, personRole.getId()),
                 new DbCreateOperation(person, HQDM.BEGINNING, startEvent),
 
                 new DbCreateOperation(house, RDFS.RDF_TYPE, HQDM.FUNCTIONAL_SYSTEM),
                 new DbCreateOperation(house, HQDM.PART_OF_POSSIBLE_WORLD, possibleWorld),
                 new DbCreateOperation(house, HQDM.ENTITY_NAME, "HouseB"),
                 new DbCreateOperation(house, HQDM.MEMBER_OF_KIND,
-                        new IRI(kindOfFunctionalSystemDomesticProperty.getId())),
-                new DbCreateOperation(house, HQDM.INTENDED_ROLE, new IRI(domesticPropertyRole.getId())),
+                        kindOfFunctionalSystemDomesticProperty.getId()),
+                new DbCreateOperation(house, HQDM.INTENDED_ROLE, domesticPropertyRole.getId()),
                 new DbCreateOperation(house, HQDM.BEGINNING, endEvent));
 
         // Create a change set and return it.

@@ -40,14 +40,18 @@ public class ExampleSigns {
     /**
      * A function that populates a database.
      *
-     * @param mcService A {@link MagmaCoreService}.
+     * @param mcService
+     *            A {@link MagmaCoreService}.
      * @return {@link DbTransformation}.
      */
     public static DbTransformation populateExampleData(final MagmaCoreService mcService) {
 
-        // Apply the transformation to the database. There are dependencies between these change sets
-        // since they both depend on RDL being present, but also the occupancies depend on the
-        // individuals being present, so each change set needs to be applied before the next one
+        // Apply the transformation to the database. There are dependencies between
+        // these change sets
+        // since they both depend on RDL being present, but also the occupancies depend
+        // on the
+        // individuals being present, so each change set needs to be applied before the
+        // next one
         // can be created.
         final DbChangeSet rdlChangeSet = ExampleSignsRdl.createRefDataObjects();
 
@@ -60,26 +64,28 @@ public class ExampleSigns {
         // Apply the DbChangeSet.
         mcService.runInTransaction(signsChangeSet);
         //
-        // Combine the DbChangeSets into a DbTransformation and return it as a record of the changes.
+        // Combine the DbChangeSets into a DbTransformation and return it as a record of
+        // the changes.
         return new DbTransformation(List.of(rdlChangeSet, signsChangeSet));
     }
 
     /**
      * Create a {@link DbChangeSet} to add the representation by sign.
      *
-     * @param mcService {@link MagmaCoreService}.
+     * @param mcService
+     *            {@link MagmaCoreService}.
      * @return {@link DbChangeSet}.
      */
     private static DbChangeSet addSigns(final MagmaCoreService mcService) {
-        final Map<String, Thing> entities = mcService
+        final Map<String, Thing<IRI>> entities = mcService
                 .findByEntityNameInTransaction(List.of("URL Pattern", "Description By URL", "English Speakers"));
 
         // Find the required classes, kinds, and roles.
-        final Pattern urlPattern = (Pattern) entities.get("URL Pattern");
-        final Description descriptionByUrl = (Description) entities.get("Description By URL");
-        final RecognizingLanguageCommunity englishSpeakers = (RecognizingLanguageCommunity) entities
+        final Pattern<IRI> urlPattern = (Pattern<IRI>) entities.get("URL Pattern");
+        final Description<IRI> descriptionByUrl = (Description<IRI>) entities.get("Description By URL");
+        final RecognizingLanguageCommunity<IRI> englishSpeakers = (RecognizingLanguageCommunity<IRI>) entities
                 .get("English Speakers");
-        final IRI englishSpeakersIri = new IRI(englishSpeakers.getId());
+        final IRI englishSpeakersIri = englishSpeakers.getId();
 
         // Create IRIs for the new entities.
         final IRI possibleWorld = new IRI(USER_BASE, uid());
@@ -106,34 +112,34 @@ public class ExampleSigns {
 
                 // Create the signs that represent the thing.
                 new DbCreateOperation(wikipediaSign, RDFS.RDF_TYPE, HQDM.STATE_OF_SIGN),
-                new DbCreateOperation(wikipediaSign, HQDM.MEMBER_OF_, new IRI(urlPattern.getId())),
+                new DbCreateOperation(wikipediaSign, HQDM.MEMBER_OF_, urlPattern.getId()),
                 new DbCreateOperation(wikipediaSign, HQDM.VALUE_, "https://en.wikipedia.org/wiki/Socrates"),
                 new DbCreateOperation(wikipediaSign, HQDM.PART_OF_POSSIBLE_WORLD, possibleWorld),
 
                 new DbCreateOperation(britannica, RDFS.RDF_TYPE, HQDM.STATE_OF_SIGN),
-                new DbCreateOperation(britannica, HQDM.MEMBER_OF_, new IRI(urlPattern.getId())),
+                new DbCreateOperation(britannica, HQDM.MEMBER_OF_, urlPattern.getId()),
                 new DbCreateOperation(britannica, HQDM.VALUE_, "https://www.britannica.com/biography/Socrates"),
                 new DbCreateOperation(britannica, HQDM.PART_OF_POSSIBLE_WORLD, possibleWorld),
 
                 new DbCreateOperation(biography, RDFS.RDF_TYPE, HQDM.STATE_OF_SIGN),
-                new DbCreateOperation(biography, HQDM.MEMBER_OF_, new IRI(urlPattern.getId())),
+                new DbCreateOperation(biography, HQDM.MEMBER_OF_, urlPattern.getId()),
                 new DbCreateOperation(biography, HQDM.VALUE_, "https://www.biography.com/scholar/socrates"),
                 new DbCreateOperation(biography, HQDM.PART_OF_POSSIBLE_WORLD, possibleWorld),
 
                 new DbCreateOperation(stanford, RDFS.RDF_TYPE, HQDM.STATE_OF_SIGN),
-                new DbCreateOperation(stanford, HQDM.MEMBER_OF_, new IRI(urlPattern.getId())),
+                new DbCreateOperation(stanford, HQDM.MEMBER_OF_, urlPattern.getId()),
                 new DbCreateOperation(stanford, HQDM.VALUE_, "https://plato.stanford.edu/entries/socrates/"),
                 new DbCreateOperation(stanford, HQDM.PART_OF_POSSIBLE_WORLD, possibleWorld),
 
                 new DbCreateOperation(nationalGeographic, RDFS.RDF_TYPE, HQDM.STATE_OF_SIGN),
-                new DbCreateOperation(nationalGeographic, HQDM.MEMBER_OF_, new IRI(urlPattern.getId())),
+                new DbCreateOperation(nationalGeographic, HQDM.MEMBER_OF_, urlPattern.getId()),
                 new DbCreateOperation(nationalGeographic, HQDM.VALUE_,
                         "https://www.nationalgeographic.com/culture/article/socrates"),
                 new DbCreateOperation(nationalGeographic, HQDM.PART_OF_POSSIBLE_WORLD, possibleWorld),
 
                 // Create the representation by signs.
                 new DbCreateOperation(representationBySign, RDFS.RDF_TYPE, HQDM.REPRESENTATION_BY_SIGN),
-                new DbCreateOperation(representationBySign, HQDM.MEMBER_OF_, new IRI(descriptionByUrl.getId())),
+                new DbCreateOperation(representationBySign, HQDM.MEMBER_OF_, descriptionByUrl.getId()),
                 new DbCreateOperation(representationBySign, HQDM.REPRESENTS, person),
                 new DbCreateOperation(representationBySign, HQDM.PART_OF_POSSIBLE_WORLD, possibleWorld),
 

@@ -37,7 +37,8 @@ public class MultiInheritFromDataApp {
     /**
      * Example program for creating classes dynamically.
      *
-     * @param args An array of Strings.
+     * @param args
+     *            An array of Strings.
      */
     public static void main(final String[] args) {
 
@@ -47,7 +48,7 @@ public class MultiInheritFromDataApp {
                 new Pair<>(RDFS.RDF_TYPE, HQDM.PARTICIPANT));
 
         // Create a new object using the type specification.
-        final Thing orgState = HqdmObjectFactory.create(new IRI(REF_BASE, uid()), newTypeSpecification);
+        final Thing<IRI> orgState = HqdmObjectFactory.create(new IRI(REF_BASE, uid()), newTypeSpecification);
 
         // Check that it implements the two interfaces.
         if (orgState instanceof Participant && orgState instanceof StateOfOrganization) {

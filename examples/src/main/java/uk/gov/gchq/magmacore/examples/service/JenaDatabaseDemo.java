@@ -20,19 +20,24 @@ import java.util.List;
 import java.util.Map;
 
 import uk.gov.gchq.magmacore.hqdm.model.Thing;
+import uk.gov.gchq.magmacore.hqdm.rdf.iri.IRI;
 import uk.gov.gchq.magmacore.service.MagmaCoreService;
 import uk.gov.gchq.magmacore.service.MagmaCoreServiceFactory;
 
 /**
- * Example use-case scenario for using Magma Core with an in-memory Jena database.
+ * Example use-case scenario for using Magma Core with an in-memory Jena
+ * database.
  *
  * <p>
- * This example demo creates an in-memory Jena database populated with the example data libraries as
+ * This example demo creates an in-memory Jena database populated with the
+ * example data libraries as
  * RDF triples.
  * </p>
  * <p>
- * {@code PersonB1_Bob} can be queried for using the `findByEntityName` method. method. The
- * resulting object(s) of this query are output to the command-line as RDF triples.
+ * {@code PersonB1_Bob} can be queried for using the `findByEntityName` method.
+ * method. The
+ * resulting object(s) of this query are output to the command-line as RDF
+ * triples.
  * </p>
  *
  */
@@ -41,7 +46,8 @@ public final class JenaDatabaseDemo {
     /**
      * Run the in-memory Jena database example.
      *
-     * @param args Application arguments.
+     * @param args
+     *            Application arguments.
      */
     public static void main(final String[] args) {
 
@@ -52,7 +58,7 @@ public final class JenaDatabaseDemo {
         populateExampleData(mcService);
 
         // Query database to check its populated.
-        final Map<String, Thing> queryResults = mcService.findByEntityNameInTransaction(List.of("PersonB1_Bob"));
+        final Map<String, Thing<IRI>> queryResults = mcService.findByEntityNameInTransaction(List.of("PersonB1_Bob"));
 
         // Output results of query to console.
         System.out.println(queryResults);
